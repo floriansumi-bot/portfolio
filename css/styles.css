@@ -330,26 +330,44 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
    entrance, so it leaves as smoothly as it arrives — never covering the About
    text (the exit is triggered well before the text reaches it). */
 .arcade.st-above { transform: translateY(-145%); opacity: 0; }
-.arcade-win { background: rgba(13,13,22,.82); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
-.arcade-bar { display: flex; align-items: center; gap: .55rem; padding: .45rem .7rem; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.03); }
-.arcade-dots { display: inline-flex; gap: 5px; flex-shrink: 0; }
-.arcade-dots i { width: 9px; height: 9px; border-radius: 50%; background: #3a3a4a; display: block; }
-.arcade-dots i:nth-child(1) { background: #f472b6; }
-.arcade-dots i:nth-child(2) { background: #fbbf24; }
-.arcade-dots i:nth-child(3) { background: #a3e635; }
-.arcade-name { font-family: "Space Grotesk", ui-monospace, monospace; font-size: .68rem; color: var(--text-faint); letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.arcade-body { position: relative; display: flex; gap: .6rem; padding: .65rem; }
-.arcade-board { border-radius: 8px; display: block; }
-.arcade-side { display: flex; flex-direction: column; gap: .45rem; min-width: 44px; }
-.arcade-stat { display: flex; flex-direction: column; gap: 2px; }
-.arcade-stat > span { font-size: .58rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-faint); }
-.arcade-stat b { font-family: "Space Grotesk"; font-size: 1rem; color: var(--text); line-height: 1; }
-#arcadeNext { background: rgba(255,255,255,.03); border-radius: 6px; display: block; }
-.arcade-keys { margin-top: auto; font-size: .56rem; color: var(--text-faint); line-height: 1.6; }
+/* ---- Synthwave / outrun skin ---- */
+.arcade-win {
+  position: relative;
+  background: linear-gradient(160deg, rgba(28,12,52,.94), rgba(11,5,28,.94));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(192,75,255,.5); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(34,224,255,.12), 0 20px 54px rgba(120,30,180,.4), 0 0 34px rgba(255,45,149,.18);
+}
+/* CRT scanlines + corner vignette across the whole window */
+.arcade-win::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3; border-radius: 14px;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.10) 0 1px, transparent 1px 3px),
+    radial-gradient(130% 90% at 50% -10%, transparent 58%, rgba(8,4,20,.5) 100%);
+  mix-blend-mode: multiply; opacity: .6;
+}
+.arcade-bar { position: relative; z-index: 1; display: flex; align-items: center; gap: .55rem; padding: .45rem .7rem; border-bottom: 1px solid rgba(192,75,255,.32); background: linear-gradient(90deg, rgba(255,45,149,.16), rgba(34,224,255,.10)); }
+.arcade-dots { display: inline-flex; gap: 6px; flex-shrink: 0; }
+.arcade-dots i { width: 9px; height: 9px; border-radius: 50%; display: block; }
+.arcade-dots i:nth-child(1) { background: #ff2d95; box-shadow: 0 0 6px #ff2d95; }
+.arcade-dots i:nth-child(2) { background: #ffd23f; box-shadow: 0 0 6px #ffd23f; }
+.arcade-dots i:nth-child(3) { background: #22e0ff; box-shadow: 0 0 6px #22e0ff; }
+.arcade-name { font-family: "Space Grotesk", ui-monospace, monospace; font-size: .66rem; text-transform: uppercase; color: #e3d4ff; letter-spacing: .16em; text-shadow: 0 0 9px rgba(192,75,255,.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.arcade-body { position: relative; z-index: 1; display: flex; gap: .6rem; padding: .65rem; }
+.arcade-board { border-radius: 8px; display: block; border: 1px solid rgba(34,224,255,.38); box-shadow: inset 0 0 22px rgba(120,30,180,.45), 0 0 14px rgba(34,224,255,.16); }
+.arcade-side { display: flex; flex-direction: column; gap: .55rem; min-width: 46px; }
+.arcade-stat { display: flex; flex-direction: column; gap: 3px; }
+.arcade-stat > span { font-size: .52rem; text-transform: uppercase; letter-spacing: .2em; color: #8ab9ff; text-shadow: 0 0 6px rgba(34,224,255,.5); }
+.arcade-stat b { font-family: "Space Grotesk", ui-monospace, monospace; font-size: 1.05rem; line-height: 1; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 0 8px rgba(255,45,149,.85), 0 0 16px rgba(255,45,149,.4); }
+#arcadeNext { border-radius: 6px; display: block; border: 1px solid rgba(192,75,255,.34); box-shadow: inset 0 0 12px rgba(120,30,180,.45); }
+.arcade-keys { margin-top: auto; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; align-content: flex-end; padding-top: .45rem; }
+.arcade-keys .kc { display: inline-grid; place-items: center; min-width: 16px; height: 16px; padding: 0 3px; font-size: .6rem; color: #e3d4ff; font-family: "Space Grotesk", ui-monospace, monospace; border: 1px solid rgba(34,224,255,.42); border-radius: 4px; background: rgba(34,224,255,.08); box-shadow: 0 0 6px rgba(34,224,255,.2); }
+.arcade-keys .kcl { font-size: .5rem; letter-spacing: .1em; color: #8ab9ff; text-transform: uppercase; margin-right: 4px; }
 .arcade-touch { display: none; }
 @media (pointer: coarse) {
-  .arcade.has-room.st-show .arcade-touch { display: grid; grid-template-columns: repeat(5, 1fr); gap: .3rem; padding: .45rem .65rem .6rem; }
-  .arcade-touch button { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: .45rem 0; font-size: .95rem; cursor: pointer; }
+  .arcade.has-room.st-show .arcade-touch { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: .35rem; padding: .5rem .65rem .65rem; }
+  .arcade-touch button { background: rgba(34,224,255,.08); border: 1px solid rgba(192,75,255,.45); color: #e7dcff; border-radius: 8px; padding: .5rem 0; font-size: 1rem; cursor: pointer; box-shadow: 0 0 8px rgba(120,30,180,.3); text-shadow: 0 0 6px rgba(34,224,255,.55); }
+  .arcade-touch button:active { background: rgba(255,45,149,.2); border-color: rgba(255,45,149,.55); }
 }
 
 /* ---------- Reveal animation ---------- */

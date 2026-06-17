@@ -23,14 +23,15 @@
 
   const COLS = 10, ROWS = 20;
 
+  /* Synthwave neon tetromino palette. */
   const PIECES = {
-    I: { m: [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]], c: "#22d3ee" },
-    O: { m: [[1,1],[1,1]], c: "#fbbf24" },
-    T: { m: [[0,1,0],[1,1,1],[0,0,0]], c: "#a78bfa" },
-    S: { m: [[0,1,1],[1,1,0],[0,0,0]], c: "#a3e635" },
-    Z: { m: [[1,1,0],[0,1,1],[0,0,0]], c: "#f472b6" },
-    J: { m: [[1,0,0],[1,1,1],[0,0,0]], c: "#60a5fa" },
-    L: { m: [[0,0,1],[1,1,1],[0,0,0]], c: "#fb923c" },
+    I: { m: [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]], c: "#22e0ff" },
+    O: { m: [[1,1],[1,1]], c: "#ffd23f" },
+    T: { m: [[0,1,0],[1,1,1],[0,0,0]], c: "#c04bff" },
+    S: { m: [[0,1,1],[1,1,0],[0,0,0]], c: "#3dff9e" },
+    Z: { m: [[1,1,0],[0,1,1],[0,0,0]], c: "#ff2d95" },
+    J: { m: [[1,0,0],[1,1,1],[0,0,0]], c: "#4d8bff" },
+    L: { m: [[0,0,1],[1,1,1],[0,0,0]], c: "#ff8a3d" },
   };
   const KEYS = Object.keys(PIECES);
 
@@ -129,26 +130,78 @@
     nctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     nextCanvas._ns = ns;
   }
-  function block(c, x, y, s, col) { c.fillStyle = col; c.fillRect(x * s, y * s, s - 1, s - 1); c.fillStyle = "rgba(255,255,255,0.22)"; c.fillRect(x * s, y * s, s - 1, Math.max(1, (s - 1) * 0.28)); }
+  function roundRect(c, x, y, w, h, r) {
+    r = Math.min(r, w / 2, h / 2);
+    c.beginPath();
+    c.moveTo(x + r, y);
+    c.arcTo(x + w, y, x + w, y + h, r);
+    c.arcTo(x + w, y + h, x, y + h, r);
+    c.arcTo(x, y + h, x, y, r);
+    c.arcTo(x, y, x + w, y, r);
+    c.closePath();
+  }
+  /* Neon block with outer glow, glossy top and a bright inner edge. */
+  function block(c, x, y, s, col) {
+    const g = Math.max(1, s * 0.07), r = Math.max(2, s * 0.2);
+    const bx = x * s + g, by = y * s + g, bw = s - 2 * g, bh = s - 2 * g;
+    c.save();
+    c.shadowColor = col; c.shadowBlur = s * 0.5;
+    c.fillStyle = col; roundRect(c, bx, by, bw, bh, r); c.fill();
+    c.shadowBlur = 0;
+    c.fillStyle = "rgba(255,255,255,0.42)";
+    roundRect(c, bx + bw * 0.16, by + bh * 0.12, bw * 0.68, bh * 0.22, r * 0.6); c.fill();
+    c.strokeStyle = "rgba(255,255,255,0.30)"; c.lineWidth = Math.max(1, s * 0.05);
+    roundRect(c, bx, by, bw, bh, r); c.stroke();
+    c.restore();
+  }
   function draw() {
     if (!board) return;
     const w = COLS * cell, h = ROWS * cell;
-    ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = "rgba(10,10,20,0.55)"; ctx.fillRect(0, 0, w, h);
-    for (let y = 0; y < ROWS; y++) for (let x = 0; x < COLS; x++) {
-      if (board[y][x]) block(ctx, x, y, cell, board[y][x]);
-      else { ctx.fillStyle = "rgba(255,255,255,0.05)"; ctx.fillRect(x * cell, y * cell, cell - 1, cell - 1); }
-    }
+    // synthwave sky
+    const sky = ctx.createLinearGradient(0, 0, 0, h);
+    sky.addColorStop(0, "#1b0b33"); sky.addColorStop(0.55, "#140a26"); sky.addColorStop(1, "#0b0420");
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, w, h);
+    // horizon glow rising from the bottom
+    const hz = ctx.createLinearGradient(0, h * 0.64, 0, h);
+    hz.addColorStop(0, "rgba(255,45,149,0)"); hz.addColorStop(0.7, "rgba(255,45,149,0.10)"); hz.addColorStop(1, "rgba(34,224,255,0.18)");
+    ctx.fillStyle = hz; ctx.fillRect(0, h * 0.64, w, h * 0.36);
+    // neon grid
+    ctx.strokeStyle = "rgba(124,77,255,0.16)"; ctx.lineWidth = 1; ctx.beginPath();
+    for (let x = 0; x <= COLS; x++) { ctx.moveTo(x * cell + 0.5, 0); ctx.lineTo(x * cell + 0.5, h); }
+    for (let y = 0; y <= ROWS; y++) { ctx.moveTo(0, y * cell + 0.5); ctx.lineTo(w, y * cell + 0.5); }
+    ctx.stroke();
+    // settled blocks
+    for (let y = 0; y < ROWS; y++) for (let x = 0; x < COLS; x++) if (board[y][x]) block(ctx, x, y, cell, board[y][x]);
     if (cur && !gameOver) {
+      // ghost (where the piece will land) as a dashed neon outline
       let gy = 0; while (!collides(0, gy + 1)) gy++;
-      for (let y = 0; y < cur.m.length; y++) for (let x = 0; x < cur.m.length; x++) if (cur.m[y][x]) { const ry = cur.y + y + gy; if (ry >= 0) { ctx.fillStyle = "rgba(255,255,255,0.10)"; ctx.fillRect((cur.x + x) * cell, ry * cell, cell - 1, cell - 1); } }
+      ctx.save();
+      ctx.strokeStyle = cur.c; ctx.globalAlpha = 0.55; ctx.lineWidth = Math.max(1, cell * 0.08);
+      ctx.setLineDash([Math.max(2, cell * 0.22), Math.max(2, cell * 0.18)]);
+      const gr = Math.max(2, cell * 0.2);
+      for (let y = 0; y < cur.m.length; y++) for (let x = 0; x < cur.m.length; x++) if (cur.m[y][x]) { const ry = cur.y + y + gy; if (ry >= 0) { roundRect(ctx, (cur.x + x) * cell + 1.5, ry * cell + 1.5, cell - 3, cell - 3, gr); ctx.stroke(); } }
+      ctx.restore();
+      // active piece
       for (let y = 0; y < cur.m.length; y++) for (let x = 0; x < cur.m.length; x++) if (cur.m[y][x] && cur.y + y >= 0) block(ctx, cur.x + x, cur.y + y, cell, cur.c);
     }
-    if (gameOver) { ctx.fillStyle = "rgba(8,8,16,0.55)"; ctx.fillRect(0, 0, w, h); }
+    // CRT scanlines
+    ctx.fillStyle = "rgba(0,0,0,0.16)";
+    for (let yy = 0; yy < h; yy += 3) ctx.fillRect(0, yy, w, 1);
+    if (gameOver) {
+      ctx.fillStyle = "rgba(8,6,20,0.62)"; ctx.fillRect(0, 0, w, h);
+      ctx.save();
+      ctx.fillStyle = "#ff2d95"; ctx.shadowColor = "#ff2d95"; ctx.shadowBlur = 14;
+      ctx.font = "700 " + Math.max(10, Math.round(cell * 0.82)) + "px 'Space Grotesk', system-ui, monospace";
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText("GAME OVER", w / 2, h / 2);
+      ctx.restore();
+    }
   }
   function drawNext() {
-    const ns = nextCanvas._ns || 12;
-    nctx.clearRect(0, 0, 4 * ns, 4 * ns);
+    const ns = nextCanvas._ns || 12, W = 4 * ns;
+    const bg = nctx.createLinearGradient(0, 0, 0, W);
+    bg.addColorStop(0, "#180a2e"); bg.addColorStop(1, "#0b0420");
+    nctx.fillStyle = bg; nctx.fillRect(0, 0, W, W);
     if (!nextPiece) return;
     const m = nextPiece.m, off = (4 - m.length) / 2;
     for (let y = 0; y < m.length; y++) for (let x = 0; x < m.length; x++) if (m[y][x]) block(nctx, x + off, y + off, ns, nextPiece.c);
@@ -231,7 +284,10 @@
   let _cellH = 0, _cellW = 0;
   function computeLayout() {
     const vh = window.innerHeight, vw = window.innerWidth;
-    TOP = vh < 560 ? 40 : 92;
+    // Always clear the fixed header so the window's title bar is never clipped.
+    const hdr = document.querySelector(".site-header");
+    const headerH = hdr ? Math.round(hdr.getBoundingClientRect().height) : 70;
+    TOP = headerH + (vh < 560 ? 12 : 22);
     const avail = vw - heroTextRight() - GAP;
     _cellH = Math.floor((vh - TOP - 88) / ROWS);
     _cellW = Math.floor((avail - SIDE) / COLS);
