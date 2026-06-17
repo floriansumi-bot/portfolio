@@ -210,7 +210,7 @@
   let TOP = 92, _cellH = 0, _cellW = 0; const GAP = 18, MINH = 250, SIDE = 78;
   function computeLayout() {
     const vh = window.innerHeight, vw = window.innerWidth;
-    TOP = vh < 560 ? 46 : 92;
+    TOP = vh < 560 ? 40 : 92;
     const avail = vw - heroTextRight() - GAP;   // horizontal room beside the hero text
     _cellH = Math.floor((vh - TOP - 88) / ROWS); // largest cell the height allows
     _cellW = Math.floor((avail - SIDE) / COLS);  // largest cell the width allows
