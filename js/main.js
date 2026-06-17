@@ -67,8 +67,8 @@ function renderProjects(el, base, loc) {
       const p = { ...b, ...(loc[i] || {}) }; // merge shared meta + translated tag/desc
       return `
       <article class="project-card reveal">
-        <div class="project-thumb" style="--card-grad:${p.grad}">
-          <span class="emoji" role="img" aria-label="${p.name}">${p.emoji}</span>
+        <div class="project-thumb">
+          <img src="${p.img}" alt="${p.name} — preview" decoding="async" />
         </div>
         <div class="project-body">
           <div class="project-top">
@@ -310,6 +310,10 @@ function setupConstellation() {
 
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
+  // ?still=1 — a static capture mode: no background animation, everything revealed.
+  let still = false;
+  try { still = new URLSearchParams(location.search).has("still"); } catch (e) {}
+
   LANG = detectInitialLang();
   applyLanguage(LANG, { reveal: false }); // render text + data; let the observer animate on first load
 
@@ -321,6 +325,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHeader();
   setupNav();
   setupCounters();
-  setupConstellation();
+  if (!still) setupConstellation();
   _initialized = true;
+  if (still) {
+    revealAll();
+    const h = document.querySelector(".hero");
+    if (h) { h.style.minHeight = "auto"; h.style.paddingTop = "7rem"; h.style.paddingBottom = "2.5rem"; }
+  }
 });

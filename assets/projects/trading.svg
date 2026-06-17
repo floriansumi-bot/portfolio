@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 563" font-family="'Segoe UI',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bgt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141a"/><stop offset="1" stop-color="#04140f"/>
+    </linearGradient>
+    <linearGradient id="equity" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="563" fill="url(#bgt)"/>
+  <!-- grid -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.06">
+    <line x1="0" y1="140" x2="1000" y2="140"/><line x1="0" y1="280" x2="1000" y2="280"/><line x1="0" y1="420" x2="1000" y2="420"/>
+    <line x1="200" y1="0" x2="200" y2="563"/><line x1="400" y1="0" x2="400" y2="563"/><line x1="600" y1="0" x2="600" y2="563"/><line x1="800" y1="0" x2="800" y2="563"/>
+  </g>
+  <!-- candlesticks -->
+  <g stroke-width="3">
+    <g stroke="#16a34a" fill="#16a34a"><line x1="110" y1="300" x2="110" y2="380"/><rect x="100" y="320" width="20" height="45"/></g>
+    <g stroke="#ef4444" fill="#ef4444"><line x1="170" y1="290" x2="170" y2="360"/><rect x="160" y="305" width="20" height="35"/></g>
+    <g stroke="#16a34a" fill="#16a34a"><line x1="230" y1="270" x2="230" y2="360"/><rect x="220" y="295" width="20" height="50"/></g>
+    <g stroke="#16a34a" fill="#16a34a"><line x1="290" y1="250" x2="290" y2="330"/><rect x="280" y="270" width="20" height="45"/></g>
+    <g stroke="#ef4444" fill="#ef4444"><line x1="350" y1="260" x2="350" y2="330"/><rect x="340" y="278" width="20" height="38"/></g>
+    <g stroke="#16a34a" fill="#16a34a"><line x1="410" y1="220" x2="410" y2="300"/><rect x="400" y="240" width="20" height="48"/></g>
+    <g stroke="#16a34a" fill="#16a34a"><line x1="470" y1="200" x2="470" y2="280"/><rect x="460" y="222" width="20" height="44"/></g>
+    <g stroke="#ef4444" fill="#ef4444"><line x1="530" y1="210" x2="530" y2="285"/><rect x="520" y="228" width="20" height="40"/></g>
+  </g>
+  <!-- equity curve -->
+  <path d="M90 400 L 200 360 L 320 330 L 430 270 L 540 250 L 660 200 L 780 170 L 910 120" fill="none" stroke="url(#equity)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 400 L 200 360 L 320 330 L 430 270 L 540 250 L 660 200 L 780 170 L 910 120 L 910 460 L 90 460 Z" fill="url(#fill)" opacity="0.7"/>
+  <circle cx="910" cy="120" r="7" fill="#22d3ee"/>
+  <text x="500" y="515" text-anchor="middle" fill="#9fe8d6" font-size="26" font-weight="700" letter-spacing="3">ALGO BACKTESTING · PAPER-ONLY</text>
+</svg>

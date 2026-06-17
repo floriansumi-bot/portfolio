@@ -10,3 +10,8 @@ node_modules/
 
 # Build artifacts (translations are baked into js/content.js)
 _i18n/
+
+# Employer CV — kept separate (manual send), not published on the site
+employer-cv.html
+assets/Florian-Sumi-Employer-CV.pdf
+assets/portfolio-qr.png
