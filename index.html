@@ -64,6 +64,7 @@
           <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
           <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
           <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#music" data-i18n="nav.music">Music</a></li>
           <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -197,10 +198,58 @@
       <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
+    <!-- Music -->
+    <section class="section music" id="music">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title" data-i18n="section.music">Music &amp; live sets</h2>
+      </div>
+      <p class="section-lead reveal" data-i18n="music.lead">
+        Self-taught on Ableton, I produce and DJ. I've grown two projects — Garage Act and Atomatek —
+        from scratch to paid venues and festivals across Switzerland and France, including EPFL's Sysmic festival.
+      </p>
+      <div class="music-grid">
+        <article class="music-card reveal" data-seed="1678609419">
+          <div class="music-art"><img src="assets/music/garageact.jpg" alt="Garage Act — Ephemeral cover art" /></div>
+          <div class="music-body">
+            <div class="music-meta">
+              <span class="music-artist">Garage Act</span>
+              <span class="music-title">Ephemeral</span>
+            </div>
+            <div class="music-controls">
+              <button class="music-play" type="button" aria-label="Play"></button>
+              <canvas class="music-wave" aria-hidden="true"></canvas>
+              <span class="music-time">0:00</span>
+            </div>
+            <a class="music-link" href="https://soundcloud.com/garageact" target="_blank" rel="noopener noreferrer" data-i18n="music.more">Full profile ↗</a>
+          </div>
+          <iframe class="sc-hidden" title="Garage Act audio" allow="autoplay" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1678609419&visual=false&show_artwork=false&show_comments=false&show_user=false&show_playcount=false&sharing=false&buying=false&download=false&hide_related=true&single_active=true"></iframe>
+        </article>
+        <article class="music-card reveal" data-seed="1980850335">
+          <div class="music-art"><img src="assets/music/atomatek.jpg" alt="Atomatek — Night Terrors cover art" /></div>
+          <div class="music-body">
+            <div class="music-meta">
+              <span class="music-artist">Atomatek</span>
+              <span class="music-title">Night Terrors</span>
+            </div>
+            <div class="music-controls">
+              <button class="music-play" type="button" aria-label="Play"></button>
+              <canvas class="music-wave" aria-hidden="true"></canvas>
+              <span class="music-time">0:00</span>
+            </div>
+            <a class="music-link" href="https://soundcloud.com/atomatek" target="_blank" rel="noopener noreferrer" data-i18n="music.more">Full profile ↗</a>
+          </div>
+          <iframe class="sc-hidden" title="Atomatek audio" allow="autoplay" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1980850335&visual=false&show_artwork=false&show_comments=false&show_user=false&show_playcount=false&sharing=false&buying=false&download=false&hide_related=true&single_active=true"></iframe>
+        </article>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="section contact" id="contact">
       <div class="section-head reveal">
-        <span class="section-index">05</span>
+        <span class="section-index">06</span>
         <h2 class="section-title" data-i18n="section.contact">Get in touch</h2>
       </div>
       <p class="section-lead reveal" data-i18n="contact.lead">
@@ -238,5 +287,7 @@
 
   <script src="js/content.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="https://w.soundcloud.com/player/api.js" defer></script>
+  <script src="js/music.js" defer></script>
 </body>
 </html>

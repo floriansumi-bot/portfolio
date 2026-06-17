@@ -261,6 +261,32 @@ body::before {
 .plink-repo { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); }
 .plink-repo:hover { border-color: var(--violet); }
 
+/* ---------- Music ---------- */
+.music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.4rem; }
+.music-card { position: relative; display: flex; gap: 1.1rem; align-items: stretch; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; transition: transform .3s var(--ease), border-color .3s, box-shadow .3s; }
+.music-card:hover { transform: translateY(-4px); border-color: rgba(34,211,238,.45); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.music-art { flex-shrink: 0; width: 118px; height: 118px; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+.music-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.music-card.is-playing .music-art::after { content: ""; position: absolute; inset: 0; border-radius: 12px; box-shadow: inset 0 0 0 2px var(--cyan); }
+.music-body { display: flex; flex-direction: column; justify-content: center; gap: .55rem; min-width: 0; flex: 1; }
+.music-meta { display: flex; flex-direction: column; line-height: 1.25; }
+.music-artist { font-family: "Space Grotesk"; font-weight: 700; font-size: 1.08rem; }
+.music-title { color: var(--text-dim); font-size: .9rem; }
+.music-controls { display: flex; align-items: center; gap: .7rem; }
+.music-play { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; color: #0a0a12; background: var(--grad); box-shadow: 0 6px 18px rgba(34,211,238,.3); transition: transform .15s var(--ease); }
+.music-play:hover { transform: scale(1.07); }
+.music-play:active { transform: scale(.95); }
+.music-wave { flex: 1; height: 44px; min-width: 0; cursor: pointer; display: block; }
+.music-time { flex-shrink: 0; font-variant-numeric: tabular-nums; font-size: .8rem; color: var(--text-faint); min-width: 32px; text-align: right; }
+.music-link { align-self: flex-start; font-size: .82rem; color: var(--cyan); font-weight: 600; }
+.music-link:hover { text-decoration: underline; }
+.sc-hidden { position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; border: 0; }
+@media (max-width: 520px) {
+  .music-card { flex-direction: column; align-items: flex-start; }
+  .music-art { width: 100%; max-width: 180px; height: auto; aspect-ratio: 1; }
+  .music-body { width: 100%; }
+}
+
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.2rem; }
 .contact-card {
