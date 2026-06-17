@@ -8,6 +8,8 @@ desktop.ini
 .vercel
 node_modules/
 .claude/
+_shots/
+_edgeprof*/
 
 # Build artifacts (translations are baked into js/content.js)
 _i18n/
