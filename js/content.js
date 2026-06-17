@@ -53,7 +53,7 @@ const CONTENT = {
 
       "hero.eyebrow": "Neuchâtel · Switzerland — open to opportunities",
       "hero.role": "Self-taught builder & social-sciences student",
-      "hero.pitch": "A humanities student who ships real software. I turn ideas into working apps — an in-browser school that teaches six programming languages, a prompt-to-Excel generator, a resale marketplace and more. A native French and English speaker — Swiss and American.",
+      "hero.pitch": "A humanities student who ships real software. I turn ideas into things people can actually use — an in-browser school that teaches six programming languages, a prompt-to-Excel generator, a resale marketplace and more. A native French and English speaker — Swiss and American.",
       "hero.cta.work": "View my work",
       "hero.cta.cv": "Download CV",
       "hero.cta.contact": "Contact",
@@ -102,7 +102,7 @@ const CONTENT = {
       "footer.tagline": "Built from scratch, deployed on GitHub Pages.",
       "footer.top": "Back to top ↑",
 
-      "badge.live": "● Live",
+      "badge.live": "Live",
       "badge.dev": "In development",
       "badge.research": "Research",
       "link.live": "Live demo ↗",
@@ -118,6 +118,7 @@ const CONTENT = {
       "a11y.glance": "At a glance",
       "a11y.workExp": "Work experience",
       "a11y.education": "Education",
+      "a11y.preview": "preview",
       "projects.stackNote": "Built with (AI-assisted):",
     },
     techSkills: [
@@ -192,7 +193,7 @@ const CONTENT = {
       "nav.contact": "Contact",
       "hero.eyebrow": "Neuchâtel · Suisse — ouvert aux opportunités",
       "hero.role": "Créateur autodidacte & étudiant en sciences sociales",
-      "hero.pitch": "Un étudiant en sciences humaines qui livre de vraies applications. Je transforme des idées en applications qui fonctionnent — une école dans le navigateur qui enseigne six langages de programmation, un générateur Excel à partir d'une simple phrase, une marketplace de seconde main et bien d'autres. Francophone et anglophone de langue maternelle, de nationalité suisse et américaine.",
+      "hero.pitch": "Un étudiant en sciences humaines qui livre de vraies applications. Je transforme des idées en applications qui fonctionnent — une école dans le navigateur qui enseigne six langages de programmation, un générateur Excel à partir d’une simple phrase, une marketplace de seconde main et bien d’autres. Francophone et anglophone de langue maternelle, de nationalité suisse et américaine.",
       "hero.cta.work": "Voir mes réalisations",
       "hero.cta.cv": "Télécharger le CV",
       "hero.cta.contact": "Contact",
@@ -200,13 +201,13 @@ const CONTENT = {
       "hero.stat.live": "en ligne",
       "hero.stat.langs": "langues maternelles",
       "section.about": "À propos",
-      "section.skills": "Ce que j'apporte",
+      "section.skills": "Ce que j’apporte",
       "section.experience": "Parcours & formation",
-      "section.projects": "Ce que j'ai créé",
+      "section.projects": "Ce que j’ai créé",
       "section.contact": "Me contacter",
-      "about.p1": "Je suis <strong>Florian Sumi</strong> — Suisse et Américain, basé près de Neuchâtel. Le jour, je prépare un <strong>Master en sciences sociales (Médias &amp; Communication) à l'Université de Lausanne (UNIL)</strong> ; le reste du temps, je développe des logiciels.",
-      "about.p2": "Je suis en grande partie <strong>autodidacte</strong>, et je travaille à la manière d'aujourd'hui — je crée des logiciels en <strong>pilotant l'IA</strong> : je conçois, prototype et livre de vraies applications avec l'IA comme partenaire de programmation. Le résultat, ce ne sont pas des maquettes — ce sont des <strong>produits qui fonctionnent</strong>, que l'on peut ouvrir et utiliser : d'une plateforme cyberpunk d'apprentissage du code qui fait tourner de vrais moteurs de langage dans le navigateur, à un outil qui transforme une phrase en un classeur Excel terminé.",
-      "about.p3": "À côté du code, j'apporte une expérience concrète et tournée vers les autres — <strong>vente en magasin, gestion de la caisse et service client</strong> — ainsi qu'une qualification d'enseignement (TEFL). J'apprends vite, je suis fiable, et j'aime transformer une idée floue en quelque chose qui se concrétise.",
+      "about.p1": "Je suis <strong>Florian Sumi</strong> — Suisse et Américain, basé près de Neuchâtel. Le jour, je prépare un <strong>Master en sciences sociales (Médias &amp; Communication) à l’Université de Lausanne (UNIL)</strong> ; le reste du temps, je développe des logiciels.",
+      "about.p2": "Je suis en grande partie <strong>autodidacte</strong>, et je travaille à la manière d’aujourd’hui — je crée des logiciels en <strong>pilotant l’IA</strong> : je conçois, prototype et livre de vraies applications avec l’IA comme partenaire de programmation. Le résultat, ce ne sont pas des maquettes — ce sont des <strong>produits qui fonctionnent</strong>, que l’on peut ouvrir et utiliser : d’une plateforme cyberpunk d’apprentissage du code qui fait tourner de vrais moteurs de langage dans le navigateur, à un outil qui transforme une phrase en un classeur Excel terminé.",
+      "about.p3": "À côté du code, j’apporte une expérience concrète et tournée vers les autres — <strong>vente en magasin, gestion de la caisse et service client</strong> — ainsi qu’une qualification d’enseignement (TEFL). J’apprends vite, je suis fiable, et j’aime transformer une idée floue en quelque chose qui se concrétise.",
       "about.fact.based.label": "Basé à",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "Langues",
@@ -220,14 +221,14 @@ const CONTENT = {
       "timeline.experience": "Expérience",
       "timeline.education": "Formation",
       "projects.lead": "De vraies applications qui fonctionnent — pas des maquettes. Les badges indiquent ce qui est en ligne publiquement par rapport à ce qui est encore en développement.",
-      "projects.mission": "Un fil rouge les relie : mettre la technologie open source entre les mains de tous — prendre des outils habituellement payants et les rendre gratuits.",
-      "section.music": "Musique & lives",
+      "projects.mission": "Un fil rouge les relie : mettre la technologie open source entre les mains de tous — prendre des outils habituellement payants et les rendre gratuits.",
+      "section.music": "Musique & sets live",
       "nav.music": "Musique",
-      "music.lead": "Autodidacte sur Ableton, je produis et je mixe. J'ai développé deux projets — Garage Act et Atomatek — depuis zéro jusqu'à des salles et festivals rémunérés en Suisse et en France, dont le festival Sysmic de l'EPFL.",
+      "music.lead": "Autodidacte sur Ableton, je produis et je mixe. J’ai développé deux projets — Garage Act et Atomatek — depuis zéro jusqu’à des salles et festivals rémunérés en Suisse et en France, dont le festival Sysmic de l’EPFL.",
       "music.more": "Profil complet ↗",
       "music.play": "Lecture",
       "music.pause": "Pause",
-      "contact.lead": "Ouvert aux stages, aux collaborations et aux problèmes intéressants. Le moyen le plus rapide de me joindre :",
+      "contact.lead": "Ouvert aux stages, aux collaborations et aux problèmes intéressants. Le moyen le plus rapide de me joindre :",
       "contact.email": "E-mail",
       "contact.phone": "Téléphone",
       "contact.github": "GitHub",
@@ -235,7 +236,7 @@ const CONTENT = {
       "contact.location.value": "Marin-Epagnier, Neuchâtel",
       "footer.tagline": "Conçu de A à Z, déployé sur GitHub Pages.",
       "footer.top": "Retour en haut ↑",
-      "badge.live": "● En ligne",
+      "badge.live": "En ligne",
       "badge.dev": "En développement",
       "badge.research": "Recherche",
       "link.live": "Démo en ligne ↗",
@@ -244,17 +245,18 @@ const CONTENT = {
       "a11y.skip": "Aller au contenu",
       "a11y.menu": "Ouvrir le menu",
       "a11y.lang": "Choisir la langue",
-      "a11y.scroll": "Défiler jusqu'à la section À propos",
+      "a11y.scroll": "Défiler jusqu’à la section À propos",
       "a11y.home": "Florian Sumi — accueil",
       "a11y.nav": "Navigation principale",
-      "a11y.glance": "En un coup d'œil",
+      "a11y.glance": "En un coup d’œil",
       "a11y.workExp": "Expérience professionnelle",
       "a11y.education": "Formation",
-      "projects.stackNote": "Réalisé avec (assisté par IA) :"
+      "a11y.preview": "aperçu",
+      "projects.stackNote": "Réalisé avec (assisté par IA) :"
     },
     "techSkills": [
-      "Développement agentique — piloter l'IA",
-      "Programmation en binôme avec l'IA",
+      "Développement agentique — piloter l’IA",
+      "Programmation en binôme avec l’IA",
       "Développe en JavaScript & Python (assisté par IA)",
       "Prompt engineering",
       "Prototypage rapide & mise en production",
@@ -282,7 +284,7 @@ const CONTENT = {
         "role": "Vendeur & caissier",
         "org": "Cash n Go",
         "meta": "Commerce de seconde main",
-        "desc": "Vente en boutique et tenue de la caisse dans un magasin de seconde main : conseil à la clientèle, estimation et gestion du stock, et tenue rigoureuse de la caisse."
+        "desc": "Vente en boutique et tenue de la caisse dans un magasin de seconde main : conseil à la clientèle, estimation et gestion du stock, et tenue rigoureuse de la caisse."
       },
       {
         "role": "Stagiaire en documentation technique",
@@ -300,7 +302,7 @@ const CONTENT = {
         "role": "Stagiaire paysagiste",
         "org": "Marco Cellerini",
         "meta": "Extérieur / espaces verts",
-        "desc": "Travaux pratiques d'aménagement paysager et d'entretien des espaces verts."
+        "desc": "Travaux pratiques d’aménagement paysager et d’entretien des espaces verts."
       }
     ],
     "education": [
@@ -317,10 +319,10 @@ const CONTENT = {
         "desc": "Baccalauréat universitaire (Bachelor) en sciences sociales."
       },
       {
-        "role": "CS50 : Introduction à la programmation avec Python",
+        "role": "CS50 : Introduction à la programmation avec Python",
         "org": "Harvard University (en ligne)",
         "meta": "En cours",
-        "desc": "Le cours d'informatique phare de Harvard — actuellement en train de suivre le parcours Python."
+        "desc": "Le cours d’informatique phare de Harvard — actuellement en train de suivre le parcours Python."
       },
       {
         "role": "Maturité gymnasiale — Économie & Droit",
@@ -331,22 +333,22 @@ const CONTENT = {
       {
         "role": "Certificat Qualifi Niveau 5 (TEFL)",
         "org": "The TEFL Academy",
-        "meta": "Enseignement de l'anglais langue étrangère",
-        "desc": "Qualification professionnelle pour enseigner l'anglais en tant que langue étrangère."
+        "meta": "Enseignement de l’anglais langue étrangère",
+        "desc": "Qualification professionnelle pour enseigner l’anglais en tant que langue étrangère."
       }
     ],
     "projects": [
       {
-        "tag": "Plateforme d'apprentissage du code · PWA",
-        "desc": "Une école à l'esthétique terminal de hacker qui vous apprend à coder dans SIX langages — Python, JavaScript, TypeScript, SQL, Lua et Ruby — chacun exécutant un VRAI moteur directement dans votre navigateur. La théorie, puis des exercices corrigés en direct. Inspirée du CS50 de Harvard + Dataquest."
+        "tag": "Plateforme d’apprentissage du code · PWA",
+        "desc": "Une école à l’esthétique terminal de hacker qui vous apprend à coder dans SIX langages — Python, JavaScript, TypeScript, SQL, Lua et Ruby — chacun exécutant un VRAI moteur directement dans votre navigateur. La théorie, puis des exercices corrigés en direct. Inspirée du CS50 de Harvard + Dataquest."
       },
       {
-        "tag": "Apprendre à créer avec l'IA · PWA",
-        "desc": "Une plateforme d'apprentissage qui vous apprend à créer de vrais logiciels en PILOTANT l'IA — en maîtrisant la « boucle agentique ». Des parcours structurés, un mentor IA en direct avec qui dialoguer, un suivi de progression, et un guide qui ne cesse de s'améliorer lui-même."
+        "tag": "Apprendre à créer avec l’IA · PWA",
+        "desc": "Une plateforme d’apprentissage qui vous apprend à créer de vrais logiciels en PILOTANT l’IA — en maîtrisant la « boucle agentique ». Des parcours structurés, un mentor IA en direct avec qui dialoguer, un suivi de progression, et un guide qui ne cesse de s’améliorer lui-même."
       },
       {
         "tag": "Générateur Excel par IA · PWA",
-        "desc": "Dictez ou tapez ce dont vous avez besoin et obtenez un vrai classeur Excel téléchargeable — formules en direct, totaux, mise en forme conditionnelle, listes déroulantes et graphiques. Lit les données depuis des photos et des PDF. S'installe comme une application sur n'importe quel appareil."
+        "desc": "Dictez ou tapez ce dont vous avez besoin et obtenez un vrai classeur Excel téléchargeable — formules en direct, totaux, mise en forme conditionnelle, listes déroulantes et graphiques. Lit les données depuis des photos et des PDF. S’installe comme une application sur n’importe quel appareil."
       },
       {
         "tag": "Triage des e-mails par IA · PWA",
@@ -354,11 +356,11 @@ const CONTENT = {
       },
       {
         "tag": "Générateur de publicités par IA · Multi-agents",
-        "desc": "Un outil d'IA multi-agents qui transforme un brief produit en créations publicitaires prêtes à l'emploi — un pipeline d'agents spécialisés rédige les textes, conçoit les scènes et génère les visuels, chaque scène restant modifiable avant l'export."
+        "desc": "Un outil d’IA multi-agents qui transforme un brief produit en créations publicitaires prêtes à l’emploi — un pipeline d’agents spécialisés rédige les textes, conçoit les scènes et génère les visuels, chaque scène restant modifiable avant l’export."
       },
       {
         "tag": "Marketplace de seconde main · Full-stack",
-        "desc": "Un « Vinted suisse » — une marketplace de mode d'occasion avec de vrais comptes utilisateurs, des annonces et une messagerie. Trilingue (FR / DE / IT). Conçue comme une application web full-stack avec un front-end PWA."
+        "desc": "Un « Vinted suisse » — une marketplace de mode d’occasion avec de vrais comptes utilisateurs, des annonces et une messagerie. Trilingue (FR / DE / IT). Conçue comme une application web full-stack avec un front-end PWA."
       },
       {
         "tag": "Outil visuel / de projection",
@@ -370,7 +372,7 @@ const CONTENT = {
       },
       {
         "tag": "Recherche en trading algorithmique",
-        "desc": "Un bot de paper-trading algorithmique et un banc d'essai de recherche (Python). Évalué en toute honnêteté : une étude de backtesting de stratégies et de gestion du risque — maintenu strictement en paper-trading après que les données ont montré l'absence d'avantage fiable en conditions réelles."
+        "desc": "Un bot de paper-trading algorithmique et un banc d’essai de recherche (Python). Évalué en toute honnêteté : une étude de backtesting de stratégies et de gestion du risque — maintenu strictement en paper-trading après que les données ont montré l’absence d’avantage fiable en conditions réelles."
       }
     ]
   },
@@ -384,12 +386,12 @@ const CONTENT = {
       "nav.contact": "Kontakt",
       "hero.eyebrow": "Neuenburg · Schweiz — offen für neue Chancen",
       "hero.role": "Autodidaktischer Entwickler & Student der Sozialwissenschaften",
-      "hero.pitch": "Ein Student der Geisteswissenschaften, der echte Software ausliefert. Ich verwandle Ideen in funktionierende Apps — eine Schule im Browser, die sechs Programmiersprachen unterrichtet, einen Generator, der aus Text Excel-Dateien macht, einen Second-Hand-Marktplatz und mehr. Französisch und Englisch als Muttersprache, Schweizer und US-amerikanischer Staatsbürger.",
+      "hero.pitch": "Ein Student der Geisteswissenschaften, der echte Software ausliefert. Ich verwandle Ideen in funktionierende Apps — eine Schule im Browser, die sechs Programmiersprachen unterrichtet, einen Generator, der aus einem Satz eine Excel-Datei erzeugt, einen Second-Hand-Marktplatz und mehr. Französisch und Englisch als Muttersprache, Schweizer und US-amerikanischer Staatsbürger.",
       "hero.cta.work": "Meine Arbeiten ansehen",
       "hero.cta.cv": "Lebenslauf herunterladen",
       "hero.cta.contact": "Kontakt",
       "hero.stat.apps": "Projekte",
-      "hero.stat.live": "live online",
+      "hero.stat.live": "online",
       "hero.stat.langs": "Muttersprachen",
       "section.about": "Über mich",
       "section.skills": "Was ich mitbringe",
@@ -427,7 +429,7 @@ const CONTENT = {
       "contact.location.value": "Marin-Epagnier, Neuenburg",
       "footer.tagline": "Von Grund auf selbst gebaut, bereitgestellt auf GitHub Pages.",
       "footer.top": "Nach oben ↑",
-      "badge.live": "● Live",
+      "badge.live": "Live",
       "badge.dev": "In Entwicklung",
       "badge.research": "Forschung",
       "link.live": "Live-Demo ↗",
@@ -442,6 +444,7 @@ const CONTENT = {
       "a11y.glance": "Auf einen Blick",
       "a11y.workExp": "Berufserfahrung",
       "a11y.education": "Ausbildung",
+      "a11y.preview": "Vorschau",
       "projects.stackNote": "Erstellt mit (KI-gestützt):"
     },
     "techSkills": [
@@ -581,7 +584,7 @@ const CONTENT = {
       "hero.cta.cv": "下载简历",
       "hero.cta.contact": "联系我",
       "hero.stat.apps": "个项目",
-      "hero.stat.live": "个已上线",
+      "hero.stat.live": "个已上线项目",
       "hero.stat.langs": "种母语",
       "section.about": "关于我",
       "section.skills": "我能带来什么",
@@ -619,7 +622,7 @@ const CONTENT = {
       "contact.location.value": "Marin-Epagnier，纳沙泰尔",
       "footer.tagline": "从零搭建，部署于 GitHub Pages。",
       "footer.top": "回到顶部 ↑",
-      "badge.live": "● 已上线",
+      "badge.live": "已上线",
       "badge.dev": "开发中",
       "badge.research": "研究中",
       "link.live": "在线演示 ↗",
@@ -634,6 +637,7 @@ const CONTENT = {
       "a11y.glance": "速览",
       "a11y.workExp": "工作经历",
       "a11y.education": "教育背景",
+      "a11y.preview": "预览",
       "projects.stackNote": "构建技术（AI 辅助）："
     },
     "techSkills": [
@@ -782,7 +786,7 @@ const CONTENT = {
       "section.contact": "ご連絡はこちら",
       "about.p1": "<strong>Florian Sumi</strong> と申します — スイスとアメリカの国籍を持ち、Neuchâtel 近郊を拠点にしています。日中は<strong>ローザンヌ大学 (UNIL) で社会科学（メディア＆コミュニケーション）の修士課程</strong>に取り組み、それ以外の時間はソフトウェアを開発しています。",
       "about.p2": "ほぼ<strong>独学</strong>で、現代的なやり方で仕事をしています — 私は<strong>AI を指揮する</strong>ことでソフトウェアを開発します。AI をペアプログラマーとして、設計・プロトタイピング・リリースまで本物のアプリケーションを形にします。出来上がるのはスライド資料ではなく、人が実際に開いて使える<strong>動く製品</strong>です — ブラウザ内で本物の言語エンジンを動かすサイバーパンク風のコード学習プラットフォームから、一文を完成した Excel ブックに変えるツールまで。",
-      "about.p3": "コードに加えて、人と接する現場の経験もあります — <strong>小売販売、現金管理、カスタマーサービス</strong> — さらに英語教授資格 (TEFL) も保有しています。私は習得が早く、信頼でき、漠然としたアイデアを実際に出荷できる形にするのが得意です。",
+      "about.p3": "コードに加えて、人と接する現場の経験もあります — <strong>小売販売、現金管理、カスタマーサービス</strong> — さらに英語教授資格 (TEFL) も保有しています。私は習得が早く、信頼でき、漠然としたアイデアを、実際にリリースできる形にするのが得意です。",
       "about.fact.based.label": "拠点",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "言語",
@@ -811,7 +815,7 @@ const CONTENT = {
       "contact.location.value": "Marin-Epagnier, Neuchâtel",
       "footer.tagline": "ゼロから構築し、GitHub Pages でデプロイ。",
       "footer.top": "トップへ戻る ↑",
-      "badge.live": "● 公開中",
+      "badge.live": "公開中",
       "badge.dev": "開発中",
       "badge.research": "リサーチ",
       "link.live": "デモを見る ↗",
@@ -826,6 +830,7 @@ const CONTENT = {
       "a11y.glance": "ひと目で見る",
       "a11y.workExp": "職務経歴",
       "a11y.education": "学歴",
+      "a11y.preview": "プレビュー",
       "projects.stackNote": "使用技術（AI 支援）："
     },
     "techSkills": [

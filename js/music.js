@@ -9,6 +9,7 @@
   const PAUSE_ICON = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>';
 
   const players = [];
+  const relabelers = []; // re-apply play/pause aria-labels when the language changes
   const tr = (k, fb) => (typeof window.t === "function" ? window.t(k) : fb) || fb;
 
   function fmt(s) {
@@ -122,12 +123,16 @@
     });
 
     setPlaying(false);
+    // Keep this button's label in sync with the active language.
+    relabelers.push(() => playBtn.setAttribute("aria-label", playing ? tr("music.pause", "Pause") : tr("music.play", "Play")));
   }
 
   function init() {
     if (typeof SC === "undefined" || !SC.Widget) return;
     document.querySelectorAll(".music-card").forEach(setupCard);
   }
+
+  window.addEventListener("pf:lang", () => relabelers.forEach((fn) => { try { fn(); } catch (e) {} }));
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

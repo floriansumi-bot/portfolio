@@ -68,7 +68,7 @@ function renderProjects(el, base, loc) {
       return `
       <article class="project-card reveal">
         <div class="project-thumb">
-          <img src="${p.img}" alt="${p.name} — preview" decoding="async" />
+          <img src="${p.img}" alt="${p.name} — ${t("a11y.preview")}" loading="lazy" decoding="async" />
         </div>
         <div class="project-body">
           <div class="project-top">
@@ -307,7 +307,11 @@ function setupConstellation() {
     raf = requestAnimationFrame(draw);
   }
   resize(); init(); draw();
-  window.addEventListener("resize", () => { cancelAnimationFrame(raf); resize(); init(); draw(); });
+  let _rt;
+  window.addEventListener("resize", () => {
+    clearTimeout(_rt);
+    _rt = setTimeout(() => { cancelAnimationFrame(raf); resize(); init(); draw(); }, 150);
+  });
 }
 
 /* ---------- INIT ---------- */
