@@ -152,6 +152,8 @@ function applyLanguage(lang, opts) {
     const st = document.getElementById("langStatus");
     if (st) st.textContent = (window.CONTENT && CONTENT[lang] && CONTENT[lang].label) || lang;
   }
+  // Hero copy width changes with language — let the arcade re-measure its room.
+  try { window.dispatchEvent(new Event("pf:lang")); } catch (e) {}
 }
 
 function detectInitialLang() {

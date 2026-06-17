@@ -120,7 +120,7 @@ body::before {
 .nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s var(--ease); }
 
 /* Mobile nav backdrop (created by JS) */
-.nav-backdrop { position: fixed; inset: 0; z-index: 40; background: rgba(6,6,12,.55); opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility 0s .3s; border: 0; padding: 0; cursor: pointer; }
+.nav-backdrop { position: fixed; inset: 0; z-index: 47; background: rgba(6,6,12,.55); opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility 0s .3s; border: 0; padding: 0; cursor: pointer; }
 .nav-backdrop.show { opacity: 1; visibility: visible; transition: opacity .3s var(--ease); }
 
 /* Header right cluster + language switcher */
@@ -307,6 +307,46 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 }
 .back-to-top { color: var(--text-dim); font-weight: 600; }
 .back-to-top:hover { color: var(--text); }
+
+/* ---------- Hero arcade easter egg ---------- */
+.arcade {
+  position: fixed; top: var(--arcTop, 92px); right: clamp(14px, 2.4vw, 40px); z-index: 45;
+  width: var(--arcW, 280px); display: none; pointer-events: none;
+  transition: transform .62s var(--ease), opacity .5s var(--ease); will-change: transform;
+}
+.arcade.has-room { display: block; }
+.arcade.st-below { transform: translateY(128%); opacity: 0; }
+.arcade.st-show { transform: translateY(0); opacity: 1; pointer-events: auto; }
+/* Exit snaps up instantly (transform not transitioned) so a fast flick or a
+   smooth-scroll nav jump can never catch the widget over the About text;
+   only the fade is animated, keeping it elegant. */
+.arcade.st-above { transform: translateY(-140%); opacity: 0; transition: opacity .22s var(--ease); }
+.arcade-win { background: rgba(13,13,22,.82); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+.arcade-bar { display: flex; align-items: center; gap: .55rem; padding: .45rem .7rem; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.03); }
+.arcade-dots { display: inline-flex; gap: 5px; flex-shrink: 0; }
+.arcade-dots i { width: 9px; height: 9px; border-radius: 50%; background: #3a3a4a; display: block; }
+.arcade-dots i:nth-child(1) { background: #f472b6; }
+.arcade-dots i:nth-child(2) { background: #fbbf24; }
+.arcade-dots i:nth-child(3) { background: #a3e635; }
+.arcade-name { font-family: "Space Grotesk", ui-monospace, monospace; font-size: .68rem; color: var(--text-faint); letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.arcade-body { position: relative; display: flex; gap: .6rem; padding: .65rem; }
+.arcade-board { border-radius: 8px; display: block; }
+.arcade-side { display: flex; flex-direction: column; gap: .45rem; min-width: 44px; }
+.arcade-stat { display: flex; flex-direction: column; gap: 2px; }
+.arcade-stat > span { font-size: .58rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-faint); }
+.arcade-stat b { font-family: "Space Grotesk"; font-size: 1rem; color: var(--text); line-height: 1; }
+#arcadeNext { background: rgba(255,255,255,.03); border-radius: 6px; display: block; }
+.arcade-keys { margin-top: auto; font-size: .56rem; color: var(--text-faint); line-height: 1.6; }
+.arcade-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; background: rgba(9,9,16,.62); backdrop-filter: blur(2px); transition: opacity .3s var(--ease); }
+.arcade-overlay.hide { opacity: 0; pointer-events: none; }
+.arcade-play { background: var(--grad); color: #0a0a12; border: 0; border-radius: 999px; padding: .5rem 1.15rem; font-weight: 700; font-family: "Space Grotesk"; cursor: pointer; box-shadow: 0 6px 18px rgba(139,92,246,.35); transition: transform .15s var(--ease); }
+.arcade-play:hover { transform: scale(1.05); }
+.arcade-otext { font-size: .68rem; color: var(--text-dim); margin: 0; }
+.arcade-touch { display: none; }
+@media (pointer: coarse) {
+  .arcade.has-room.is-active .arcade-touch { display: grid; grid-template-columns: repeat(5, 1fr); gap: .3rem; padding: .45rem .65rem .6rem; }
+  .arcade-touch button { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: .45rem 0; font-size: .95rem; cursor: pointer; }
+}
 
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
