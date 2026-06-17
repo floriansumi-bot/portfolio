@@ -301,11 +301,28 @@
     computeLayout();
     const sz = widgetSize();
     const vh = window.innerHeight;
-    roomOK = (_cellW >= 10) && (_cellH >= 10) && (vh >= MINH) && (vh >= sz.h + TOP + 10);
+    const wide = _cellW >= 10;                                   // horizontal room beside the hero text (portrait phones fail this)
+    const gainRoom = wide && _cellH >= 10 && vh >= MINH && vh >= sz.h + TOP + 10;
+    // Hysteresis: once shown, tolerate the ~60–100px viewport shrink that happens when
+    // a mobile browser's URL bar slides in on scroll, so `display` never flips on/off
+    // mid-scroll. A display toggle can't be transitioned — that was making the window
+    // blink in/out instead of gliding on Android (landscape especially).
+    const keepRoom = wide && _cellH >= 6 && vh >= MINH - 60 && vh >= sz.h + TOP - 90;
+    const was = roomOK;
+    roomOK = was ? keepRoom : gainRoom;
     root.style.setProperty("--arcW", sz.w + "px");
     root.classList.toggle("has-room", roomOK);
     draw();
-    updateSlide();
+    if (roomOK && !was) {
+      // Just gained room: park off-screen below (now displayed), force a reflow, then
+      // resolve the real state next frame so the entrance actually glides in.
+      root.classList.remove("st-show", "st-above"); root.classList.add("st-below");
+      state = "below"; root.inert = true; root.setAttribute("aria-hidden", "true");
+      void root.offsetHeight;
+      requestAnimationFrame(updateSlide);
+    } else {
+      updateSlide();
+    }
   }
 
   /* ---- scroll choreography: slide in / rest / slide out ---- */
