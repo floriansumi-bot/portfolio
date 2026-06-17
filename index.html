@@ -71,13 +71,13 @@
     </div>
   </header>
 
-  <!-- Hero easter egg: a scroll-aware, playable mini falling-blocks game.
-       Shows only when there's genuine empty space beside the hero. -->
-  <aside id="arcade" class="arcade st-below" inert aria-hidden="true" aria-label="Mini game (easter egg)">
+  <!-- Hero mini game: a scroll-aware, playable falling-blocks game.
+       Auto-plays itself; shows only when there's genuine empty space beside the hero. -->
+  <aside id="arcade" class="arcade st-below" inert aria-hidden="true" aria-label="Mini game">
     <div class="arcade-win">
       <div class="arcade-bar">
         <span class="arcade-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="arcade-name">// blocks.js — a wink to the geeks</span>
+        <span class="arcade-name">// blocks.js</span>
       </div>
       <div class="arcade-body">
         <canvas id="arcadeCanvas" class="arcade-board" aria-hidden="true"></canvas>
@@ -86,10 +86,6 @@
           <div class="arcade-stat"><span>score</span><b id="arcadeScore">0</b></div>
           <div class="arcade-stat"><span>lines</span><b id="arcadeLines">0</b></div>
           <div class="arcade-keys" aria-hidden="true">← → ↓<br>↑ rotate<br>⎵ drop</div>
-        </div>
-        <div class="arcade-overlay" id="arcadeOverlay">
-          <button class="arcade-play" id="arcadePlay" type="button">▶ play</button>
-          <p class="arcade-otext" id="arcadeOverlayText">a tiny easter egg</p>
         </div>
       </div>
       <div class="arcade-touch" id="arcadeTouch" aria-hidden="true">

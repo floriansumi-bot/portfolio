@@ -7,6 +7,7 @@ desktop.ini
 # Local tooling
 .vercel
 node_modules/
+.claude/
 
 # Build artifacts (translations are baked into js/content.js)
 _i18n/

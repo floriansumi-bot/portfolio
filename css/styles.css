@@ -308,7 +308,7 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 .back-to-top { color: var(--text-dim); font-weight: 600; }
 .back-to-top:hover { color: var(--text); }
 
-/* ---------- Hero arcade easter egg ---------- */
+/* ---------- Hero arcade mini game ---------- */
 .arcade {
   position: fixed; top: var(--arcTop, 92px); right: clamp(14px, 2.4vw, 40px); z-index: 45;
   width: var(--arcW, 280px); display: none; pointer-events: none;
@@ -317,10 +317,10 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 .arcade.has-room { display: block; }
 .arcade.st-below { transform: translateY(128%); opacity: 0; }
 .arcade.st-show { transform: translateY(0); opacity: 1; pointer-events: auto; }
-/* Exit snaps up instantly (transform not transitioned) so a fast flick or a
-   smooth-scroll nav jump can never catch the widget over the About text;
-   only the fade is animated, keeping it elegant. */
-.arcade.st-above { transform: translateY(-140%); opacity: 0; transition: opacity .22s var(--ease); }
+/* Exit slides up out of the viewport using the same eased transition as the
+   entrance, so it leaves as smoothly as it arrives — never covering the About
+   text (the exit is triggered well before the text reaches it). */
+.arcade.st-above { transform: translateY(-145%); opacity: 0; }
 .arcade-win { background: rgba(13,13,22,.82); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
 .arcade-bar { display: flex; align-items: center; gap: .55rem; padding: .45rem .7rem; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.03); }
 .arcade-dots { display: inline-flex; gap: 5px; flex-shrink: 0; }
@@ -337,14 +337,9 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 .arcade-stat b { font-family: "Space Grotesk"; font-size: 1rem; color: var(--text); line-height: 1; }
 #arcadeNext { background: rgba(255,255,255,.03); border-radius: 6px; display: block; }
 .arcade-keys { margin-top: auto; font-size: .56rem; color: var(--text-faint); line-height: 1.6; }
-.arcade-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; background: rgba(9,9,16,.62); backdrop-filter: blur(2px); transition: opacity .3s var(--ease); }
-.arcade-overlay.hide { opacity: 0; pointer-events: none; }
-.arcade-play { background: var(--grad); color: #0a0a12; border: 0; border-radius: 999px; padding: .5rem 1.15rem; font-weight: 700; font-family: "Space Grotesk"; cursor: pointer; box-shadow: 0 6px 18px rgba(139,92,246,.35); transition: transform .15s var(--ease); }
-.arcade-play:hover { transform: scale(1.05); }
-.arcade-otext { font-size: .68rem; color: var(--text-dim); margin: 0; }
 .arcade-touch { display: none; }
 @media (pointer: coarse) {
-  .arcade.has-room.is-active .arcade-touch { display: grid; grid-template-columns: repeat(5, 1fr); gap: .3rem; padding: .45rem .65rem .6rem; }
+  .arcade.has-room.st-show .arcade-touch { display: grid; grid-template-columns: repeat(5, 1fr); gap: .3rem; padding: .45rem .65rem .6rem; }
   .arcade-touch button { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: .45rem 0; font-size: .95rem; cursor: pointer; }
 }
 
@@ -383,7 +378,7 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
   .header-right { gap: .6rem; }
 }
 /* Short + wide viewports (landscape phones): scale the oversized hero column down
-   so the arcade easter egg has room to its right (and the hero is less cramped). */
+   so the arcade mini game has room to its right (and the hero is less cramped). */
 @media (max-height: 560px) and (min-width: 760px) {
   .hero-title { font-size: clamp(2.2rem, 9vw, 4.2rem); }
   .hero-pitch { max-width: 46%; font-size: .95rem; }
