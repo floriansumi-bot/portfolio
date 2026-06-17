@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florian Sumi — Builder &amp; Social-Sciences Student</title>
+  <meta name="description" content="Florian Sumi — Swiss/American self-taught builder and UNIL social-sciences student. I turn ideas into working software: an in-browser code school, a prompt-to-Excel app, a resale marketplace and more. Native French & English, based in Neuchâtel." />
+  <meta name="author" content="Florian Sumi" />
+  <meta name="theme-color" content="#0a0a12" />
+  <link rel="canonical" href="https://floriansumi-bot.github.io/portfolio/" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Florian Sumi — Builder & Social-Sciences Student" />
+  <meta property="og:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
+  <meta property="og:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.png" />
+  <meta property="og:url" content="https://floriansumi-bot.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Florian Sumi — Builder & Social-Sciences Student" />
+  <meta name="twitter:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
+  <meta name="twitter:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body id="top">
+  <!-- Animated background -->
+  <div class="bg-aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / nav -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="Florian Sumi — home">
+      <span class="brand-mark">FS</span>
+      <span class="brand-name">Florian&nbsp;Sumi</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal">Neuchâtel · Switzerland — open to opportunities</p>
+        <h1 class="hero-title reveal">
+          <span class="line">Florian</span>
+          <span class="line gradient-text">Sumi</span>
+        </h1>
+        <p class="hero-role reveal">Self-taught builder &amp; social-sciences student</p>
+        <p class="hero-pitch reveal">
+          A humanities student who ships real software. I turn ideas into working apps —
+          an in-browser school that teaches six programming languages, a prompt-to-Excel
+          generator, a resale marketplace and more. Native 🇫🇷 French &amp; 🇬🇧 English.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="assets/Florian-Sumi-CV.pdf" class="btn btn-ghost" download>Download CV</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
+        <ul class="hero-stats reveal" aria-label="At a glance">
+          <li aria-label="9 apps built"><strong data-count="9" aria-hidden="true">9</strong><span>apps built</span></li>
+          <li aria-label="3 live online"><strong data-count="3" aria-hidden="true">3</strong><span>live online</span></li>
+          <li aria-label="2 native languages"><strong data-count="2" aria-hidden="true">2</strong><span>native languages</span></li>
+        </ul>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-portrait reveal">
+          <div class="portrait-frame">
+            <img src="assets/profile.jpg" alt="Portrait of Florian Sumi" id="portrait"
+                 onerror="this.style.display='none';this.parentElement.classList.add('monogram')" />
+            <span class="portrait-monogram" aria-hidden="true">FS</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Florian Sumi</strong> — Swiss and American, based near Neuchâtel.
+            By day I'm doing a <strong>Master's in Social Sciences (Media &amp; Communication)
+            at the University of Lausanne</strong>; the rest of the time I build software.
+          </p>
+          <p>
+            I'm largely <strong>self-taught</strong>, and I work the modern way — designing,
+            prototyping and shipping real applications with AI as a pair-programmer. The result
+            isn't slideware: it's <strong>working products</strong> people can open and use, from a
+            cyberpunk code-learning platform running real language engines in the browser, to a
+            tool that turns a sentence into a finished Excel workbook.
+          </p>
+          <p>
+            Alongside the code I bring hands-on, people-facing experience — <strong>retail sales,
+            cash handling and customer service</strong> — plus a teaching qualification (TEFL).
+            I learn fast, I'm reliable, and I like turning a vague idea into something that ships.
+          </p>
+          <ul class="about-facts">
+            <li><span>Based in</span> Marin-Epagnier, Neuchâtel 🇨🇭</li>
+            <li><span>Languages</span> French (native) · English (native) · German (school)</li>
+            <li><span>Studying</span> MA Social Sciences (Media &amp; Communication) — UNIL</li>
+            <li><span>Also does</span> Music production (Ableton) · live shows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">What I bring</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3>🛠️ Builder &amp; tech</h3>
+          <ul class="chips" id="techSkills"></ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3>🤝 People &amp; professional</h3>
+          <ul class="chips" id="softSkills"></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience + Education -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Experience &amp; education</h2>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline" id="experienceList" aria-label="Work experience">
+          <h3 class="timeline-heading reveal">Experience</h3>
+        </div>
+        <div class="timeline" id="educationList" aria-label="Education">
+          <h3 class="timeline-heading reveal">Education</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Things I've built</h2>
+      </div>
+      <p class="section-lead reveal">
+        Real, working applications — not mockups. Badges show what's publicly live versus still
+        in development.
+      </p>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title">Get in touch</h2>
+      </div>
+      <p class="section-lead reveal">
+        Open to internships, collaborations and interesting problems. The fastest way to reach me:
+      </p>
+      <div class="contact-grid reveal">
+        <a class="contact-card" href="mailto:Florian.Sumi@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">Florian.Sumi@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+41786452178">
+          <span class="contact-icon">📞</span>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+41 78 645 21 78</span>
+        </a>
+        <a class="contact-card" href="https://github.com/floriansumi-bot" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">💻</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@floriansumi-bot</span>
+        </a>
+        <div class="contact-card contact-card--static">
+          <span class="contact-icon">📍</span>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Marin-Epagnier, Neuchâtel 🇨🇭</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Florian Sumi — Built from scratch, deployed on Vercel.</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

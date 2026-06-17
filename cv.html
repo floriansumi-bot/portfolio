@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Florian Sumi — CV</title>
+<style>
+  :root {
+    --ink: #15151f;
+    --muted: #555068;
+    --accent: #6d28d9;
+    --accent2: #0891b2;
+    --line: #e6e3ef;
+    --chip: #f3f1fb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    color: var(--ink); background: #fff; line-height: 1.5; font-size: 10.5pt;
+  }
+  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 16mm 15mm; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem;
+    border-bottom: 3px solid var(--accent); padding-bottom: 12px; margin-bottom: 16px; }
+  .name { font-size: 27pt; font-weight: 800; letter-spacing: -.5px; line-height: 1; }
+  .role { color: var(--accent); font-weight: 700; font-size: 11.5pt; margin-top: 4px; }
+  .contact { text-align: right; font-size: 9pt; color: var(--muted); }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact div { margin-bottom: 2px; }
+
+  .body { display: grid; grid-template-columns: 1fr 64mm; gap: 12mm; }
+  h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent2);
+    border-bottom: 1px solid var(--line); padding-bottom: 4px; margin: 0 0 9px; }
+  section { margin-bottom: 15px; }
+
+  .summary { color: #3a3650; }
+
+  .item { margin-bottom: 11px; }
+  .item .top { display: flex; justify-content: space-between; gap: 8px; }
+  .item .title { font-weight: 700; }
+  .item .org { color: var(--accent); font-weight: 600; }
+  .item .meta { color: var(--muted); font-size: 8.6pt; white-space: nowrap; }
+  .item p { color: #46415a; font-size: 9.4pt; margin-top: 2px; }
+
+  .proj { margin-bottom: 9px; }
+  .proj .title { font-weight: 700; }
+  .proj .badge { font-size: 7.4pt; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+    padding: 1px 6px; border-radius: 99px; margin-left: 6px; vertical-align: middle; }
+  .badge.live { background: #dcfce7; color: #15803d; }
+  .badge.dev { background: #fce7f3; color: #be185d; }
+  .badge.research { background: #cffafe; color: #0e7490; }
+  .proj p { color: #46415a; font-size: 9.2pt; }
+  .proj .url { color: var(--accent2); font-size: 8.6pt; word-break: break-all; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chips span { background: var(--chip); border: 1px solid var(--line); border-radius: 99px;
+    padding: 2px 8px; font-size: 8.6pt; color: #423d57; }
+  .lang { display: flex; justify-content: space-between; font-size: 9.4pt; margin-bottom: 3px; }
+  .lang b { color: var(--accent2); font-weight: 600; }
+  .side .block { margin-bottom: 15px; }
+
+  @page { size: A4; margin: 0; }
+  @media print { .page { margin: 0; } }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="name">Florian Sumi</div>
+        <div class="role">Self-taught builder &amp; social-sciences student</div>
+      </div>
+      <div class="contact">
+        <div><a href="mailto:Florian.Sumi@gmail.com">Florian.Sumi@gmail.com</a></div>
+        <div>+41 78 645 21 78</div>
+        <div>Marin, Neuchâtel, Switzerland</div>
+        <div><a href="https://github.com/floriansumi-bot">github.com/floriansumi-bot</a></div>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="main">
+        <section>
+          <h2>Profile</h2>
+          <p class="summary">
+            Master's student in social sciences (media &amp; communication) at the University of Lausanne and a self-taught software builder.
+            I design and ship real, working web applications — using modern AI-assisted development —
+            from a six-language in-browser code school to a prompt-to-Excel generator. Reliable,
+            adaptable and fast-learning, with hands-on retail and customer-service experience.
+            Native French &amp; English.
+          </p>
+        </section>
+
+        <section>
+          <h2>Selected projects</h2>
+          <div class="proj">
+            <div class="title">THE CONSTRUCT <span class="badge live">Live</span></div>
+            <p>A hacker-terminal code school teaching six languages (Python, JS, TypeScript, SQL, Lua, Ruby),
+               each running a real engine in the browser. Live demo online.</p>
+            <div class="url">floriansumi-bot.github.io/the-construct</div>
+          </div>
+          <div class="proj">
+            <div class="title">SheetGenie <span class="badge dev">In dev</span></div>
+            <p>A PWA that turns a plain-language request into a real, downloadable Excel workbook —
+               formulas, charts, conditional formatting; reads data from photos &amp; PDFs.</p>
+          </div>
+          <div class="proj">
+            <div class="title">SAPE <span class="badge dev">In dev</span></div>
+            <p>A "Swiss Vinted" second-hand marketplace — full-stack web app with accounts, listings
+               and messaging; trilingual (FR/DE/IT).</p>
+          </div>
+          <div class="proj">
+            <div class="title">HyperFractal &amp; Barathon <span class="badge dev">In dev</span></div>
+            <p>An infinite-zoom fractal/projection-mapping visualizer for live shows; and a bar-crawl
+               app covering every bar in Switzerland (React Native).</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <div class="item">
+            <div class="top"><span><span class="title">Salesman &amp; Cashier</span> · <span class="org">Cash n Go</span></span></div>
+            <p>Second-hand retail: customer advice, stock handling and valuation, accurate cash management.</p>
+          </div>
+          <div class="item">
+            <div class="top"><span><span class="title">Technical Documentation Intern</span> · <span class="org">LNS, Orvin</span></span></div>
+            <p>Produced and structured technical documentation in the machine-tool domain.</p>
+          </div>
+          <div class="item">
+            <div class="top"><span><span class="title">Logistics Intern</span> · <span class="org">Rolex SA, Geneva</span></span></div>
+            <p>Inventory management and parcel preparation and dispatch.</p>
+          </div>
+          <div class="item">
+            <div class="top"><span><span class="title">Landscaping Intern</span> · <span class="org">Marco Cellerini</span></span></div>
+            <p>Hands-on landscaping and grounds work.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="side">
+        <div class="block">
+          <h2>Education</h2>
+          <div class="item">
+            <div class="title">MA, Social Sciences</div>
+            <div class="org" style="font-size:9.4pt">University of Lausanne</div>
+            <div class="meta">Media &amp; Communication · in progress</div>
+          </div>
+          <div class="item">
+            <div class="title">BA, Social Sciences</div>
+            <div class="org" style="font-size:9.4pt">University of Lausanne</div>
+            <div class="meta">Completed</div>
+          </div>
+          <div class="item">
+            <div class="title">Federal Maturity</div>
+            <div class="org" style="font-size:9.4pt">Lycée Jean-Piaget</div>
+            <div class="meta">Economics &amp; Law</div>
+          </div>
+          <div class="item">
+            <div class="title">TEFL — Qualifi Level 5</div>
+            <div class="org" style="font-size:9.4pt">The TEFL Academy</div>
+            <div class="meta">Teaching English</div>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2>Tech skills</h2>
+          <div class="chips">
+            <span>JavaScript</span><span>Python</span><span>HTML/CSS</span><span>SQL</span>
+            <span>Node/Express</span><span>PWAs</span><span>Git &amp; GitHub</span><span>Vercel</span>
+            <span>AI-assisted dev</span><span>Ableton Live</span><span>Video editing</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2>Strengths</h2>
+          <div class="chips">
+            <span>Customer service</span><span>Cash handling</span><span>Fast learner</span>
+            <span>Reliable</span><span>Adaptable</span><span>Self-directed</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2>Languages</h2>
+          <div class="lang"><span>French</span><b>Native</b></div>
+          <div class="lang"><span>English</span><b>Native</b></div>
+          <div class="lang"><span>German</span><b>School level</b></div>
+        </div>
+
+        <div class="block">
+          <h2>Details</h2>
+          <div class="lang"><span>Nationality</span><b>Swiss / American</b></div>
+          <div class="lang"><span>Based in</span><b>Neuchâtel, CH</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
