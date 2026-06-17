@@ -23,7 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body id="top">
@@ -35,7 +35,8 @@
   </div>
   <canvas id="constellation" aria-hidden="true"></canvas>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+  <p id="langStatus" class="sr-only" role="status" aria-live="polite"></p>
 
   <!-- Header / nav -->
   <header class="site-header" id="siteHeader">
@@ -43,47 +44,59 @@
       <span class="brand-mark">FS</span>
       <span class="brand-name">Florian&nbsp;Sumi</span>
     </a>
-    <nav class="nav" aria-label="Primary">
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-list" id="navList">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <div class="lang-switch">
+        <span class="lang-globe" aria-hidden="true">🌐</span>
+        <select id="langSwitch" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
     <!-- Hero -->
     <section class="hero" id="hero">
       <div class="hero-inner">
-        <p class="hero-eyebrow reveal">Neuchâtel · Switzerland — open to opportunities</p>
+        <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Neuchâtel · Switzerland — open to opportunities</p>
         <h1 class="hero-title reveal">
           <span class="line">Florian</span>
           <span class="line gradient-text">Sumi</span>
         </h1>
-        <p class="hero-role reveal">Self-taught builder &amp; social-sciences student</p>
-        <p class="hero-pitch reveal">
+        <p class="hero-role reveal" data-i18n="hero.role">Self-taught builder &amp; social-sciences student</p>
+        <p class="hero-pitch reveal" data-i18n="hero.pitch">
           A humanities student who ships real software. I turn ideas into working apps —
           an in-browser school that teaches six programming languages, a prompt-to-Excel
           generator, a resale marketplace and more. Native 🇫🇷 French &amp; 🇬🇧 English.
         </p>
         <div class="hero-actions reveal">
-          <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="assets/Florian-Sumi-CV.pdf" class="btn btn-ghost" download>Download CV</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">View my work</a>
+          <a href="assets/Florian-Sumi-CV.pdf" class="btn btn-ghost" download data-i18n="hero.cta.cv">Download CV</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">Contact</a>
         </div>
         <ul class="hero-stats reveal" aria-label="At a glance">
-          <li aria-label="9 apps built"><strong data-count="9" aria-hidden="true">9</strong><span>apps built</span></li>
-          <li aria-label="3 live online"><strong data-count="3" aria-hidden="true">3</strong><span>live online</span></li>
-          <li aria-label="2 native languages"><strong data-count="2" aria-hidden="true">2</strong><span>native languages</span></li>
+          <li data-stat="apps" aria-label="9 apps built"><strong data-count="9" aria-hidden="true">9</strong><span data-i18n="hero.stat.apps">apps built</span></li>
+          <li data-stat="live" aria-label="3 live online"><strong data-count="3" aria-hidden="true">3</strong><span data-i18n="hero.stat.live">live online</span></li>
+          <li data-stat="langs" aria-label="2 native languages"><strong data-count="2" aria-hidden="true">2</strong><span data-i18n="hero.stat.langs">native languages</span></li>
         </ul>
       </div>
-      <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+      <a href="#about" class="scroll-cue" aria-label="Scroll to the About section">
         <span></span>
       </a>
     </section>
@@ -92,7 +105,7 @@
     <section class="section" id="about">
       <div class="section-head reveal">
         <span class="section-index">01</span>
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title" data-i18n="section.about">About</h2>
       </div>
       <div class="about-grid">
         <div class="about-portrait reveal">
@@ -103,28 +116,29 @@
           </div>
         </div>
         <div class="about-text reveal">
-          <p>
+          <p data-i18n-html="about.p1">
             I'm <strong>Florian Sumi</strong> — Swiss and American, based near Neuchâtel.
             By day I'm doing a <strong>Master's in Social Sciences (Media &amp; Communication)
             at the University of Lausanne</strong>; the rest of the time I build software.
           </p>
-          <p>
-            I'm largely <strong>self-taught</strong>, and I work the modern way — designing,
-            prototyping and shipping real applications with AI as a pair-programmer. The result
-            isn't slideware: it's <strong>working products</strong> people can open and use, from a
-            cyberpunk code-learning platform running real language engines in the browser, to a
-            tool that turns a sentence into a finished Excel workbook.
+          <p data-i18n-html="about.p2">
+            I'm largely <strong>self-taught</strong>, and I work the modern way — I build software
+            by <strong>directing AI</strong>: designing, prototyping and shipping real applications
+            with AI as a pair-programmer. The result isn't slideware — it's <strong>working
+            products</strong> people can open and use, from a cyberpunk code-learning platform
+            running real language engines in the browser, to a tool that turns a sentence into a
+            finished Excel workbook.
           </p>
-          <p>
+          <p data-i18n-html="about.p3">
             Alongside the code I bring hands-on, people-facing experience — <strong>retail sales,
             cash handling and customer service</strong> — plus a teaching qualification (TEFL).
             I learn fast, I'm reliable, and I like turning a vague idea into something that ships.
           </p>
           <ul class="about-facts">
-            <li><span>Based in</span> Marin-Epagnier, Neuchâtel 🇨🇭</li>
-            <li><span>Languages</span> French (native) · English (native) · German (school)</li>
-            <li><span>Studying</span> MA Social Sciences (Media &amp; Communication) — UNIL</li>
-            <li><span>Also does</span> Music production (Ableton) · live shows</li>
+            <li><span class="fact-key" data-i18n="about.fact.based.label">Based in</span> <span class="fact-val" data-i18n="about.fact.based.value">Marin-Epagnier, Neuchâtel 🇨🇭</span></li>
+            <li><span class="fact-key" data-i18n="about.fact.langs.label">Languages</span> <span class="fact-val" data-i18n="about.fact.langs.value">French (native) · English (native) · German (school)</span></li>
+            <li><span class="fact-key" data-i18n="about.fact.study.label">Studying</span> <span class="fact-val" data-i18n="about.fact.study.value">MA Social Sciences (Media &amp; Communication) — UNIL</span></li>
+            <li><span class="fact-key" data-i18n="about.fact.also.label">Also does</span> <span class="fact-val" data-i18n="about.fact.also.value">Music production (Ableton) · live shows</span></li>
           </ul>
         </div>
       </div>
@@ -134,15 +148,15 @@
     <section class="section" id="skills">
       <div class="section-head reveal">
         <span class="section-index">02</span>
-        <h2 class="section-title">What I bring</h2>
+        <h2 class="section-title" data-i18n="section.skills">What I bring</h2>
       </div>
       <div class="skills-grid">
         <article class="skill-card reveal">
-          <h3>🛠️ Builder &amp; tech</h3>
+          <h3 data-i18n="skills.tech.heading">🛠️ Building &amp; AI</h3>
           <ul class="chips" id="techSkills"></ul>
         </article>
         <article class="skill-card reveal">
-          <h3>🤝 People &amp; professional</h3>
+          <h3 data-i18n="skills.people.heading">🤝 People &amp; professional</h3>
           <ul class="chips" id="softSkills"></ul>
         </article>
       </div>
@@ -152,14 +166,16 @@
     <section class="section" id="experience">
       <div class="section-head reveal">
         <span class="section-index">03</span>
-        <h2 class="section-title">Experience &amp; education</h2>
+        <h2 class="section-title" data-i18n="section.experience">Experience &amp; education</h2>
       </div>
       <div class="timeline-grid">
         <div class="timeline" id="experienceList" aria-label="Work experience">
-          <h3 class="timeline-heading reveal">Experience</h3>
+          <h3 class="timeline-heading reveal" data-i18n="timeline.experience">Experience</h3>
+          <div class="tl-items" id="experienceItems"></div>
         </div>
         <div class="timeline" id="educationList" aria-label="Education">
-          <h3 class="timeline-heading reveal">Education</h3>
+          <h3 class="timeline-heading reveal" data-i18n="timeline.education">Education</h3>
+          <div class="tl-items" id="educationItems"></div>
         </div>
       </div>
     </section>
@@ -168,9 +184,9 @@
     <section class="section" id="projects">
       <div class="section-head reveal">
         <span class="section-index">04</span>
-        <h2 class="section-title">Things I've built</h2>
+        <h2 class="section-title" data-i18n="section.projects">Things I've built</h2>
       </div>
-      <p class="section-lead reveal">
+      <p class="section-lead reveal" data-i18n="projects.lead">
         Real, working applications — not mockups. Badges show what's publicly live versus still
         in development.
       </p>
@@ -181,41 +197,42 @@
     <section class="section contact" id="contact">
       <div class="section-head reveal">
         <span class="section-index">05</span>
-        <h2 class="section-title">Get in touch</h2>
+        <h2 class="section-title" data-i18n="section.contact">Get in touch</h2>
       </div>
-      <p class="section-lead reveal">
+      <p class="section-lead reveal" data-i18n="contact.lead">
         Open to internships, collaborations and interesting problems. The fastest way to reach me:
       </p>
       <div class="contact-grid reveal">
         <a class="contact-card" href="mailto:Florian.Sumi@gmail.com">
           <span class="contact-icon">✉️</span>
-          <span class="contact-label">Email</span>
+          <span class="contact-label" data-i18n="contact.email">Email</span>
           <span class="contact-value">Florian.Sumi@gmail.com</span>
         </a>
         <a class="contact-card" href="tel:+41786452178">
           <span class="contact-icon">📞</span>
-          <span class="contact-label">Phone</span>
+          <span class="contact-label" data-i18n="contact.phone">Phone</span>
           <span class="contact-value">+41 78 645 21 78</span>
         </a>
         <a class="contact-card" href="https://github.com/floriansumi-bot" target="_blank" rel="noopener noreferrer">
           <span class="contact-icon">💻</span>
-          <span class="contact-label">GitHub</span>
+          <span class="contact-label" data-i18n="contact.github">GitHub</span>
           <span class="contact-value">@floriansumi-bot</span>
         </a>
         <div class="contact-card contact-card--static">
           <span class="contact-icon">📍</span>
-          <span class="contact-label">Location</span>
-          <span class="contact-value">Marin-Epagnier, Neuchâtel 🇨🇭</span>
+          <span class="contact-label" data-i18n="contact.location">Location</span>
+          <span class="contact-value" data-i18n="contact.location.value">Marin-Epagnier, Neuchâtel 🇨🇭</span>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Florian Sumi — Built from scratch, deployed on Vercel.</p>
-    <a href="#top" class="back-to-top">Back to top ↑</a>
+    <p>© <span id="year"></span> Florian Sumi — <span data-i18n="footer.tagline">Built from scratch, deployed on GitHub Pages.</span></p>
+    <a href="#top" class="back-to-top" data-i18n="footer.top">Back to top ↑</a>
   </footer>
 
+  <script src="js/content.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

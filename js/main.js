@@ -1,189 +1,36 @@
 /* ============================================================
    Florian Sumi — Portfolio logic
-   Data-driven: edit the arrays below to update the site.
+   Content + translations live in js/content.js (PROJECTS_BASE, CONTENT).
+   This file renders the page and handles language switching.
    ============================================================ */
 
-/* ---------- DATA: edit me ---------- */
+const LANGS = ["en", "fr", "de", "zh", "ja"];
+let LANG = "en";
+let _initialized = false;
 
-const TECH_SKILLS = [
-  "JavaScript", "Python", "HTML & CSS", "SQL", "Node / Express",
-  "Progressive Web Apps", "Git & GitHub", "Vercel deploy",
-  "AI-assisted development", "Ableton Live", "Audio production", "Video editing",
-  "UI / layout design",
-];
-
-const SOFT_SKILLS = [
-  "Customer service", "Cash handling", "Retail sales", "Teaching (TEFL)",
-  "Bilingual FR / EN", "Fast learner", "Reliable & trustworthy",
-  "Adaptable", "Self-directed", "Problem solving",
-];
-
-const EXPERIENCE = [
-  {
-    role: "Salesman & Cashier",
-    org: "Cash n Go",
-    meta: "Second-hand retail",
-    desc: "Front-of-house sales and till operation in a second-hand store: advising customers, valuing and handling stock, and managing cash accurately.",
-  },
-  {
-    role: "Technical Documentation Intern",
-    org: "LNS, Orvin",
-    meta: "Machine-tools industry",
-    desc: "Produced and structured technical documentation in the machine-tool domain.",
-  },
-  {
-    role: "Logistics Intern",
-    org: "Rolex SA, Geneva",
-    meta: "Inventory & dispatch",
-    desc: "Supported logistics operations — inventory management and parcel preparation and shipping.",
-  },
-  {
-    role: "Landscaping Intern",
-    org: "Marco Cellerini",
-    meta: "Outdoor / grounds",
-    desc: "Hands-on landscaping and grounds work.",
-  },
-];
-
-const EDUCATION = [
-  {
-    role: "MA, Social Sciences — Media & Communication",
-    org: "University of Lausanne (UNIL)",
-    meta: "In progress",
-    desc: "Master's in social sciences, specialising in media and communication.",
-  },
-  {
-    role: "BA, Social Sciences",
-    org: "University of Lausanne (UNIL)",
-    meta: "Completed",
-    desc: "Bachelor's degree in social sciences.",
-  },
-  {
-    role: "Federal Maturity — Economics & Law",
-    org: "Lycée Jean-Piaget, Neuchâtel",
-    meta: "Diplôme de maturité gymnasiale",
-    desc: "Swiss academic baccalaureate with a focus on economics and law.",
-  },
-  {
-    role: "Qualifi Level 5 Certificate (TEFL)",
-    org: "The TEFL Academy",
-    meta: "Teaching English as a Foreign Language",
-    desc: "Professional qualification to teach English as a foreign language.",
-  },
-];
-
-const PROJECTS = [
-  {
-    name: "THE CONSTRUCT",
-    emoji: "🧩",
-    grad: "linear-gradient(135deg, #06b6d4, #7c3aed)",
-    tag: "Learn-to-code platform · PWA",
-    status: "live",
-    desc: "A hacker-terminal-themed school that teaches you to code across SIX languages — Python, JavaScript, TypeScript, SQL, Lua and Ruby — each running a REAL engine inside your browser. Theory, then live-graded exercises. Modeled on Harvard's CS50 + Dataquest.",
-    tech: ["JavaScript", "WASM", "Pyodide", "SQLite", "GitHub Pages"],
-    live: "https://floriansumi-bot.github.io/the-construct/",
-    repo: "https://github.com/floriansumi-bot/the-construct",
-  },
-  {
-    name: "The Loop Academy",
-    emoji: "🔁",
-    grad: "linear-gradient(135deg, #22d3ee, #6d28d9)",
-    tag: "Learn to build with AI · PWA",
-    status: "live",
-    desc: "A learning platform that teaches you to build real software by DIRECTING AI — mastering the \"agentic loop\". Structured tracks, a live AI mentor you can chat with, progress tracking, and a guide that keeps improving itself.",
-    tech: ["JavaScript", "AI agents", "PWA", "Vercel"],
-    live: "https://loop-academy.vercel.app/",
-    repo: "",
-  },
-  {
-    name: "SheetGenie",
-    emoji: "📊",
-    grad: "linear-gradient(135deg, #16a34a, #22d3ee)",
-    tag: "AI Excel generator · PWA",
-    status: "dev",
-    desc: "Speak or type what you need and get a real, downloadable Excel workbook — live formulas, totals, conditional formatting, dropdowns and charts. Reads data from photos and PDFs. Installs as an app on any device.",
-    tech: ["Vanilla JS", "Python", "openpyxl", "Vercel", "Multimodal AI"],
-    live: "",
-    repo: "https://github.com/floriansumi-bot/sheetgenie",
-  },
-  {
-    name: "Flaily",
-    emoji: "📬",
-    grad: "linear-gradient(135deg, #6d28d9, #0891b2)",
-    tag: "AI email triage · PWA",
-    status: "live",
-    desc: "An AI assistant that triages a Gmail inbox twice a day — it stars and labels the mail that matters (invoices, payroll, tax, deadlines, security), drafts the replies that need one (never sends), and can block noisy senders on request.",
-    tech: ["AI agent", "Gmail", "PWA", "GitHub Pages"],
-    live: "https://floriansumi-bot.github.io/flaily/",
-    repo: "",
-  },
-  {
-    name: "AdForge",
-    emoji: "🎨",
-    grad: "linear-gradient(135deg, #f59e0b, #8b5cf6)",
-    tag: "AI ad generator · Multi-agent",
-    status: "dev",
-    desc: "A multi-agent AI tool that turns a product brief into ready-to-use ad creatives — a pipeline of specialised agents writes the copy, designs the scenes and generates the imagery, with every scene editable before export.",
-    tech: ["Multi-agent AI", "JavaScript", "Image generation"],
-    live: "",
-    repo: "",
-  },
-  {
-    name: "SAPE",
-    emoji: "🛍️",
-    grad: "linear-gradient(135deg, #f472b6, #8b5cf6)",
-    tag: "Resale marketplace · Full-stack",
-    status: "dev",
-    desc: "A \"Swiss Vinted\" — a second-hand fashion marketplace with real user accounts, listings and messaging. Trilingual (FR / DE / IT). Built as a full-stack web app with a PWA front end.",
-    tech: ["Node", "Express", "JWT auth", "PWA", "JSON DB"],
-    live: "",
-    repo: "",
-  },
-  {
-    name: "HyperFractal",
-    emoji: "🌀",
-    grad: "linear-gradient(135deg, #8b5cf6, #ec4899)",
-    tag: "Visual / projection tool",
-    status: "dev",
-    desc: "An infinite-zoom psychedelic fractal visualizer for live shows and projection mapping — with a built-in psytrance generator and corner-pin projection mapping. Runs as a desktop web app.",
-    tech: ["WebGL", "Canvas", "Web Audio", "JavaScript"],
-    live: "",
-    repo: "",
-  },
-  {
-    name: "Barathon",
-    emoji: "🍻",
-    grad: "linear-gradient(135deg, #f59e0b, #f472b6)",
-    tag: "Bar-crawl app · Mobile",
-    status: "dev",
-    desc: "A bar-crawl companion app covering every bar in Switzerland (3,500+, organised by canton and commune). Built with Expo / React Native, moving to a Supabase backend.",
-    tech: ["React Native", "Expo", "Supabase"],
-    live: "",
-    repo: "",
-  },
-  {
-    name: "Trading Assistant",
-    emoji: "📈",
-    grad: "linear-gradient(135deg, #22d3ee, #16a34a)",
-    tag: "Algo trading research",
-    status: "research",
-    desc: "An algorithmic paper-trading bot and research harness (Python). Honestly evaluated: a study in strategy back-testing and risk — kept strictly paper-only after the data showed no reliable live edge.",
-    tech: ["Python", "Backtesting", "ccxt / IBKR", "Pandas"],
-    live: "",
-    repo: "",
-  },
-];
+/* ---------- i18n helpers (always fall back to English) ---------- */
+function uiDict(lang) {
+  return (window.CONTENT && CONTENT[lang] && CONTENT[lang].ui) || {};
+}
+function t(key) {
+  const d = uiDict(LANG);
+  const en = (window.CONTENT && CONTENT.en && CONTENT.en.ui) || {};
+  return d[key] != null ? d[key] : en[key] != null ? en[key] : key;
+}
+function block(lang, field) {
+  const c = window.CONTENT || {};
+  return (c[lang] && c[lang][field]) || (c.en && c.en[field]) || [];
+}
 
 /* ---------- RENDER ---------- */
-
 function chipList(el, items) {
   if (!el) return;
   el.innerHTML = items.map((s) => `<li>${s}</li>`).join("");
 }
 
-function timeline(el, items) {
+function timelineItems(el, items) {
   if (!el) return;
-  const html = items
+  el.innerHTML = items
     .map(
       (it) => `
       <article class="tl-item reveal">
@@ -194,60 +41,139 @@ function timeline(el, items) {
       </article>`
     )
     .join("");
-  el.insertAdjacentHTML("beforeend", html);
 }
 
 function badgeFor(status) {
-  const map = {
-    live: ["live", "● Live"],
-    dev: ["dev", "In development"],
-    research: ["research", "Research"],
-  };
-  const [cls, label] = map[status] || map.dev;
+  const cls = { live: "live", dev: "dev", research: "research" }[status] || "dev";
+  const label = t("badge." + (cls));
   return `<span class="badge ${cls}">${label}</span>`;
 }
 
 function projectLinks(p) {
   const links = [];
   if (p.live)
-    links.push(
-      `<a class="plink-live" href="${p.live}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>`
-    );
+    links.push(`<a class="plink-live" href="${p.live}" target="_blank" rel="noopener noreferrer">${t("link.live")}</a>`);
   if (p.repo)
-    links.push(
-      `<a class="plink-repo" href="${p.repo}" target="_blank" rel="noopener noreferrer">Code ↗</a>`
-    );
+    links.push(`<a class="plink-repo" href="${p.repo}" target="_blank" rel="noopener noreferrer">${t("link.code")}</a>`);
   if (!links.length)
-    links.push(`<span class="plink-repo" aria-disabled="true">Private / local</span>`);
+    links.push(`<span class="plink-repo" aria-disabled="true">${t("link.private")}</span>`);
   return links.join("");
 }
 
-function renderProjects(el, items) {
+function renderProjects(el, base, loc) {
   if (!el) return;
-  el.innerHTML = items
-    .map(
-      (p) => `
+  el.innerHTML = base
+    .map((b, i) => {
+      const p = { ...b, ...(loc[i] || {}) }; // merge shared meta + translated tag/desc
+      return `
       <article class="project-card reveal">
         <div class="project-thumb" style="--card-grad:${p.grad}">
-          <span class="emoji" role="img" aria-label="${p.name} icon">${p.emoji}</span>
+          <span class="emoji" role="img" aria-label="${p.name}">${p.emoji}</span>
         </div>
         <div class="project-body">
           <div class="project-top">
             <h3 class="project-name">${p.name}</h3>
             ${badgeFor(p.status)}
           </div>
-          <div class="project-tag">${p.tag}</div>
-          <p class="project-desc">${p.desc}</p>
-          <div class="project-tech">${p.tech.map((t) => `<span>${t}</span>`).join("")}</div>
+          <div class="project-tag">${p.tag || ""}</div>
+          <p class="project-desc">${p.desc || ""}</p>
+          <div class="project-stacknote">${t("projects.stackNote")}</div>
+          <div class="project-tech">${p.tech.map((x) => `<span>${x}</span>`).join("")}</div>
           <div class="project-links">${projectLinks(p)}</div>
         </div>
-      </article>`
-    )
+      </article>`;
+    })
     .join("");
 }
 
-/* ---------- INTERACTIONS ---------- */
+function renderData(lang) {
+  chipList(document.getElementById("techSkills"), block(lang, "techSkills"));
+  chipList(document.getElementById("softSkills"), block(lang, "softSkills"));
+  timelineItems(document.getElementById("experienceItems"), block(lang, "experience"));
+  timelineItems(document.getElementById("educationItems"), block(lang, "education"));
+  renderProjects(document.getElementById("projectsGrid"), window.PROJECTS_BASE || [], block(lang, "projects"));
+  // After the first load (when scroll-reveal is already set up), freshly injected
+  // cards must be made visible immediately rather than waiting on an observer that
+  // never saw them.
+  if (_initialized) {
+    ["#techSkills", "#softSkills", "#experienceItems", "#educationItems", "#projectsGrid"].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.querySelectorAll(".reveal").forEach((n) => n.classList.add("in"));
+    });
+  }
+}
 
+/* ---------- LANGUAGE ---------- */
+function applyStaticText() {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const v = t(el.getAttribute("data-i18n"));
+    if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    const v = t(el.getAttribute("data-i18n-html"));
+    if (v != null) el.innerHTML = v;
+  });
+  // attribute-level strings (aria)
+  const set = (sel, attr, key) => {
+    const el = document.querySelector(sel);
+    if (el) el.setAttribute(attr, t(key));
+  };
+  set("#navToggle", "aria-label", "a11y.menu");
+  set("#langSwitch", "aria-label", "a11y.lang");
+  set(".scroll-cue", "aria-label", "a11y.scroll");
+  set(".brand", "aria-label", "a11y.home");
+  set(".nav", "aria-label", "a11y.nav");
+  set(".hero-stats", "aria-label", "a11y.glance");
+  set("#experienceList", "aria-label", "a11y.workExp");
+  set("#educationList", "aria-label", "a11y.education");
+  // hero stat aria-labels = number + translated label
+  document.querySelectorAll(".hero-stats li[data-stat]").forEach((li) => {
+    const n = li.querySelector("strong")?.dataset.count || "";
+    li.setAttribute("aria-label", `${n} ${t("hero.stat." + li.dataset.stat)}`);
+  });
+}
+
+function revealAll() {
+  document.querySelectorAll(".reveal").forEach((e) => e.classList.add("in"));
+}
+
+function applyLanguage(lang, opts) {
+  if (!window.CONTENT || !CONTENT[lang]) lang = "en";
+  LANG = lang;
+  document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+  try { localStorage.setItem("pf-lang", lang); } catch (e) {}
+  applyStaticText();
+  renderData(lang);
+  const sel = document.getElementById("langSwitch");
+  if (sel) sel.value = lang;
+  if (!opts || opts.reveal !== false) revealAll();
+  // Announce the change to screen readers (only after the first paint).
+  if (_initialized) {
+    const st = document.getElementById("langStatus");
+    if (st) st.textContent = (window.CONTENT && CONTENT[lang] && CONTENT[lang].label) || lang;
+  }
+}
+
+function detectInitialLang() {
+  try {
+    const fromUrl = new URLSearchParams(location.search).get("lang");
+    if (fromUrl && LANGS.includes(fromUrl)) return fromUrl;
+  } catch (e) {}
+  try {
+    const saved = localStorage.getItem("pf-lang");
+    if (saved && LANGS.includes(saved)) return saved;
+  } catch (e) {}
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  return LANGS.includes(nav) ? nav : "en";
+}
+
+function setupLangSwitch() {
+  const sel = document.getElementById("langSwitch");
+  if (!sel) return;
+  sel.addEventListener("change", () => applyLanguage(sel.value, { reveal: true }));
+}
+
+/* ---------- INTERACTIONS ---------- */
 function setupReveal() {
   const els = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window)) {
@@ -266,9 +192,7 @@ function setupReveal() {
     { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
   );
   els.forEach((e) => io.observe(e));
-  // Safety net: if the observer is throttled (e.g. a backgrounded tab) or never
-  // fires, make sure every element becomes visible after a short delay so content
-  // is never stuck hidden at opacity:0.
+  // Safety net: never leave content stuck hidden if the observer is throttled.
   setTimeout(() => els.forEach((e) => e.classList.add("in")), 2600);
 }
 
@@ -283,16 +207,43 @@ function setupNav() {
   const toggle = document.getElementById("navToggle");
   const list = document.getElementById("navList");
   if (!toggle || !list) return;
-  const close = () => {
-    list.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "nav-backdrop";
+  backdrop.setAttribute("aria-hidden", "true");
+  backdrop.tabIndex = -1;
+  document.body.appendChild(backdrop);
+
+  const isOpen = () => list.classList.contains("open");
+  const open = () => {
+    list.classList.add("open");
+    backdrop.classList.add("show");
+    toggle.setAttribute("aria-expanded", "true");
+    const first = list.querySelector("a");
+    if (first) first.focus();
   };
-  toggle.addEventListener("click", () => {
-    const open = list.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(open));
+  const close = (restoreFocus) => {
+    list.classList.remove("open");
+    backdrop.classList.remove("show");
+    toggle.setAttribute("aria-expanded", "false");
+    if (restoreFocus) toggle.focus();
+  };
+
+  toggle.addEventListener("click", () => (isOpen() ? close(true) : open()));
+  backdrop.addEventListener("click", () => close(true));
+  list.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => close(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen()) close(true);
   });
-  list.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
-  document.addEventListener("keydown", (e) => e.key === "Escape" && close());
+  // Keep Tab focus inside the open drawer.
+  list.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab" || !isOpen()) return;
+    const links = [...list.querySelectorAll("a")];
+    if (!links.length) return;
+    const firstEl = links[0], lastEl = links[links.length - 1];
+    if (e.shiftKey && document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+    else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+  });
 }
 
 function setupCounters() {
@@ -308,7 +259,6 @@ function setupCounters() {
       if (cur < target) requestAnimationFrame(tick);
     };
     setTimeout(tick, 400);
-    // Guarantee the final value lands even if rAF is throttled (background tab).
     setTimeout(() => { el.textContent = String(target); }, 1600);
   });
 }
@@ -320,16 +270,11 @@ function setupConstellation() {
   const ctx = canvas.getContext("2d");
   let w, h, pts, raf;
   const COUNT = Math.min(70, Math.floor(window.innerWidth / 22));
-  function resize() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
+  function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
   function init() {
     pts = Array.from({ length: COUNT }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25,
+      x: Math.random() * w, y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
     }));
   }
   function draw() {
@@ -365,18 +310,17 @@ function setupConstellation() {
 
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  chipList(document.getElementById("techSkills"), TECH_SKILLS);
-  chipList(document.getElementById("softSkills"), SOFT_SKILLS);
-  timeline(document.getElementById("experienceList"), EXPERIENCE);
-  timeline(document.getElementById("educationList"), EDUCATION);
-  renderProjects(document.getElementById("projectsGrid"), PROJECTS);
+  LANG = detectInitialLang();
+  applyLanguage(LANG, { reveal: false }); // render text + data; let the observer animate on first load
 
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 
+  setupLangSwitch();
   setupReveal();
   setupHeader();
   setupNav();
   setupCounters();
   setupConstellation();
+  _initialized = true;
 });
