@@ -398,11 +398,39 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
+/* Editorial section rhythm on phones: a hairline marker above each section
+   header + one deliberate vertical scale (desktop keeps its fluid clamp). */
+@media (max-width: 560px) {
+  .section { padding-top: 4.25rem; padding-bottom: 4.25rem; }
+  .section-head { align-items: flex-start; gap: .7rem; margin-bottom: 1.6rem; padding-top: 1.1rem; border-top: 1px solid var(--border); }
+  .section-index { align-self: flex-start; margin-top: .35rem; padding: .22rem .5rem; font-size: .78rem; letter-spacing: .02em; }
+  .section-lead { font-size: 1rem; line-height: 1.55; max-width: 42ch; margin-bottom: 1.9rem; }
+}
 @media (max-width: 480px) {
-  .hero-stats { gap: 1.6rem; }
-  .hero-stats strong { font-size: 1.9rem; }
-  .btn { width: 100%; justify-content: center; }
+  /* Headline cluster — tighten so the name anchors to the eyebrow + role */
+  .hero-eyebrow { margin-bottom: 1.4rem; }
+  .hero-title { margin: 0 0 .15rem; line-height: .98; }
+  .hero-role { margin-top: .2rem; line-height: 1.25; }
+  .hero-pitch { font-size: .98rem; line-height: 1.72; max-width: 40ch; margin-top: 1.5rem; }
   .hero-actions { flex-direction: column; }
+  .btn { width: 100%; justify-content: center; }
+  /* Stat trio as a bordered three-column band */
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid var(--border); }
+  .hero-stats li { align-items: flex-start; }
+  .hero-stats strong { font-size: 2.1rem; }
+  .hero-stats span { font-size: .72rem; margin-top: .3rem; letter-spacing: .04em; line-height: 1.25; }
+  /* About — lighter body + stacked fact rows */
+  .about-text p { font-size: .975rem; line-height: 1.72; margin-bottom: 1.25rem; }
+  .about-facts li { flex-direction: column; gap: .25rem; align-items: stretch; padding-bottom: .85rem; }
+  .about-facts .fact-key { min-width: 0; font-size: .7rem; letter-spacing: .08em; }
+  /* Project card header — anchor name + badge to the top */
+  .project-top { align-items: flex-start; gap: .5rem; margin-bottom: .4rem; }
+  /* Contact — compact icon + label/value rows */
+  .contact-grid { gap: .7rem; }
+  .contact-card { display: grid; grid-template-columns: 2.4rem 1fr; grid-template-rows: auto auto; column-gap: .9rem; row-gap: .1rem; align-items: center; padding: 1.05rem 1.15rem; }
+  .contact-icon { grid-row: 1 / span 2; grid-column: 1; font-size: 1.35rem; line-height: 1; align-self: center; justify-self: center; margin: 0; }
+  .contact-label { grid-column: 2; grid-row: 1; margin-top: 0; font-size: .72rem; }
+  .contact-value { grid-column: 2; grid-row: 2; font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
 }
 /* Hide the brand wordmark + globe early enough that long labels (e.g. German
    "Deutsch") never crowd the hamburger on common 401–440px Android widths. */
