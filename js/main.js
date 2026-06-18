@@ -267,7 +267,9 @@ function setupCounters() {
 /* Lightweight constellation background */
 function setupConstellation() {
   const canvas = document.getElementById("constellation");
-  if (!canvas || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  // Skip the canvas particle loop where it costs the most for the least — phones (battery/
+  // jank) and reduced-motion users. The CSS aurora blobs still provide ambient depth.
+  if (!canvas || window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.innerWidth < 700) return;
   const ctx = canvas.getContext("2d");
   let w, h, pts, raf;
   const COUNT = Math.min(70, Math.floor(window.innerWidth / 22));

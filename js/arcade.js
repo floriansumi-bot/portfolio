@@ -243,6 +243,9 @@
     const ctl = ["ArrowLeft", "ArrowRight", "ArrowDown", "ArrowUp", " ", "Spacebar"].includes(e.key);
     if (e.key === "Escape") { if (userControl) { userControl = false; root.classList.remove("is-active"); if (!gameOver) planAI(); } return; }
     if (!ctl) return;
+    // Never hijack page scrolling: only capture arrows/space when the user is actually
+    // interacting with the widget (already playing, or hovering/focusing it).
+    if (!userControl && !root.matches(":hover") && !root.contains(document.activeElement)) return;
     if (!userControl) takeOver();
     e.preventDefault();
     if (e.key === "ArrowLeft") move(-1);
