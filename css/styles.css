@@ -260,7 +260,6 @@ body::before {
 .badge.research { background: rgba(34,211,238,.12); color: var(--cyan); border: 1px solid rgba(34,211,238,.35); }
 .project-tag { color: var(--text-faint); font-size: .82rem; margin-bottom: .7rem; }
 .project-desc { color: var(--text-dim); font-size: .94rem; flex: 1; }
-.project-stacknote { font-size: .64rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: .05em; margin: 1rem 0 .35rem; }
 .project-tech { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; }
 .project-tech span { font-size: .72rem; color: var(--text-faint); border: 1px solid var(--border); border-radius: 6px; padding: .15rem .5rem; }
 .project-links { display: flex; gap: .7rem; margin-top: auto; }

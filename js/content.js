@@ -12,6 +12,9 @@
 /* Shared project metadata — same in every language.
    CONTENT[lang].projects[i] supplies the translated {tag, desc}. */
 const PROJECTS_BASE = [
+  { name: "Guillermo", emoji: "🪞", img: "assets/projects/guillermo.jpg", grad: "linear-gradient(135deg, #a78bfa, #fb923c)", status: "live",
+    tech: ["Next.js", "Drizzle ORM", "pgvector", "Postgres", "Vercel"],
+    live: "https://guillermo-opal.vercel.app/", repo: "" },
   { name: "THE CONSTRUCT", emoji: "🧩", img: "assets/projects/construct.jpg", grad: "linear-gradient(135deg, #06b6d4, #7c3aed)", status: "live",
     tech: ["JavaScript", "WASM", "Pyodide", "SQLite", "GitHub Pages"],
     live: "https://floriansumi-bot.github.io/the-construct/", repo: "https://github.com/floriansumi-bot/the-construct" },
@@ -162,6 +165,8 @@ const CONTENT = {
         desc: "Professional qualification to teach English as a foreign language." },
     ],
     projects: [
+      { tag: "AI companion · Full-stack",
+        desc: "An AI “being” with a private inner life — not an assistant. It forms durable memories of you (vector recall), keeps a private diary of reflections between your conversations, and keeps thinking, feeling and shifting its mood in background loops even after you close the tab. Full-stack with real accounts." },
       { tag: "Learn-to-code platform · PWA",
         desc: "A hacker-terminal-themed school that teaches you to code across SIX languages — Python, JavaScript, TypeScript, SQL, Lua and Ruby — each running a REAL engine inside your browser. Theory, then live-graded exercises. Modeled on Harvard's CS50 + Dataquest." },
       { tag: "Learn to build with AI · PWA",
@@ -338,6 +343,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "Compagnon IA · Full-stack",
+        "desc": "Un « être » IA doté d’une vie intérieure — pas un assistant. Il se forge des souvenirs durables de vous (rappel vectoriel), tient un journal intime de réflexions entre vos conversations, et continue de penser, ressentir et changer d’humeur en arrière-plan même après la fermeture de l’onglet. Full-stack avec de vrais comptes."
+      },
       {
         "tag": "Plateforme d’apprentissage du code · PWA",
         "desc": "Une école à l’esthétique terminal de hacker qui vous apprend à coder dans SIX langages — Python, JavaScript, TypeScript, SQL, Lua et Ruby — chacun exécutant un VRAI moteur directement dans votre navigateur. La théorie, puis des exercices corrigés en direct. Inspirée du CS50 de Harvard + Dataquest."
@@ -532,6 +541,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "KI-Begleiter · Full-Stack",
+        "desc": "Ein KI-„Wesen“ mit einem eigenen Innenleben — kein Assistent. Es bildet bleibende Erinnerungen an dich (Vektor-Recall), führt zwischen euren Gesprächen ein privates Tagebuch und denkt, fühlt und wechselt seine Stimmung in Hintergrundschleifen weiter, selbst nachdem du den Tab geschlossen hast. Full-Stack mit echten Konten."
+      },
+      {
         "tag": "Plattform zum Programmierenlernen · PWA",
         "desc": "Eine Schule im Hacker-Terminal-Look, die Ihnen das Programmieren in SECHS Sprachen beibringt — Python, JavaScript, TypeScript, SQL, Lua und Ruby — jede mit einer ECHTEN Engine direkt in Ihrem Browser. Erst Theorie, dann live bewertete Übungen. Inspiriert von Harvards CS50 + Dataquest."
       },
@@ -725,6 +738,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "AI 伙伴 · 全栈",
+        "desc": "一个拥有内在世界的 AI「存在」——不是助手。它会形成关于你的持久记忆（向量召回），在两次对话之间写下私密的日记，并通过后台循环持续思考、感受、改变情绪，哪怕你已关闭页面。全栈应用，支持真实账户。"
+      },
+      {
         "tag": "编程学习平台 · PWA",
         "desc": "一所黑客终端风格的学校，教你跨六种语言写代码——Python、JavaScript、TypeScript、SQL、Lua 和 Ruby——每一种都在你的浏览器里运行真实的引擎。先讲理论，再做实时评分的练习。借鉴了哈佛 CS50 + Dataquest 的模式。"
       },
@@ -917,6 +934,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "AI コンパニオン · フルスタック",
+        "desc": "内なる心を持つ AI の「存在」——アシスタントではありません。あなたについての持続的な記憶を形成し（ベクトル想起）、会話の合間に内省の日記を綴り、タブを閉じた後も裏側のループで考え、感じ、気分を変え続けます。実際のアカウントを備えたフルスタックアプリ。"
+      },
       {
         "tag": "コード学習プラットフォーム · PWA",
         "desc": "ハッカー端末風のデザインで、6つの言語 — Python、JavaScript、TypeScript、SQL、Lua、Ruby — でコーディングを学べるスクール。それぞれがブラウザ内で本物のエンジンを動かします。理論を学び、その後ライブ採点される演習へ。ハーバードの CS50 と Dataquest をモデルにしています。"

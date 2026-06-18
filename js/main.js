@@ -77,7 +77,6 @@ function renderProjects(el, base, loc) {
           </div>
           <div class="project-tag">${p.tag || ""}</div>
           <p class="project-desc">${p.desc || ""}</p>
-          <div class="project-stacknote">${t("projects.stackNote")}</div>
           <div class="project-tech">${p.tech.map((x) => `<span>${x}</span>`).join("")}</div>
           <div class="project-links">${projectLinks(p)}</div>
         </div>
