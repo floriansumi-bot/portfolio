@@ -12,6 +12,9 @@
 /* Shared project metadata — same in every language.
    CONTENT[lang].projects[i] supplies the translated {tag, desc}. */
 const PROJECTS_BASE = [
+  { name: "Pilot", emoji: "🍓", img: "assets/projects/pilot.png", grad: "linear-gradient(135deg, #C7152A, #0E8C7E)", status: "live",
+    tech: ["Vanilla JS", "ES modules", "SVG", "PWA", "GitHub Pages"],
+    live: "https://floriansumi-bot.github.io/raspberry-pi-academy/", repo: "https://github.com/floriansumi-bot/raspberry-pi-academy" },
   { name: "Guillermo", emoji: "🪞", img: "assets/projects/guillermo.jpg", grad: "linear-gradient(135deg, #a78bfa, #fb923c)", status: "live",
     tech: ["Next.js", "Drizzle ORM", "pgvector", "Postgres", "Vercel"],
     live: "https://guillermo-opal.vercel.app/", repo: "" },
@@ -165,6 +168,8 @@ const CONTENT = {
         desc: "Professional qualification to teach English as a foreign language." },
     ],
     projects: [
+      { tag: "Interactive Pi 5 course · PWA",
+        desc: "The complete 447-page Raspberry Pi 5 handbook reborn as a friendly, finishable course — with a real hand-written Linux terminal and a wireable GPIO breadboard you can try right in the browser. A winding learning path, ⌘K search, a living glossary, quizzes and badges, and dual light/dark themes. Installable and fully offline." },
       { tag: "AI companion · Full-stack",
         desc: "An AI “being” with a private inner life — not an assistant. It forms durable memories of you (vector recall), keeps a private diary of reflections between your conversations, and keeps thinking, feeling and shifting its mood in background loops even after you close the tab. Full-stack with real accounts." },
       { tag: "Learn-to-code platform · PWA",
@@ -343,6 +348,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "Cours interactif Pi 5 · PWA",
+        "desc": "Le manuel complet de 447 pages sur le Raspberry Pi 5 transformé en un cours convivial que l’on peut vraiment terminer — avec un véritable terminal Linux écrit à la main et une platine GPIO que l’on câble directement dans le navigateur. Un parcours d’apprentissage sinueux, une recherche ⌘K, un glossaire vivant, des quiz et des badges, et deux thèmes clair/sombre. Installable et entièrement hors ligne."
+      },
       {
         "tag": "Compagnon IA · Full-stack",
         "desc": "Un « être » IA doté d’une vie intérieure — pas un assistant. Il se forge des souvenirs durables de vous (rappel vectoriel), tient un journal intime de réflexions entre vos conversations, et continue de penser, ressentir et changer d’humeur en arrière-plan même après la fermeture de l’onglet. Full-stack avec de vrais comptes."
@@ -541,6 +550,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "Interaktiver Pi-5-Kurs · PWA",
+        "desc": "Das komplette 447-seitige Raspberry-Pi-5-Handbuch als freundlicher, abschließbarer Kurs — mit einem echten, handgeschriebenen Linux-Terminal und einem verdrahtbaren GPIO-Steckbrett, das man direkt im Browser ausprobiert. Ein gewundener Lernpfad, ⌘K-Suche, ein lebendiges Glossar, Quizze und Abzeichen sowie zwei helle/dunkle Themes. Installierbar und vollständig offline."
+      },
+      {
         "tag": "KI-Begleiter · Full-Stack",
         "desc": "Ein KI-„Wesen“ mit einem eigenen Innenleben — kein Assistent. Es bildet bleibende Erinnerungen an dich (Vektor-Recall), führt zwischen euren Gesprächen ein privates Tagebuch und denkt, fühlt und wechselt seine Stimmung in Hintergrundschleifen weiter, selbst nachdem du den Tab geschlossen hast. Full-Stack mit echten Konten."
       },
@@ -738,6 +751,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "树莓派 5 互动课程 · PWA",
+        "desc": "把 447 页的树莓派 5 完整手册重塑为一门友好、可真正学完的课程——内置可在浏览器中直接操作的真实手写 Linux 终端，以及可接线的 GPIO 面包板。蜿蜒的学习路径、⌘K 搜索、活动词汇表、测验与徽章，以及明暗双主题。可安装、完全离线。"
+      },
+      {
         "tag": "AI 伙伴 · 全栈",
         "desc": "一个拥有内在世界的 AI「存在」——不是助手。它会形成关于你的持久记忆（向量召回），在两次对话之间写下私密的日记，并通过后台循环持续思考、感受、改变情绪，哪怕你已关闭页面。全栈应用，支持真实账户。"
       },
@@ -934,6 +951,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "インタラクティブ Pi 5 講座 · PWA",
+        "desc": "447 ページの Raspberry Pi 5 ハンドブックを、最後までやり切れる親しみやすい講座に再構築。ブラウザ内で実際に動く手作りの Linux ターミナルと、配線できる GPIO ブレッドボードを搭載。うねる学習パス、⌘K 検索、生きた用語集、クイズとバッジ、ライト／ダークの2テーマ。インストール可能で完全オフライン対応。"
+      },
       {
         "tag": "AI コンパニオン · フルスタック",
         "desc": "内なる心を持つ AI の「存在」——アシスタントではありません。あなたについての持続的な記憶を形成し（ベクトル想起）、会話の合間に内省の日記を綴り、タブを閉じた後も裏側のループで考え、感じ、気分を変え続けます。実際のアカウントを備えたフルスタックアプリ。"
