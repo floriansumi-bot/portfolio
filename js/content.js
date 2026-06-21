@@ -377,7 +377,7 @@ const CONTENT = {
       },
       {
         "tag": "Resale marketplace · Node/Express full-stack",
-        "desc": "A \"Swiss Vinted\" — a second-hand fashion marketplace with real user accounts, JWT auth, listings and messaging. Trilingual (FR / DE / IT), built as a Node/Express full-stack app with a PWA front end. In development."
+        "desc": "A peer-to-peer marketplace for buying and selling second-hand fashion in Switzerland — real user accounts, JWT auth, listings and messaging. Trilingual (FR / DE / IT), built as a Node/Express full-stack app with a PWA front end. In development."
       },
       {
         "tag": "Visual / projection tool · WebGL",
@@ -579,7 +579,7 @@ const CONTENT = {
       },
       {
         "tag": "Marketplace de seconde main · Full-stack Node/Express",
-        "desc": "Un « Vinted suisse » — une marketplace de mode d’occasion avec de vrais comptes utilisateurs, une authentification JWT, des annonces et une messagerie. Trilingue (FR / DE / IT), conçue comme une application full-stack Node/Express avec un front-end PWA. En développement."
+        "desc": "Une marketplace entre particuliers pour acheter et vendre de la mode de seconde main en Suisse — vrais comptes utilisateurs, authentification JWT, annonces et messagerie. Trilingue (FR / DE / IT), conçue comme une application full-stack Node/Express avec un front-end PWA. En développement."
       },
       {
         "tag": "Outil visuel / de projection · WebGL",
@@ -781,7 +781,7 @@ const CONTENT = {
       },
       {
         "tag": "Second-Hand-Marktplatz · Node/Express Full-Stack",
-        "desc": "Ein «Schweizer Vinted» — ein Marktplatz für Second-Hand-Mode mit echten Benutzerkonten, JWT-Authentifizierung, Inseraten und Nachrichten. Dreisprachig (FR / DE / IT), gebaut als Full-Stack-App mit Node/Express und PWA-Frontend. In Entwicklung."
+        "desc": "Ein Peer-to-Peer-Marktplatz zum Kaufen und Verkaufen von Second-Hand-Mode in der Schweiz — echte Benutzerkonten, JWT-Authentifizierung, Inserate und Nachrichten. Dreisprachig (FR / DE / IT), gebaut als Full-Stack-App mit Node/Express und PWA-Frontend. In Entwicklung."
       },
       {
         "tag": "Visualisierungs- / Projektions-Tool · WebGL",
@@ -983,7 +983,7 @@ const CONTENT = {
       },
       {
         "tag": "二手交易市场 · Node/Express 全栈",
-        "desc": "一个「瑞士版 Vinted」——带有真实用户账户、JWT 鉴权、商品发布与消息功能的二手时尚交易市场。三语界面（法/德/意），以 Node/Express 全栈应用构建，前端为 PWA。开发中。"
+        "desc": "一个面向瑞士的二手时尚个人交易市场（C2C）——带有真实用户账户、JWT 鉴权、商品发布与消息功能。三语界面（法/德/意），以 Node/Express 全栈应用构建，前端为 PWA。开发中。"
       },
       {
         "tag": "视觉 / 投影工具 · WebGL",
@@ -1185,7 +1185,7 @@ const CONTENT = {
       },
       {
         "tag": "リセールマーケットプレイス · Node/Express フルスタック",
-        "desc": "「スイス版 Vinted」— 実際のユーザーアカウント、JWT 認証、出品、メッセージング機能を備えた中古ファッションのマーケットプレイス。3か国語対応 (FR / DE / IT) で、PWA フロントエンドを持つ Node/Express のフルスタックアプリとして構築。現在開発中。"
+        "desc": "スイス向けの個人間（C2C）中古ファッション・マーケットプレイス — 実際のユーザーアカウント、JWT 認証、出品、メッセージング機能を備えています。3か国語対応 (FR / DE / IT) で、PWA フロントエンドを持つ Node/Express のフルスタックアプリとして構築。現在開発中。"
       },
       {
         "tag": "ビジュアル／プロジェクションツール · WebGL",
