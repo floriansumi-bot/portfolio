@@ -376,6 +376,10 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 .arcade-keys { margin-top: auto; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; align-content: flex-end; padding-top: .45rem; }
 .arcade-keys .kc { display: inline-grid; place-items: center; min-width: 16px; height: 16px; padding: 0 3px; font-size: .6rem; color: #e3d4ff; font-family: "Space Grotesk", ui-monospace, monospace; border: 1px solid rgba(34,224,255,.42); border-radius: 4px; background: rgba(34,224,255,.08); box-shadow: 0 0 6px rgba(34,224,255,.2); }
 .arcade-keys .kcl { font-size: .5rem; letter-spacing: .1em; color: #8ab9ff; text-transform: uppercase; margin-right: 4px; }
+/* On-screen keys are clickable controls (click to take over from the AI + play). */
+.arcade-keys .kc[data-act] { cursor: pointer; user-select: none; touch-action: none; transition: background .12s, border-color .12s, transform .08s; }
+.arcade-keys .kc[data-act]:hover { background: rgba(34,224,255,.22); border-color: rgba(34,224,255,.72); }
+.arcade-keys .kc[data-act]:active { background: rgba(255,45,149,.3); border-color: rgba(255,45,149,.6); transform: translateY(1px); }
 .arcade-touch { display: none; }
 @media (pointer: coarse) {
   .arcade.has-room.st-show .arcade-touch { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: .35rem; padding: .5rem .65rem .65rem; }

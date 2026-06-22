@@ -240,12 +240,14 @@
   canvas.addEventListener("click", takeOver);
   document.addEventListener("keydown", (e) => {
     if (state !== "show") return;
-    const ctl = ["ArrowLeft", "ArrowRight", "ArrowDown", "ArrowUp", " ", "Spacebar"].includes(e.key);
     if (e.key === "Escape") { if (userControl) { userControl = false; root.classList.remove("is-active"); if (!gameOver) planAI(); } return; }
-    if (!ctl) return;
-    // Never hijack page scrolling: only capture arrows/space when the user is actually
-    // interacting with the widget (already playing, or hovering/focusing it).
-    if (!userControl && !root.matches(":hover") && !root.contains(document.activeElement)) return;
+    const arrow = ["ArrowLeft", "ArrowRight", "ArrowDown", "ArrowUp"].includes(e.key);
+    const space = e.key === " " || e.key === "Spacebar";
+    if (!arrow && !space) return;
+    // Arrows take over and play the moment the game is on screen (keyboard "just works").
+    // Space (hard-drop) only acts once you're already playing, so Space-to-scroll still
+    // works at the top of the page until you start. Esc hands control back to the AI.
+    if (space && !userControl) return;
     if (!userControl) takeOver();
     e.preventDefault();
     if (e.key === "ArrowLeft") move(-1);
@@ -255,22 +257,26 @@
     else hardDrop();
     draw();
   });
-  if (touch) {
-    const act = (a) => { if (a === "left") move(-1); else if (a === "right") move(1); else if (a === "down") softDrop(); else if (a === "rotate") rotateCur(); else if (a === "drop") hardDrop(); draw(); };
-    touch.querySelectorAll("button").forEach((b) => {
-      const a = b.dataset.act;
-      let rep = null;
-      const stop = () => { if (rep) { clearInterval(rep); rep = null; } };
-      b.addEventListener("pointerdown", (e) => {
-        e.preventDefault();
-        try { b.setPointerCapture(e.pointerId); } catch (e2) {}
-        takeOver(); act(a);
-        if (a === "left" || a === "right" || a === "down") rep = setInterval(() => act(a), 110);
-      });
-      b.addEventListener("pointerup", stop);
-      b.addEventListener("pointercancel", stop);
+  const act = (a) => { if (a === "left") move(-1); else if (a === "right") move(1); else if (a === "down") softDrop(); else if (a === "rotate") rotateCur(); else if (a === "drop") hardDrop(); draw(); };
+  // Wire any control with [data-act] (the on-screen keycaps on desktop, and the
+  // touch pad if present) — pointerdown takes over from the AI and performs the move,
+  // with press-and-hold auto-repeat for left/right/down.
+  const wireControl = (b) => {
+    const a = b.dataset.act;
+    let rep = null;
+    const stop = () => { if (rep) { clearInterval(rep); rep = null; } };
+    b.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      try { b.setPointerCapture(e.pointerId); } catch (e2) {}
+      takeOver(); act(a);
+      if (a === "left" || a === "right" || a === "down") rep = setInterval(() => act(a), 110);
     });
-  }
+    b.addEventListener("pointerup", stop);
+    b.addEventListener("pointerleave", stop);
+    b.addEventListener("pointercancel", stop);
+  };
+  document.querySelectorAll(".arcade-keys .kc[data-act]").forEach(wireControl);
+  if (touch) touch.querySelectorAll("button").forEach(wireControl);
 
   /* ---- responsive room detection ---- */
   let TOP = 92, _mode = "none"; const GAP = 18, MINH = 250, SIDE = 78;
@@ -300,7 +306,18 @@
   }
   function widgetSize() { return { w: COLS * cell + SIDE, h: ROWS * cell + 70 }; }
   let roomOK = false;
+  // DESKTOP ONLY: the game is a PC easter egg — never shown on mobile/touch devices
+  // (phones AND tablets, portrait or landscape). Requires a real hover-capable mouse.
+  const DESKTOP = window.matchMedia("(hover: hover) and (pointer: fine)");
   function evaluateRoom() {
+    if (!DESKTOP.matches) {                                      // mobile/touch → fully off
+      roomOK = false;
+      root.classList.remove("has-room", "st-show", "st-above");
+      root.classList.add("st-below");
+      state = "below"; root.inert = true; root.setAttribute("aria-hidden", "true");
+      if (running) pause();
+      return;
+    }
     computeLayout();
     const sz = widgetSize();
     const vh = window.innerHeight;
@@ -360,6 +377,7 @@
   window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(evaluateRoom, 120); });
   window.addEventListener("orientationchange", () => setTimeout(evaluateRoom, 250));
   window.addEventListener("pf:lang", () => setTimeout(evaluateRoom, 0));
+  try { DESKTOP.addEventListener("change", evaluateRoom); } catch (e) { /* older Safari */ }
   document.addEventListener("visibilitychange", () => { if (document.hidden) stopLoop(); else if (running) { last = 0; acc = 0; startLoop(); } });
   document.addEventListener("click", (e) => { if (userControl && !root.contains(e.target)) { userControl = false; root.classList.remove("is-active"); if (!gameOver) planAI(); } });
 
