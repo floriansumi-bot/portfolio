@@ -14,7 +14,7 @@ const PROJECTS_BASE = [
   {
     "name": "RED MATRIX",
     "emoji": "🎬",
-    "img": "assets/projects/redmatrix.png",
+    "img": "assets/projects/redmatrix.jpg",
     "grad": "linear-gradient(135deg, #ff0033, #1a0210)",
     "status": "live",
     "free": false,
