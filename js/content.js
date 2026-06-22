@@ -160,6 +160,23 @@ const PROJECTS_BASE = [
     "repo": "https://github.com/floriansumi-bot/hyperfractal"
   },
   {
+    "name": "VoiceLab",
+    "emoji": "🎙️",
+    "img": "assets/projects/voicelab.svg",
+    "grad": "linear-gradient(135deg, #818cf8, #22d3ee)",
+    "status": "live",
+    "free": true,
+    "tech": [
+      "Web Audio API",
+      "Vanilla JS",
+      "PWA",
+      "Capacitor",
+      "GitHub Pages"
+    ],
+    "live": "https://floriansumi-bot.github.io/sing-coach/",
+    "repo": "https://github.com/floriansumi-bot/sing-coach"
+  },
+  {
     "name": "Barathon",
     "emoji": "🍻",
     "img": "assets/projects/barathon.svg",
@@ -200,8 +217,8 @@ const CONTENT = {
       "nav.projects": "Projects",
       "nav.contact": "Contact",
       "hero.eyebrow": "Neuchâtel · Switzerland — open to opportunities",
-      "hero.role": "I ship real web apps by directing AI — 8 live online",
-      "hero.pitch": "I turn ideas into software people actually use, and 8 of them are live right now: an in-browser school teaching six programming languages, a sentence-to-Excel generator, an AI companion with real memory, and more. I build the modern way — AI as my pair-programmer — and I come from media research, so I build for real people, not just other engineers. Native French and English; Swiss and American.",
+      "hero.role": "I ship real web apps by directing AI — 9 live online",
+      "hero.pitch": "I turn ideas into software people actually use, and 9 of them are live right now: an in-browser school teaching six programming languages, a sentence-to-Excel generator, an AI companion with real memory, and more. I build the modern way — AI as my pair-programmer — and I come from media research, so I build for real people, not just other engineers. Native French and English; Swiss and American.",
       "hero.cta.work": "View my work",
       "hero.cta.cv": "Download CV",
       "hero.cta.contact": "Contact",
@@ -228,7 +245,7 @@ const CONTENT = {
       "skills.people.heading": "🤝 People & professional",
       "timeline.experience": "Experience",
       "timeline.education": "Education",
-      "projects.lead": "Real, working applications — not mockups. Eight are live, all built solo; badges show what's publicly live versus still in development.",
+      "projects.lead": "Real, working applications — not mockups. Nine are live, all built solo; badges show what's publicly live versus still in development.",
       "projects.mission": "One thread ties them together: putting open-source technology into everyday hands — taking tools people normally pay for and making them free.",
       "section.music": "Music & live sets",
       "nav.music": "Music",
@@ -384,6 +401,10 @@ const CONTENT = {
         "desc": "An infinite-zoom psychedelic fractal visualizer for live shows, driven by WebGL and Web Audio. Pairs a built-in psytrance generator with corner-pin projection mapping, and runs as a desktop web app."
       },
       {
+        "tag": "AI singing coach · Web Audio + PWA",
+        "desc": "A full singing coach in the browser — real-time pitch tuner, scored vocal warm-ups, pitch practice game, 13 theory cards, a 12-week training programme, smart daily plans, Ableton studio guide, progress radar chart and achievement badges. Runs offline, installs as an app, and ships as an Android APK."
+      },
+      {
         "tag": "Bar-crawl app · React Native / Expo",
         "desc": "A bar-crawl companion covering every bar in Switzerland — 3,500+, organised by canton and commune. Built with Expo and React Native, moving to a Supabase backend. In development."
       },
@@ -402,8 +423,8 @@ const CONTENT = {
       "nav.projects": "Projets",
       "nav.contact": "Contact",
       "hero.eyebrow": "Neuchâtel · Suisse — ouvert aux opportunités",
-      "hero.role": "Je conçois de vraies applis web en pilotant l’IA — 8 déjà en ligne",
-      "hero.pitch": "Je transforme des idées en logiciels que les gens utilisent vraiment, et 8 d’entre eux sont en ligne dès maintenant : une école dans le navigateur qui enseigne six langages de programmation, un générateur qui crée un fichier Excel à partir d’une simple phrase, un compagnon IA doté d’une vraie mémoire, et bien plus encore. Je développe à la manière d’aujourd’hui — l’IA comme partenaire de programmation — et, venant de la recherche en médias, je conçois pour de vraies personnes, pas seulement pour d’autres ingénieurs. Français et anglais de langue maternelle ; suisse et américain.",
+      "hero.role": "Je conçois de vraies applis web en pilotant l’IA — 9 déjà en ligne",
+      "hero.pitch": "Je transforme des idées en logiciels que les gens utilisent vraiment, et 9 d’entre eux sont en ligne dès maintenant : une école dans le navigateur qui enseigne six langages de programmation, un générateur qui crée un fichier Excel à partir d’une simple phrase, un compagnon IA doté d’une vraie mémoire, et bien plus encore. Je développe à la manière d’aujourd’hui — l’IA comme partenaire de programmation — et, venant de la recherche en médias, je conçois pour de vraies personnes, pas seulement pour d’autres ingénieurs. Français et anglais de langue maternelle ; suisse et américain.",
       "hero.cta.work": "Voir mes réalisations",
       "hero.cta.cv": "Télécharger le CV",
       "hero.cta.contact": "Contact",
@@ -430,7 +451,7 @@ const CONTENT = {
       "skills.people.heading": "🤝 Relationnel & professionnel",
       "timeline.experience": "Expérience",
       "timeline.education": "Formation",
-      "projects.lead": "De vraies applications qui fonctionnent — pas des maquettes. Huit sont en ligne, toutes développées en solo ; les badges distinguent ce qui est publiquement en ligne de ce qui est encore en développement.",
+      "projects.lead": "De vraies applications qui fonctionnent — pas des maquettes. Neuf sont en ligne, toutes développées en solo ; les badges distinguent ce qui est publiquement en ligne de ce qui est encore en développement.",
       "projects.mission": "Un fil rouge les relie : mettre la technologie open source entre les mains de tous — prendre des outils habituellement payants et les rendre gratuits.",
       "section.music": "Musique & sets live",
       "nav.music": "Musique",
@@ -586,6 +607,10 @@ const CONTENT = {
         "desc": "Un visualiseur de fractales psychédéliques à zoom infini pour les concerts, propulsé par WebGL et Web Audio. Il associe un générateur de psytrance intégré à un mapping de projection par corner-pin, et tourne comme une application web de bureau."
       },
       {
+        "tag": "Coach chant IA · Web Audio + PWA",
+        "desc": "Un coach vocal complet dans le navigateur — accordeur de justesse en temps réel, échauffements notés, jeu de pratique mélodique, 13 fiches théoriques, programme de 12 semaines, plan journalier adaptatif, guide studio Ableton, radar de progression et badges. Fonctionne hors ligne, s'installe comme appli et sort en APK Android."
+      },
+      {
         "tag": "Appli de tournée des bars · React Native / Expo",
         "desc": "Un compagnon de tournée des bars qui recense tous les bars de Suisse — plus de 3 500, organisés par canton et par commune. Développé avec Expo et React Native, en migration vers un backend Supabase. En développement."
       },
@@ -604,8 +629,8 @@ const CONTENT = {
       "nav.projects": "Projekte",
       "nav.contact": "Kontakt",
       "hero.eyebrow": "Neuenburg · Schweiz — offen für neue Chancen",
-      "hero.role": "Ich entwickle echte Web-Apps, indem ich KI steuere — 8 davon live",
-      "hero.pitch": "Ich mache aus Ideen Software, die Menschen wirklich nutzen — 8 davon sind genau jetzt online: eine Schule im Browser, die sechs Programmiersprachen unterrichtet, ein Generator, der aus einem Satz eine Excel-Datei macht, ein KI-Begleiter mit echtem Gedächtnis und mehr. Ich entwickle auf moderne Weise — mit KI als Pair-Programmer — und komme aus der Medienforschung, baue also für echte Menschen, nicht nur für andere Entwickler. Französisch und Englisch als Muttersprache; Schweizer und Amerikaner.",
+      "hero.role": "Ich entwickle echte Web-Apps, indem ich KI steuere — 9 davon live",
+      "hero.pitch": "Ich mache aus Ideen Software, die Menschen wirklich nutzen — 9 davon sind genau jetzt online: eine Schule im Browser, die sechs Programmiersprachen unterrichtet, ein Generator, der aus einem Satz eine Excel-Datei macht, ein KI-Begleiter mit echtem Gedächtnis und mehr. Ich entwickle auf moderne Weise — mit KI als Pair-Programmer — und komme aus der Medienforschung, baue also für echte Menschen, nicht nur für andere Entwickler. Französisch und Englisch als Muttersprache; Schweizer und Amerikaner.",
       "hero.cta.work": "Meine Arbeiten ansehen",
       "hero.cta.cv": "Lebenslauf herunterladen",
       "hero.cta.contact": "Kontakt",
@@ -632,7 +657,7 @@ const CONTENT = {
       "skills.people.heading": "🤝 Menschen & Berufliches",
       "timeline.experience": "Erfahrung",
       "timeline.education": "Ausbildung",
-      "projects.lead": "Echte, funktionierende Anwendungen — keine Mockups. Acht sind live, alle im Alleingang gebaut; die Badges zeigen, was öffentlich live ist und was sich noch in Entwicklung befindet.",
+      "projects.lead": "Echte, funktionierende Anwendungen — keine Mockups. Neun sind live, alle im Alleingang gebaut; die Badges zeigen, was öffentlich live ist und was sich noch in Entwicklung befindet.",
       "projects.mission": "Ein roter Faden verbindet sie alle: quelloffene Technologie in den Alltag aller bringen — Werkzeuge, für die man sonst zahlt, kostenlos machen.",
       "section.music": "Musik & Live-Sets",
       "nav.music": "Musik",
@@ -788,6 +813,10 @@ const CONTENT = {
         "desc": "Ein psychedelischer Fraktal-Visualizer mit unendlichem Zoom für Live-Shows, angetrieben von WebGL und Web Audio. Kombiniert einen integrierten Psytrance-Generator mit Corner-Pin-Projection-Mapping und läuft als Desktop-Webanwendung."
       },
       {
+        "tag": "KI-Gesangscoach · Web Audio + PWA",
+        "desc": "Ein vollständiger Gesangscoach im Browser – Echtzeit-Stimmungs-Tuner, bewertete Stimmübungen, Melodie-Übungsspiel, 13 Theorie-Karten, ein 12-Wochen-Trainingsprogramm, adaptiver Tagesplan, Ableton-Studio-Guide, Fortschrittsradar und Achievements. Offline nutzbar, als App installierbar und als Android-APK verfügbar."
+      },
+      {
         "tag": "Bar-Crawl-App · React Native / Expo",
         "desc": "Eine Begleit-App für Bar-Crawls, die jede Bar der Schweiz abdeckt — über 3'500, geordnet nach Kanton und Gemeinde. Gebaut mit Expo und React Native, in Umstellung auf ein Supabase-Backend. In Entwicklung."
       },
@@ -806,8 +835,8 @@ const CONTENT = {
       "nav.projects": "项目",
       "nav.contact": "联系",
       "hero.eyebrow": "瑞士纳沙泰尔 · 正在寻找机会",
-      "hero.role": "我靠驾驭 AI 打造真实可用的 Web 应用——已有 8 款上线",
-      "hero.pitch": "我把想法变成人们真正会用的软件，其中 8 款此刻就在线上运行：一所在浏览器里教六种编程语言的学校、一个把一句话变成 Excel 的生成器、一个拥有真实记忆的 AI 伙伴，等等。我以现代方式开发——让 AI 当我的结对编程搭档——而我出身媒体研究，所以做出来的东西是为真实用户服务的，而不只是写给其他工程师看。法语、英语双母语，瑞士与美国双重国籍。",
+      "hero.role": "我靠驾驭 AI 打造真实可用的 Web 应用——已有 9 款上线",
+      "hero.pitch": "我把想法变成人们真正会用的软件，其中 9 款此刻就在线上运行：一所在浏览器里教六种编程语言的学校、一个把一句话变成 Excel 的生成器、一个拥有真实记忆的 AI 伙伴，等等。我以现代方式开发——让 AI 当我的结对编程搭档——而我出身媒体研究，所以做出来的东西是为真实用户服务的，而不只是写给其他工程师看。法语、英语双母语，瑞士与美国双重国籍。",
       "hero.cta.work": "查看我的作品",
       "hero.cta.cv": "下载简历",
       "hero.cta.contact": "联系我",
@@ -834,7 +863,7 @@ const CONTENT = {
       "skills.people.heading": "🤝 人际与职业",
       "timeline.experience": "工作经历",
       "timeline.education": "教育背景",
-      "projects.lead": "真实可用的应用，而非设计稿。8 款已上线，全部由我独立完成；徽章标明哪些已公开上线、哪些仍在开发中。",
+      "projects.lead": "真实可用的应用，而非设计稿。9 款已上线，全部由我独立完成；徽章标明哪些已公开上线、哪些仍在开发中。",
       "projects.mission": "它们有一条共同的主线：把开源技术带到日常人手中——把人们通常要付费的工具变成免费的。",
       "section.music": "音乐与现场",
       "nav.music": "音乐",
@@ -990,6 +1019,10 @@ const CONTENT = {
         "desc": "一款面向现场演出的无限缩放迷幻分形可视化工具，由 WebGL 与 Web Audio 驱动。内置 psytrance 生成器，搭配四角定位投影映射，以桌面 Web 应用运行。"
       },
       {
+        "tag": "AI声乐教练 · Web Audio + PWA",
+        "desc": "浏览器内完整的声乐教练——实时音准调音器、评分发声练习、音高练习游戏、13张理论卡片、12周训练计划、自适应每日计划、Ableton录音棚指南、进度雷达图与成就徽章。支持离线使用，可安装为应用，并提供Android APK。"
+      },
+      {
         "tag": "酒吧巡游应用 · React Native / Expo",
         "desc": "一款酒吧巡游伴侣应用，覆盖瑞士的每一家酒吧——3500 多家，按州与市镇组织。用 Expo 与 React Native 构建，正迁移至 Supabase 后端。开发中。"
       },
@@ -1008,8 +1041,8 @@ const CONTENT = {
       "nav.projects": "プロジェクト",
       "nav.contact": "お問い合わせ",
       "hero.eyebrow": "Neuchâtel · スイス — 新たな機会を歓迎",
-      "hero.role": "AI を指揮して本物の Web アプリを開発 — 8本が公開中",
-      "hero.pitch": "アイデアを、人が実際に使うソフトウェアに変えています。そのうち8本は今この瞬間も公開中です — 6つのプログラミング言語を教えるブラウザ内スクール、一文から Excel を生成するツール、本物の記憶を持つ AI コンパニオンなど。AI をペアプログラマーとする現代的なやり方で開発し、メディア研究の出身だからこそ、エンジニアだけでなく実際のユーザーのために作ります。フランス語と英語のネイティブ、スイスとアメリカの国籍を持っています。",
+      "hero.role": "AI を指揮して本物の Web アプリを開発 — 9本が公開中",
+      "hero.pitch": "アイデアを、人が実際に使うソフトウェアに変えています。そのうち9本は今この瞬間も公開中です — 6つのプログラミング言語を教えるブラウザ内スクール、一文から Excel を生成するツール、本物の記憶を持つ AI コンパニオンなど。AI をペアプログラマーとする現代的なやり方で開発し、メディア研究の出身だからこそ、エンジニアだけでなく実際のユーザーのために作ります。フランス語と英語のネイティブ、スイスとアメリカの国籍を持っています。",
       "hero.cta.work": "実績を見る",
       "hero.cta.cv": "CV をダウンロード",
       "hero.cta.contact": "お問い合わせ",
@@ -1036,7 +1069,7 @@ const CONTENT = {
       "skills.people.heading": "🤝 対人 & プロフェッショナル",
       "timeline.experience": "経歴",
       "timeline.education": "学歴",
-      "projects.lead": "モックアップではなく、実際に動くアプリケーション。8本が公開中で、すべて単独で開発しました。バッジは一般公開中か開発中かを示しています。",
+      "projects.lead": "モックアップではなく、実際に動くアプリケーション。9本が公開中で、すべて単独で開発しました。バッジは一般公開中か開発中かを示しています。",
       "projects.mission": "すべてに共通する一本の軸があります。オープンソース技術を誰もの手に届けること — 本来は有料のツールを、無料で使えるようにすることです。",
       "section.music": "音楽 & ライブ",
       "nav.music": "音楽",
@@ -1190,6 +1223,10 @@ const CONTENT = {
       {
         "tag": "ビジュアル／プロジェクションツール · WebGL",
         "desc": "WebGL と Web Audio で動く、ライブショー向けの無限ズームするサイケデリックなフラクタルビジュアライザー。内蔵のサイケトランスジェネレーターとコーナーピン式プロジェクションマッピングを組み合わせ、デスクトップのウェブアプリとして動作します。"
+      },
+      {
+        "tag": "AI歌声コーチ · Web Audio + PWA",
+        "desc": "ブラウザ完結の歌声コーチ——リアルタイムピッチチューナー、採点付き発声練習、音程練習ゲーム、13枚の理論カード、12週間トレーニングプログラム、アダプティブ日次プラン、Abletonスタジオガイド、進捗レーダーチャート、アチーブメントバッジ。オフライン対応、アプリとしてインストール可能、Android APKも提供。"
       },
       {
         "tag": "バー巡りアプリ · React Native / Expo",
