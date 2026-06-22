@@ -12,6 +12,25 @@
 
 const PROJECTS_BASE = [
   {
+    "name": "RED MATRIX",
+    "emoji": "🎬",
+    "img": "assets/projects/redmatrix.png",
+    "grad": "linear-gradient(135deg, #ff0033, #1a0210)",
+    "status": "live",
+    "free": false,
+    "tech": [
+      "Electron",
+      "Node.js",
+      "Express",
+      "Capacitor",
+      "Vanilla JS",
+      "HTTP range streaming",
+      "Server-Sent Events"
+    ],
+    "live": "",
+    "repo": ""
+  },
+  {
     "name": "Pilot",
     "emoji": "🍓",
     "img": "assets/projects/pilot.png",
@@ -365,6 +384,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "Self-hosted media centre · Electron + Node",
+        "desc": "A self-hosted media centre, built end-to-end: a Node/Express server that indexes a library and streams it over HTTP range requests (instant seeking), with three clients sharing one sync engine — an Electron desktop app, a Capacitor Android app, and a lightweight client for low-power devices. Notable parts: a hand-built virtualised grid that stays smooth with thousands of items (no framework), real-time 'watch-together' rooms that mirror one viewer's play / pause / seek to a friend over Server-Sent Events, token auth with passkey-locked private folders, and remote access over a private mesh VPN."
+      },
+      {
         "tag": "Interactive Pi 5 course · PWA",
         "desc": "A 447-page Raspberry Pi 5 handbook reborn as a friendly, finishable course — with a real hand-written Linux terminal and a wireable GPIO breadboard you can try right in the browser. Adds ⌘K search, a living glossary, quizzes and badges, and light/dark themes. Installable and fully offline."
       },
@@ -570,6 +593,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "Médiacentre auto-hébergé · Electron + Node",
+        "desc": "Un médiacentre auto-hébergé, conçu de bout en bout : un serveur Node/Express qui indexe une bibliothèque et la diffuse via des requêtes HTTP par plage (lecture instantanée), avec trois clients partageant un même moteur de synchronisation — une application de bureau Electron, une application Android Capacitor et un client léger pour appareils peu puissants. Points notables : une grille virtualisée faite main qui reste fluide avec des milliers d'éléments (sans framework), des sessions « regarder ensemble » en temps réel qui répliquent la lecture / pause / avance d'un spectateur vers un ami via Server-Sent Events, une authentification par jeton avec dossiers privés verrouillés par clé d'accès, et un accès à distance via un réseau maillé privé (VPN)."
+      },
       {
         "tag": "Cours interactif Pi 5 · PWA",
         "desc": "Un manuel de 447 pages sur le Raspberry Pi 5 réinventé en un cours convivial que l’on peut vraiment terminer — avec un véritable terminal Linux écrit à la main et une platine GPIO que l’on câble directement dans le navigateur. S’y ajoutent une recherche ⌘K, un glossaire vivant, des quiz et des badges, ainsi que des thèmes clair et sombre. Installable et entièrement hors ligne."
@@ -777,6 +804,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "Selbst gehostetes Mediacenter · Electron + Node",
+        "desc": "Ein selbst gehostetes Mediacenter, von Grund auf gebaut: ein Node/Express-Server, der eine Bibliothek indexiert und per HTTP-Range-Requests streamt (sofortiges Spulen), mit drei Clients, die eine gemeinsame Sync-Engine teilen — eine Electron-Desktop-App, eine Capacitor-Android-App und ein schlanker Client für leistungsschwache Geräte. Besonderheiten: ein handgebautes virtualisiertes Grid, das mit Tausenden Einträgen flüssig bleibt (ohne Framework), Echtzeit-Räume zum gemeinsamen Ansehen, die Wiedergabe / Pause / Spulen eines Zuschauers über Server-Sent Events an einen Freund spiegeln, Token-Authentifizierung mit per Passkey gesperrten privaten Ordnern und Fernzugriff über ein privates Mesh-VPN."
+      },
+      {
         "tag": "Interaktiver Pi-5-Kurs · PWA",
         "desc": "Ein 447-seitiges Raspberry-Pi-5-Handbuch, neu geboren als freundlicher, abschliessbarer Kurs — mit einem echten, handgeschriebenen Linux-Terminal und einem verdrahtbaren GPIO-Steckbrett, das man direkt im Browser ausprobieren kann. Dazu ⌘K-Suche, ein lebendiges Glossar, Quizze und Abzeichen sowie ein helles und ein dunkles Theme. Installierbar und vollständig offline."
       },
@@ -983,6 +1014,10 @@ const CONTENT = {
     ],
     "projects": [
       {
+        "tag": "自托管媒体中心 · Electron + Node",
+        "desc": "一个从零搭建的自托管媒体中心：Node/Express 服务器索引媒体库并通过 HTTP 范围请求流式传输（即时跳转），三个客户端共用同一套同步引擎——Electron 桌面应用、Capacitor 安卓应用，以及面向低功耗设备的轻量客户端。亮点：手写的虚拟化网格在上千条目下依然流畅（无框架）、通过 Server-Sent Events 将一位观众的播放／暂停／跳转实时镜像给好友的「一起看」房间、基于令牌的鉴权与通行密钥锁定的私密文件夹，以及通过私有网状 VPN 的远程访问。"
+      },
+      {
         "tag": "树莓派 5 互动课程 · PWA",
         "desc": "一本 447 页的树莓派 5 手册重生为友好、可真正学完的课程——内置可直接在浏览器里上手的真实手写 Linux 终端，以及可接线的 GPIO 面包板。配有 ⌘K 搜索、随查随用的词汇表、测验与徽章，以及明暗双主题。可安装、完全离线。"
       },
@@ -1188,6 +1223,10 @@ const CONTENT = {
       }
     ],
     "projects": [
+      {
+        "tag": "セルフホスト型メディアセンター · Electron + Node",
+        "desc": "ゼロから構築したセルフホスト型のメディアセンター：ライブラリを索引化し HTTP レンジリクエストでストリーミング（瞬時のシーク）する Node/Express サーバーと、同一の同期エンジンを共有する 3 つのクライアント（Electron デスクトップ、Capacitor の Android アプリ、低スペック機器向けの軽量クライアント）で構成。見どころ：数千件でも滑らかに動く自作の仮想化グリッド（フレームワーク不使用）、Server-Sent Events で視聴者の再生／一時停止／シークを友人にリアルタイムで反映する「一緒に観る」ルーム、トークン認証とパスキーで施錠した非公開フォルダ、プライベートなメッシュ VPN による遠隔アクセス。"
+      },
       {
         "tag": "インタラクティブ Pi 5 講座 · PWA",
         "desc": "447 ページの Raspberry Pi 5 ハンドブックを、最後までやり切れる親しみやすい講座に再構築。ブラウザ内で実際に動く手作りの Linux ターミナルと、配線できる GPIO ブレッドボードをその場で試せます。⌘K 検索、生きた用語集、クイズとバッジ、ライト／ダークの2テーマを搭載。インストール可能で完全オフライン対応。"
