@@ -420,8 +420,8 @@ const CONTENT = {
         "desc": "A peer-to-peer marketplace for buying and selling second-hand fashion in Switzerland — real user accounts, JWT auth, listings and messaging. Trilingual (FR / DE / IT), built as a Node/Express full-stack app with a PWA front end. In development."
       },
       {
-        "tag": "Visual / projection tool · WebGL",
-        "desc": "An infinite-zoom psychedelic fractal visualizer for live shows, driven by WebGL and Web Audio. Pairs a built-in psytrance generator with corner-pin projection mapping, and runs as a desktop web app."
+        "tag": "Audio-reactive visuals & projection · WebGL",
+        "desc": "A real-time WebGL / Web Audio VJ tool for live shows: ten visuals — five infinite-zoom 'liquid' fractals plus five audio visualizers — that react to any sound. Includes a built-in evolving psytrance generator and free-form multi-shape projection mapping, and runs as a desktop web app."
       },
       {
         "tag": "AI singing coach · Web Audio + PWA",
@@ -630,8 +630,8 @@ const CONTENT = {
         "desc": "Une marketplace entre particuliers pour acheter et vendre de la mode de seconde main en Suisse — vrais comptes utilisateurs, authentification JWT, annonces et messagerie. Trilingue (FR / DE / IT), conçue comme une application full-stack Node/Express avec un front-end PWA. En développement."
       },
       {
-        "tag": "Outil visuel / de projection · WebGL",
-        "desc": "Un visualiseur de fractales psychédéliques à zoom infini pour les concerts, propulsé par WebGL et Web Audio. Il associe un générateur de psytrance intégré à un mapping de projection par corner-pin, et tourne comme une application web de bureau."
+        "tag": "Visuels audio-réactifs & projection · WebGL",
+        "desc": "Un outil VJ temps réel en WebGL / Web Audio pour les concerts : dix visuels — cinq fractales « liquides » à zoom infini et cinq visualiseurs audio — qui réagissent à n'importe quel son. Avec un générateur de psytrance évolutif intégré et un mapping de projection multi-formes libre, le tout en application web de bureau."
       },
       {
         "tag": "Coach chant IA · Web Audio + PWA",
@@ -840,8 +840,8 @@ const CONTENT = {
         "desc": "Ein Peer-to-Peer-Marktplatz zum Kaufen und Verkaufen von Second-Hand-Mode in der Schweiz — echte Benutzerkonten, JWT-Authentifizierung, Inserate und Nachrichten. Dreisprachig (FR / DE / IT), gebaut als Full-Stack-App mit Node/Express und PWA-Frontend. In Entwicklung."
       },
       {
-        "tag": "Visualisierungs- / Projektions-Tool · WebGL",
-        "desc": "Ein psychedelischer Fraktal-Visualizer mit unendlichem Zoom für Live-Shows, angetrieben von WebGL und Web Audio. Kombiniert einen integrierten Psytrance-Generator mit Corner-Pin-Projection-Mapping und läuft als Desktop-Webanwendung."
+        "tag": "Audioreaktive Visuals & Projektion · WebGL",
+        "desc": "Ein Echtzeit-VJ-Tool (WebGL / Web Audio) für Live-Shows: zehn Visuals — fünf 'flüssige' Fraktale mit unendlichem Zoom und fünf Audio-Visualizer — die auf jeden Sound reagieren. Mit eingebautem, sich entwickelndem Psytrance-Generator und freiem Multi-Form-Projection-Mapping, als Desktop-Webanwendung."
       },
       {
         "tag": "KI-Gesangscoach · Web Audio + PWA",
@@ -1050,8 +1050,8 @@ const CONTENT = {
         "desc": "一个面向瑞士的二手时尚个人交易市场（C2C）——带有真实用户账户、JWT 鉴权、商品发布与消息功能。三语界面（法/德/意），以 Node/Express 全栈应用构建，前端为 PWA。开发中。"
       },
       {
-        "tag": "视觉 / 投影工具 · WebGL",
-        "desc": "一款面向现场演出的无限缩放迷幻分形可视化工具，由 WebGL 与 Web Audio 驱动。内置 psytrance 生成器，搭配四角定位投影映射，以桌面 Web 应用运行。"
+        "tag": "音频响应视觉与投影 · WebGL",
+        "desc": "一款基于 WebGL / Web Audio 的实时 VJ 工具，面向现场演出：十种视觉效果——五种无限缩放的“液态”分形，外加五种音频可视化——都会随任意声音律动。内置不断演变的 psytrance 生成器与自由的多形状投影映射，以桌面 Web 应用运行。"
       },
       {
         "tag": "AI声乐教练 · Web Audio + PWA",
@@ -1260,8 +1260,8 @@ const CONTENT = {
         "desc": "スイス向けの個人間（C2C）中古ファッション・マーケットプレイス — 実際のユーザーアカウント、JWT 認証、出品、メッセージング機能を備えています。3か国語対応 (FR / DE / IT) で、PWA フロントエンドを持つ Node/Express のフルスタックアプリとして構築。現在開発中。"
       },
       {
-        "tag": "ビジュアル／プロジェクションツール · WebGL",
-        "desc": "WebGL と Web Audio で動く、ライブショー向けの無限ズームするサイケデリックなフラクタルビジュアライザー。内蔵のサイケトランスジェネレーターとコーナーピン式プロジェクションマッピングを組み合わせ、デスクトップのウェブアプリとして動作します。"
+        "tag": "オーディオ反応ビジュアル＆プロジェクション · WebGL",
+        "desc": "WebGL／Web Audio によるライブ向けリアルタイム VJ ツール。10種類のビジュアル——無限ズームする5つの『液体』フラクタルと5つのオーディオビジュアライザー——があらゆる音に反応します。進化する内蔵サイケトランスジェネレーターと自由な複数シェイプのプロジェクションマッピングを備え、デスクトップのウェブアプリとして動作します。"
       },
       {
         "tag": "AI歌声コーチ · Web Audio + PWA",
