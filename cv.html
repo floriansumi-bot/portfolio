@@ -19,7 +19,7 @@
     font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
     color: var(--ink); background: #fff; line-height: 1.42; font-size: 10pt;
   }
-  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 12mm 14mm; }
+  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 10mm 13mm; }
 
   header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem;
     border-bottom: 3px solid var(--accent); padding-bottom: 9px; margin-bottom: 11px; }
@@ -32,7 +32,7 @@
   .body { display: grid; grid-template-columns: 1fr 64mm; gap: 12mm; }
   h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent2);
     border-bottom: 1px solid var(--line); padding-bottom: 4px; margin: 0 0 9px; }
-  section { margin-bottom: 10px; }
+  section { margin-bottom: 7px; }
 
   .summary { color: #3a3650; }
 
@@ -50,6 +50,7 @@
   .badge.live { background: #dcfce7; color: #15803d; }
   .badge.dev { background: #fce7f3; color: #be185d; }
   .badge.research { background: #cffafe; color: #0e7490; }
+  .badge.private { background: #ede9fe; color: #6d28d9; }
   .proj p { color: #46415a; font-size: 9.2pt; }
   .proj .url { color: var(--accent2); font-size: 8.6pt; word-break: break-all; }
 
@@ -61,7 +62,10 @@
   .side .block { margin-bottom: 10px; }
 
   @page { size: A4; margin: 0; }
-  @media print { .page { margin: 0; } }
+  @media print {
+    html, body { margin: 0; }
+    .page { margin: 0; height: 297mm; min-height: 297mm; overflow: hidden; }
+  }
 </style>
 </head>
 <body>
@@ -69,7 +73,7 @@
     <header>
       <div>
         <div class="name">Florian Sumi</div>
-        <div class="role">Self-taught builder &amp; social-sciences student</div>
+        <div class="role">Full-stack developer &amp; Social Sciences student</div>
       </div>
       <div class="contact">
         <div><a href="mailto:Florian.Sumi@gmail.com">Florian.Sumi@gmail.com</a></div>
@@ -84,11 +88,12 @@
         <section>
           <h2>Profile</h2>
           <p class="summary">
-            Master's student in social sciences (media &amp; communication) at the University of Lausanne and a self-taught software builder.
-            I design and ship real, working web applications — using modern AI-assisted development —
-            from a six-language in-browser code school to a prompt-to-Excel generator. Reliable,
-            adaptable and fast-learning, with hands-on retail and customer-service experience.
-            Native French &amp; English.
+            Full-stack developer and Master's student in social sciences (media &amp; communication)
+            at the University of Lausanne. I ship real, working web applications and AI-powered
+            products — from a six-language in-browser code school running real language engines via
+            WebAssembly, to a companion app with a Postgres&nbsp;+&nbsp;pgvector memory system. I write
+            production code with AI as a multiplier, not a ghostwriter. Eight projects live online.
+            Native French &amp; English; Swiss and American.
           </p>
         </section>
 
@@ -96,24 +101,33 @@
           <h2>Selected projects</h2>
           <div class="proj">
             <div class="title">THE CONSTRUCT <span class="badge live">Live</span></div>
-            <p>A hacker-terminal code school teaching six languages (Python, JS, TypeScript, SQL, Lua, Ruby),
-               each running a real engine in the browser. Live demo online.</p>
+            <p>A browser code school teaching six languages (Python, JS, TypeScript, SQL, Lua, Ruby),
+               each running a <b>real engine via WebAssembly</b>. 96 verified exercises, live-graded in the browser.</p>
             <div class="url">floriansumi-bot.github.io/the-construct</div>
           </div>
           <div class="proj">
-            <div class="title">SheetGenie <span class="badge dev">In dev</span></div>
-            <p>A PWA that turns a plain-language request into a real, downloadable Excel workbook —
-               formulas, charts, conditional formatting; reads data from photos &amp; PDFs.</p>
+            <div class="title">Guillermo <span class="badge live">Live</span></div>
+            <p>A full-stack AI companion (Next.js, <b>Postgres + pgvector</b>) that forms durable, searchable
+               memories and runs autonomous background jobs — real accounts and persistence.</p>
+            <div class="url">guillermo-opal.vercel.app</div>
           </div>
           <div class="proj">
-            <div class="title">SAPE <span class="badge dev">In dev</span></div>
-            <p>A "Swiss Vinted" second-hand marketplace — full-stack web app with accounts, listings
-               and messaging; trilingual (FR/DE/IT).</p>
+            <div class="title">SheetGenie <span class="badge live">Live</span></div>
+            <p>Turns a spoken or typed request into a real, downloadable Excel workbook — live formulas,
+               charts, conditional formatting; reads data from photos &amp; PDFs. JS + Python serverless.</p>
+            <div class="url">sheetgenie.vercel.app</div>
           </div>
           <div class="proj">
-            <div class="title">HyperFractal &amp; Barathon <span class="badge dev">In dev</span></div>
-            <p>An infinite-zoom fractal/projection-mapping visualizer for live shows; and a bar-crawl
-               app covering every bar in Switzerland (React Native).</p>
+            <div class="title">AdForge <span class="badge live">Live</span></div>
+            <p>A pipeline of <b>five specialised AI agents</b> that turns one product brief into finished ad
+               creatives — copy, editable scenes, and an animated video with AI voiceover, all in-browser.</p>
+            <div class="url">adforge-gamma.vercel.app</div>
+          </div>
+          <div class="proj">
+            <div class="title">HyperFractal <span class="badge live">Live</span></div>
+            <p>A single-file <b>WebGL / Web Audio</b> VJ tool for live shows: ten audio-reactive visuals plus
+               free-form projection mapping — no dependencies, runs in the browser.</p>
+            <div class="url">floriansumi-bot.github.io/hyperfractal</div>
           </div>
         </section>
 
@@ -130,10 +144,6 @@
           <div class="item">
             <div class="top"><span><span class="title">Logistics Intern</span> · <span class="org">Rolex SA, Geneva</span></span></div>
             <p>Inventory management and parcel preparation and dispatch.</p>
-          </div>
-          <div class="item">
-            <div class="top"><span><span class="title">Landscaping Intern</span> · <span class="org">Marco Cellerini</span></span></div>
-            <p>Hands-on landscaping and grounds work.</p>
           </div>
         </section>
       </div>
@@ -171,17 +181,19 @@
         <div class="block">
           <h2>Building &amp; AI</h2>
           <div class="chips">
-            <span>Agentic coding</span><span>AI pair-programming</span><span>JavaScript &amp; Python (AI-assisted)</span>
-            <span>Prompt engineering</span><span>PWAs</span><span>Git &amp; GitHub</span><span>Vercel / GitHub Pages</span>
-            <span>Product &amp; UX design</span><span>Ableton Live</span><span>Audio &amp; video editing</span>
+            <span>JavaScript &amp; Python</span><span>Next.js / Node.js</span><span>React Native</span>
+            <span>WebAssembly / Pyodide</span><span>WebGL / Web Audio</span><span>pgvector / vector search</span>
+            <span>Multi-agent AI</span><span>Server-Sent Events</span><span>JWT auth &amp; REST APIs</span>
+            <span>Electron &amp; Capacitor</span><span>PWAs</span><span>Automated testing</span>
+            <span>Git, Vercel, GitHub Pages</span><span>Product &amp; UX design</span>
           </div>
         </div>
 
         <div class="block">
           <h2>Strengths</h2>
           <div class="chips">
-            <span>Customer service</span><span>Cash handling</span><span>Fast learner</span>
-            <span>Reliable</span><span>Adaptable</span><span>Self-directed</span>
+            <span>Customer service</span><span>Teaching (TEFL)</span><span>Fast learner</span>
+            <span>Reliable</span><span>Adaptable</span><span>Self-directed</span><span>Problem solving</span>
           </div>
         </div>
 
