@@ -63,6 +63,20 @@ function projectLinks(p) {
   return links.join("");
 }
 
+function caseStudyHtml(p) {
+  const cs = p.caseStudy;
+  if (!cs) return "";
+  const stats = (cs.stats || []).map((s) => `<li>${s}</li>`).join("");
+  return `
+          <details class="project-case">
+            <summary><span class="case-label">${t("projects.caseStudy")}</span><span class="case-chevron" aria-hidden="true"></span></summary>
+            <div class="project-case-body">
+              <ul class="project-case-stats">${stats}</ul>
+              <p>${cs.body || ""}</p>
+            </div>
+          </details>`;
+}
+
 function renderProjects(el, base, loc) {
   if (!el) return;
   // Merge shared meta + translated tag/desc FIRST (index-matched), THEN order the cards.
@@ -89,6 +103,7 @@ function renderProjects(el, base, loc) {
           <div class="project-tag">${p.tag || ""}</div>
           <p class="project-desc">${p.desc || ""}</p>
           <div class="project-tech">${p.tech.map((x) => `<span>${x}</span>`).join("")}</div>
+          ${caseStudyHtml(p)}
           ${p.free ? `<p class="project-free">${t("free.note")}</p>` : ""}
           <div class="project-links">${projectLinks(p)}</div>
         </div>

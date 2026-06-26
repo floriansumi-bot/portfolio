@@ -508,3 +508,32 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
   .projects-cta-actions { flex-direction: column; }
   .projects-cta-actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ---------- Project case study (expander) ---------- */
+.project-case { margin: .2rem 0 1rem; border-top: 1px solid var(--border); }
+.project-case > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: .45rem;
+  padding: .7rem 0 .15rem; font-size: .78rem; font-weight: 700;
+  letter-spacing: .03em; text-transform: uppercase; color: var(--cyan); user-select: none;
+}
+.project-case > summary::-webkit-details-marker { display: none; }
+.project-case > summary:hover .case-label { color: var(--violet); }
+.project-case > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+.case-label { transition: color .2s; }
+.case-chevron {
+  width: .46rem; height: .46rem; border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor; transform: rotate(45deg);
+  transition: transform .25s var(--ease); margin-top: -3px; opacity: .85;
+}
+.project-case[open] > summary .case-chevron { transform: rotate(225deg); margin-top: 2px; }
+.project-case-body { padding: .45rem 0 .1rem; animation: caseIn .3s var(--ease); }
+@keyframes caseIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
+.project-case-stats {
+  list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 .65rem; padding: 0;
+}
+.project-case-stats li {
+  font-size: .72rem; font-weight: 600; color: var(--text);
+  background: var(--grad-soft); border: 1px solid var(--border);
+  border-radius: 999px; padding: .26rem .62rem;
+}
+.project-case-body p { font-size: .87rem; line-height: 1.55; color: var(--text-dim); margin: 0; }
