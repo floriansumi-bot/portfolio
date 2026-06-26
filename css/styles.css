@@ -261,6 +261,7 @@ body::before {
 .badge.live { background: rgba(163,230,53,.15); color: var(--lime); border: 1px solid rgba(163,230,53,.4); }
 .badge.dev { background: rgba(244,114,182,.12); color: var(--magenta); border: 1px solid rgba(244,114,182,.35); }
 .badge.research { background: rgba(34,211,238,.12); color: var(--cyan); border: 1px solid rgba(34,211,238,.35); }
+.badge.private { background: rgba(139,92,246,.12); color: var(--violet); border: 1px solid rgba(139,92,246,.35); }
 .project-tag { color: var(--text-faint); font-size: .82rem; margin-bottom: .7rem; }
 .project-desc { color: var(--text-dim); font-size: .94rem; flex: 1; }
 .project-tech { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; }
@@ -493,14 +494,17 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
 
 /* ---------- After-projects CTA ---------- */
 .projects-cta {
-  text-align: center; margin-top: 3rem; padding: 1.5rem;
+  text-align: center; margin-top: 3rem; padding: 2.2rem 1.5rem;
   border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--grad-soft);
 }
-.projects-cta p { color: var(--text-dim); font-size: 1rem; }
-.projects-cta a {
-  color: var(--cyan); font-weight: 600;
-  border-bottom: 1px solid rgba(34,211,238,.35);
-  transition: color .2s, border-color .2s;
+.projects-cta p {
+  color: var(--text); font-size: 1.15rem; font-weight: 600;
+  font-family: "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.01em;
+  margin-bottom: 1.3rem;
 }
-.projects-cta a:hover { color: var(--violet); border-color: rgba(139,92,246,.5); }
+.projects-cta-actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 560px) {
+  .projects-cta-actions { flex-direction: column; }
+  .projects-cta-actions .btn { width: 100%; justify-content: center; }
+}

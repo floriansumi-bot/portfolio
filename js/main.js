@@ -43,9 +43,12 @@ function timelineItems(el, items) {
     .join("");
 }
 
-function badgeFor(status) {
-  const cls = { live: "live", dev: "dev", research: "research" }[status] || "dev";
-  const label = t("badge." + (cls));
+function badgeFor(p) {
+  // Accept either a status string or a full project (so we can honour `private`).
+  const status = typeof p === "string" ? p : p && p.status;
+  const isPrivate = typeof p === "object" && p && p.private;
+  const cls = isPrivate ? "private" : ({ live: "live", dev: "dev", research: "research" }[status] || "dev");
+  const label = t("badge." + cls);
   return `<span class="badge ${cls}">${label}</span>`;
 }
 
@@ -62,9 +65,14 @@ function projectLinks(p) {
 
 function renderProjects(el, base, loc) {
   if (!el) return;
-  el.innerHTML = base
-    .map((b, i) => {
-      const p = { ...b, ...(loc[i] || {}) }; // merge shared meta + translated tag/desc
+  // Merge shared meta + translated tag/desc FIRST (index-matched), THEN order the cards.
+  // Lead with the strongest: a featured project that's publicly clickable goes first;
+  // everything else keeps its authored order (Array.sort is stable).
+  const merged = base.map((b, i) => ({ ...b, ...(loc[i] || {}) }));
+  const lead = (p) => (p.featured && p.live ? 0 : 1);
+  merged.sort((a, b) => lead(a) - lead(b));
+  el.innerHTML = merged
+    .map((p) => {
       return `
       <article class="project-card reveal">
         <div class="project-thumb">
@@ -75,7 +83,7 @@ function renderProjects(el, base, loc) {
             <h3 class="project-name">${p.name}</h3>
             <div class="project-top-right">
               ${p.year ? `<span class="project-year">${p.year}</span>` : ""}
-              ${badgeFor(p.status)}
+              ${badgeFor(p)}
             </div>
           </div>
           <div class="project-tag">${p.tag || ""}</div>

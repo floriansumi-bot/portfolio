@@ -13,13 +13,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Florian Sumi — Builder & Social-Sciences Student" />
   <meta property="og:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
-  <meta property="og:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.png" />
+  <meta property="og:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.jpg" />
   <meta property="og:url" content="https://floriansumi-bot.github.io/portfolio/" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Florian Sumi — Builder & Social-Sciences Student" />
   <meta name="twitter:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
-  <meta name="twitter:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.png" />
+  <meta name="twitter:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,7 +46,10 @@
       { "@type": "EducationalOrganization", "name": "Harvard University" }
     ],
     "knowsLanguage": ["French", "English", "German"],
-    "sameAs": ["https://github.com/floriansumi-bot"]
+    "sameAs": [
+      "https://github.com/floriansumi-bot",
+      "https://www.linkedin.com/in/florian-sumi/"
+    ]
   }
   </script>
 </head>
@@ -178,12 +181,12 @@
             at the University of Lausanne</strong>; the rest of the time I build software.
           </p>
           <p data-i18n-html="about.p2">
-            I'm largely <strong>self-taught</strong>, and I work the modern way — I build software
-            by <strong>directing AI</strong>: designing, prototyping and shipping real applications
-            with AI as a pair-programmer. The result isn't slideware — it's <strong>working
-            products</strong> people can open and use, from a cyberpunk code-learning platform
-            running real language engines in the browser, to a tool that turns a sentence into a
-            finished Excel workbook.
+            I'm largely <strong>self-taught</strong> and I work the modern way — writing real code
+            with <strong>AI as a multiplier, not a ghostwriter</strong>. I've shipped products using
+            WebGL, WebAssembly, vector databases, multi-agent pipelines and real-time streaming.
+            The result isn't slideware — it's <strong>working products people can open and use</strong>,
+            from a code-learning platform running real language engines in the browser, to a
+            companion app with a genuine pgvector memory system.
           </p>
           <p data-i18n-html="about.p3">
             Alongside the code I bring hands-on, people-facing experience — <strong>retail sales,
@@ -252,7 +255,11 @@
       </p>
       <div class="projects-grid" id="projectsGrid"></div>
       <div class="projects-cta reveal">
-        <p>If something here looks useful for your team — <a href="mailto:Florian.Sumi@gmail.com">email me</a> or <a href="assets/Florian-Sumi-CV.pdf" download>download my CV</a>.</p>
+        <p data-i18n="projects.cta">Like what you see? Let's build something together.</p>
+        <div class="projects-cta-actions">
+          <a href="mailto:Florian.Sumi@gmail.com" class="btn btn-primary" data-i18n="projects.cta.email">Get in touch</a>
+          <a href="assets/Florian-Sumi-CV.pdf" class="btn btn-ghost" download data-i18n="projects.cta.cv">Download CV</a>
+        </div>
       </div>
     </section>
 
@@ -315,27 +322,27 @@
       </p>
       <div class="contact-grid reveal">
         <a class="contact-card" href="mailto:Florian.Sumi@gmail.com">
-          <span class="contact-icon">✉️</span>
+          <span class="contact-icon" aria-hidden="true">✉️</span>
           <span class="contact-label" data-i18n="contact.email">Email</span>
           <span class="contact-value">Florian.Sumi@gmail.com</span>
         </a>
         <a class="contact-card" href="tel:+41786452178">
-          <span class="contact-icon">📞</span>
+          <span class="contact-icon" aria-hidden="true">📞</span>
           <span class="contact-label" data-i18n="contact.phone">Phone</span>
           <span class="contact-value">+41 78 645 21 78</span>
         </a>
         <a class="contact-card" href="https://github.com/floriansumi-bot" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon">💻</span>
+          <span class="contact-icon" aria-hidden="true">💻</span>
           <span class="contact-label" data-i18n="contact.github">GitHub</span>
           <span class="contact-value">@floriansumi-bot</span>
         </a>
         <a class="contact-card" href="https://www.linkedin.com/in/florian-sumi/" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon">🔗</span>
+          <span class="contact-icon" aria-hidden="true">🔗</span>
           <span class="contact-label" data-i18n="contact.linkedin">LinkedIn</span>
           <span class="contact-value">florian-sumi</span>
         </a>
         <div class="contact-card contact-card--static">
-          <span class="contact-icon">📍</span>
+          <span class="contact-icon" aria-hidden="true">📍</span>
           <span class="contact-label" data-i18n="contact.location">Location</span>
           <span class="contact-value" data-i18n="contact.location.value">Marin-Epagnier, Neuchâtel 🇨🇭</span>
         </div>

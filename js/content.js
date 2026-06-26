@@ -17,6 +17,7 @@ const PROJECTS_BASE = [
     "img": "assets/projects/redmatrix.jpg",
     "grad": "linear-gradient(135deg, #ff0033, #1a0210)",
     "status": "live",
+    "private": true,
     "free": false,
     "year": 2025,
     "tech": [
@@ -297,6 +298,7 @@ const CONTENT = {
       "badge.live": "Live",
       "badge.dev": "In development",
       "badge.research": "Research",
+      "badge.private": "Private",
       "free.note": "Free to use, built on an open-source stack — no subscription, no paywall.",
       "link.live": "Live demo ↗",
       "link.code": "Code ↗",
@@ -311,7 +313,10 @@ const CONTENT = {
       "a11y.workExp": "Work experience",
       "a11y.education": "Education",
       "a11y.preview": "preview",
-      "projects.stackNote": "Built with (AI-assisted):"
+      "projects.stackNote": "Built with (AI-assisted):",
+      "projects.cta": "Like what you see? Let's build something together.",
+      "projects.cta.email": "Get in touch",
+      "projects.cta.cv": "Download CV"
     },
     "techSkills": [
       "JavaScript & Python",
@@ -327,8 +332,7 @@ const CONTENT = {
       "Automated testing",
       "WCAG accessibility",
       "Git, GitHub, Vercel, GitHub Pages",
-      "Product & UX design",
-      "AI-directed development & prompt engineering"
+      "Product & UX design"
     ],
     "softSkills": [
       "FR / EN native · DE (school)",
@@ -510,6 +514,7 @@ const CONTENT = {
       "badge.live": "En ligne",
       "badge.dev": "En développement",
       "badge.research": "Recherche",
+      "badge.private": "Privé",
       "free.note": "Gratuit, sur une base open source — sans abonnement ni péage.",
       "link.live": "Démo en ligne ↗",
       "link.code": "Code ↗",
@@ -524,6 +529,9 @@ const CONTENT = {
       "a11y.workExp": "Expérience professionnelle",
       "a11y.education": "Formation",
       "a11y.preview": "aperçu",
+      "projects.cta": "Ça vous parle ? Construisons quelque chose ensemble.",
+      "projects.cta.email": "Me contacter",
+      "projects.cta.cv": "Télécharger le CV",
       "projects.stackNote": "Réalisé avec (assisté par IA) :"
     },
     "techSkills": [
@@ -540,8 +548,7 @@ const CONTENT = {
       "Tests automatisés",
       "Accessibilité WCAG",
       "Git, GitHub, Vercel, GitHub Pages",
-      "Conception produit & UX",
-      "Développement agentique & prompt engineering"
+      "Conception produit & UX"
     ],
     "softSkills": [
       "FR / EN langue maternelle · DE (scolaire)",
@@ -723,6 +730,7 @@ const CONTENT = {
       "badge.live": "Live",
       "badge.dev": "In Entwicklung",
       "badge.research": "Forschung",
+      "badge.private": "Privat",
       "free.note": "Kostenlos nutzbar, auf einem Open-Source-Stack gebaut — kein Abo, keine Paywall.",
       "link.live": "Live-Demo ↗",
       "link.code": "Code ↗",
@@ -737,6 +745,9 @@ const CONTENT = {
       "a11y.workExp": "Berufserfahrung",
       "a11y.education": "Ausbildung",
       "a11y.preview": "Vorschau",
+      "projects.cta": "Gefällt Ihnen, was Sie sehen? Lassen Sie uns gemeinsam etwas bauen.",
+      "projects.cta.email": "Kontakt aufnehmen",
+      "projects.cta.cv": "Lebenslauf herunterladen",
       "projects.stackNote": "Erstellt mit (KI-gestützt):"
     },
     "techSkills": [
@@ -753,8 +764,7 @@ const CONTENT = {
       "Automatisierte Tests",
       "WCAG-Barrierefreiheit",
       "Git, GitHub, Vercel, GitHub Pages",
-      "Produkt- & UX-Design",
-      "Agentische Entwicklung & Prompt Engineering"
+      "Produkt- & UX-Design"
     ],
     "softSkills": [
       "FR / EN Muttersprache · DE (Schule)",
@@ -936,6 +946,7 @@ const CONTENT = {
       "badge.live": "已上线",
       "badge.dev": "开发中",
       "badge.research": "研究中",
+      "badge.private": "私有",
       "free.note": "免费使用，基于开源技术栈构建——无订阅、无付费墙。",
       "link.live": "在线演示 ↗",
       "link.code": "代码 ↗",
@@ -950,27 +961,31 @@ const CONTENT = {
       "a11y.workExp": "工作经历",
       "a11y.education": "教育背景",
       "a11y.preview": "预览",
+      "projects.cta": "喜欢看到的内容吗？我们一起做点东西吧。",
+      "projects.cta.email": "联系我",
+      "projects.cta.cv": "下载简历",
       "projects.stackNote": "构建技术（AI 辅助）："
     },
     "techSkills": [
       "JavaScript 与 Python",
-      "React Native、Next.js 与 Node",
-      "智能体编程 — 驾驭 AI",
-      "提示词工程",
-      "快速原型与交付",
+      "React Native、Next.js 与 Node.js",
+      "WebAssembly / Pyodide",
+      "WebGL / Web Audio API",
+      "pgvector / 向量搜索",
+      "多智能体 AI 流水线",
+      "Electron 与 Capacitor（Android）",
+      "Server-Sent Events / 实时通信",
+      "JWT 鉴权与 REST API",
       "渐进式 Web 应用（PWA）",
-      "Git 与 GitHub",
-      "Vercel / GitHub Pages 部署",
-      "产品与 UX 设计",
-      "Ableton Live — 音乐制作",
-      "音视频剪辑"
+      "自动化测试",
+      "WCAG 无障碍",
+      "Git、GitHub、Vercel、GitHub Pages",
+      "产品与 UX 设计"
     ],
     "softSkills": [
-      "客户服务",
-      "现金管理",
-      "零售销售",
-      "教学（TEFL）",
       "法语/英语母语 · 德语（学校所学）",
+      "客户服务",
+      "教学（TEFL）",
       "学习能力强",
       "可靠可信",
       "适应力强",
@@ -1147,6 +1162,7 @@ const CONTENT = {
       "badge.live": "公開中",
       "badge.dev": "開発中",
       "badge.research": "リサーチ",
+      "badge.private": "非公開",
       "free.note": "無料で使え、オープンソースのスタックで構築 — サブスクや課金の壁はありません。",
       "link.live": "デモを見る ↗",
       "link.code": "コード ↗",
@@ -1161,27 +1177,31 @@ const CONTENT = {
       "a11y.workExp": "職務経歴",
       "a11y.education": "学歴",
       "a11y.preview": "プレビュー",
+      "projects.cta": "気に入っていただけましたか？ 一緒に何かつくりましょう。",
+      "projects.cta.email": "お問い合わせ",
+      "projects.cta.cv": "CV をダウンロード",
       "projects.stackNote": "使用技術（AI 支援）："
     },
     "techSkills": [
       "JavaScript と Python",
-      "React Native・Next.js・Node",
-      "エージェント型コーディング — AI を指揮",
-      "プロンプトエンジニアリング",
-      "高速プロトタイピング＆リリース",
+      "React Native・Next.js・Node.js",
+      "WebAssembly / Pyodide",
+      "WebGL / Web Audio API",
+      "pgvector / ベクトル検索",
+      "マルチエージェント AI パイプライン",
+      "Electron と Capacitor（Android）",
+      "Server-Sent Events / リアルタイム",
+      "JWT 認証と REST API",
       "プログレッシブウェブアプリ (PWA)",
-      "Git と GitHub",
-      "Vercel / GitHub Pages へのデプロイ",
-      "プロダクト＆UX デザイン",
-      "Ableton Live — 音楽制作",
-      "音声・動画編集"
+      "自動テスト",
+      "WCAG アクセシビリティ",
+      "Git・GitHub・Vercel・GitHub Pages",
+      "プロダクト＆UX デザイン"
     ],
     "softSkills": [
-      "カスタマーサービス",
-      "現金管理",
-      "小売販売",
-      "英語教授 (TEFL)",
       "FR / EN ネイティブ · DE（学校）",
+      "カスタマーサービス",
+      "英語教授 (TEFL)",
       "習得が早い",
       "誠実で信頼できる",
       "適応力がある",
