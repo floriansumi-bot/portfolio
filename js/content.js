@@ -251,7 +251,7 @@ const CONTENT = {
       "nav.contact": "Contact",
       "hero.eyebrow": "Full-stack developer & UNIL Social Sciences student — open to junior dev roles",
       "hero.role": "I ship full-stack web apps and AI-powered tools — 8 live now",
-      "hero.pitch": "I turn ideas into software people actually use, and 8 of them are live right now: an in-browser school running six real programming language engines via WebAssembly, a voice-to-Excel generator, a companion app with pgvector memory, a multi-agent ad pipeline, and more. I build AI-powered products — not just with AI, but products that use AI as a feature. Native French and English speaker; Swiss and American.",
+      "hero.pitch": "I turn ideas into software people use, and 8 are live right now: an in-browser school that runs six programming-language engines via WebAssembly, a voice-to-Excel generator, a companion app with pgvector memory, a multi-agent ad pipeline, and more. Several of them use AI as an actual feature, not only to build them. Native French and English; Swiss and American.",
       "hero.cta.work": "View my work",
       "hero.cta.cv": "Download CV",
       "hero.cta.contact": "Contact",
@@ -264,8 +264,8 @@ const CONTENT = {
       "section.projects": "Things I've built",
       "section.contact": "Get in touch",
       "about.p1": "I'm <strong>Florian Sumi</strong> — Swiss and American, based near Neuchâtel. By day I'm doing a <strong>Master's in Social Sciences (Media &amp; Communication) at the University of Lausanne</strong>; the rest of the time I build software.",
-      "about.p2": "I'm largely <strong>self-taught</strong> and I work the modern way — writing real code with <strong>AI as a multiplier, not a ghostwriter</strong>. I've shipped products using WebGL, WebAssembly, vector databases, multi-agent pipelines, and real-time streaming. The result isn't slideware — it's <strong>working products people can open and use</strong>, from a code-learning platform running real language engines in the browser, to a companion app with a genuine pgvector memory system.",
-      "about.p3": "My background is <strong>media and communication research</strong> — which is exactly why my software is built for real people, not just other engineers. The same instinct shows in hands-on <strong>retail, cash-handling and customer-service</strong> roles and a TEFL teaching qualification. I learn fast, I ship reliably, and I turn vague ideas into things people can use.",
+      "about.p2": "I'm largely <strong>self-taught</strong>, and AI is part of my workflow the way any developer relies on their tools. I've shipped products with WebGL, WebAssembly, vector databases, multi-agent pipelines and real-time streaming. You can open and use all of them: a platform that runs real language engines in the browser, a companion app with a pgvector memory system, and more.",
+      "about.p3": "My background is in <strong>media and communication research</strong>, so I build software for the people using it, not only for other developers. The same habit comes from hands-on <strong>retail, cash-handling and customer-service</strong> work and a TEFL teaching qualification. I pick things up fast and I ship.",
       "about.fact.based.label": "Based in",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "Languages",
@@ -415,12 +415,12 @@ const CONTENT = {
       {
         "tag": "AI companion · Next.js + pgvector",
         "desc": "A full-stack AI companion (Next.js, Postgres + pgvector) that forms durable, searchable memories of you and keeps running background jobs — journaling private reflections and shifting mood even after you close the tab. Real accounts, real persistence: an experiment in giving an AI an inner life.",
-        "caseStudy": {"stats": ["Next.js + Postgres/pgvector", "Semantic long-term memory", "Autonomous background jobs"], "body": "Most 'AI companion' demos forget you on refresh. Guillermo stores embeddings in pgvector and retrieves by meaning, so it recalls past conversations — and a scheduler keeps it journaling and shifting mood even after you close the tab."}
+        "caseStudy": {"stats": ["Next.js + pgvector", "Long-term memory", "Background jobs"], "body": "Memories are stored as embeddings in pgvector and looked up by similarity, so relevant past conversations come back instead of being lost on reload. Scheduled jobs keep it writing journal entries and changing mood while the tab is closed."}
       },
       {
         "tag": "Learn-to-code platform · WASM/Pyodide",
         "desc": "A hacker-terminal-themed school that teaches six languages — Python, JavaScript, TypeScript, SQL, Lua and Ruby — each running a real engine inside the browser via WebAssembly. Theory first, then live-graded exercises. Modeled on Harvard's CS50 and Dataquest.",
-        "caseStudy": {"stats": ["6 real language engines", "96 verified exercises", "100% in-browser · 0 installs"], "body": "The hard part was running six genuinely different runtimes client-side — Python and Ruby via WebAssembly, plus JS, TypeScript, SQL and Lua — and grading real code instead of multiple-choice. Every reference solution is verified to pass, so an exercise can never ship broken."}
+        "caseStudy": {"stats": ["6 languages, real engines", "96 exercises", "Runs in the browser"], "body": "Each language runs a real engine compiled to WebAssembly: Pyodide for Python, ruby.wasm, sql.js, plus JS, TypeScript and Lua. Exercises grade the code you write by running it against tests, not multiple choice. Reference solutions are checked in CI before they ship."}
       },
       {
         "tag": "Learn to build with AI · PWA",
@@ -429,7 +429,7 @@ const CONTENT = {
       {
         "tag": "AI Excel generator · JS + Python serverless",
         "desc": "Say or type what you need and get a real, downloadable Excel workbook — live formulas, totals, conditional formatting, dropdowns and charts. Reads data from photos and PDFs, and installs as an app on any device.",
-        "caseStudy": {"stats": ["Speech/text → real .xlsx", "Live formulas, charts, formatting", "Reads photos & PDFs"], "body": "It doesn't dump a CSV — a Python serverless function builds a genuine workbook with live formulas, conditional formatting and charts, then streams the .xlsx back. Vision models turn a photo of a receipt or a PDF table into structured rows."}
+        "caseStudy": {"stats": ["Voice or text in", "Real .xlsx out", "Reads photos and PDFs"], "body": "A Python function on the backend writes a real workbook with formulas, conditional formatting and charts, then returns the .xlsx. Photos and PDFs are read into rows with a vision model."}
       },
       {
         "tag": "AI email triage · Gmail agent",
@@ -438,7 +438,7 @@ const CONTENT = {
       {
         "tag": "AI ad generator · Multi-agent",
         "desc": "A multi-agent pipeline that turns a product brief into ready-to-use ad creatives — specialised agents write the copy, design the scenes and generate the imagery, with every scene editable before export.",
-        "caseStudy": {"stats": ["5 specialised AI agents", "Brief → copy, scenes, video", "Every scene editable"], "body": "Instead of one mega-prompt, AdForge is a real pipeline: separate agents for strategy, copy, art direction and imagery hand off through a refinement loop, and the whole campaign — down to an animated video with AI voiceover — is generated in the browser."}
+        "caseStudy": {"stats": ["5 agents", "Brief in, campaign out", "Editable scenes"], "body": "Five agents handle strategy, copy, art direction, imagery and a review pass, each feeding the next. The result is a full campaign, including an animated video with voiceover, generated in the browser."}
       },
       {
         "tag": "Resale marketplace · Node/Express full-stack",
@@ -447,7 +447,7 @@ const CONTENT = {
       {
         "tag": "Audio-reactive visuals & projection · WebGL",
         "desc": "A real-time WebGL / Web Audio VJ tool for live shows: ten visuals — five infinite-zoom 'liquid' fractals plus five audio visualizers — that react to any sound. Includes a built-in evolving psytrance generator and free-form multi-shape projection mapping, and runs as a desktop web app.",
-        "caseStudy": {"stats": ["Single file · 0 dependencies", "10 audio-reactive visuals", "Live projection mapping"], "body": "Ten infinite-zoom fractals and audio visualizers run as GLSL shaders driven by the Web Audio API's live frequency data — all in one self-contained HTML file with no build step and no libraries, plus free-form projection mapping for real shows."}
+        "caseStudy": {"stats": ["One HTML file", "No dependencies", "10 live visuals"], "body": "Ten fractals and audio visualisers written as GLSL shaders that react to live frequency data from the Web Audio API. It is one HTML file with no build step and no libraries. Projection mapping is built in for live shows."}
       },
       {
         "tag": "AI singing coach · Web Audio + PWA",
@@ -473,7 +473,7 @@ const CONTENT = {
       "nav.contact": "Contact",
       "hero.eyebrow": "Développeur full-stack & étudiant UNIL en Sciences sociales — ouvert aux postes junior",
       "hero.role": "Je livre des apps web full-stack et des outils IA — 8 en ligne",
-      "hero.pitch": "Je transforme des idées en logiciels que les gens utilisent vraiment, et 8 d’entre eux sont en ligne dès maintenant : une école dans le navigateur qui enseigne six langages de programmation, un générateur qui crée un fichier Excel à partir d’une simple phrase, une application compagnon dotée d’une vraie mémoire, et bien d’autres. Issu de la recherche dans les médias, je conçois pour de vraies personnes — pas seulement pour d’autres ingénieurs. Francophone et anglophone de naissance ; Suisse et Américain.",
+      "hero.pitch": "Je transforme des idées en logiciels que les gens utilisent, et 8 sont en ligne en ce moment : une école dans le navigateur qui fait tourner six moteurs de langages via WebAssembly, un générateur Excel à la voix, une application compagnon avec mémoire pgvector, un pipeline publicitaire multi-agents, et plus encore. Plusieurs utilisent l’IA comme vraie fonctionnalité, pas seulement pour les construire. Francophone et anglophone de naissance ; Suisse et Américain.",
       "hero.cta.work": "Voir mes réalisations",
       "hero.cta.cv": "Télécharger le CV",
       "hero.cta.contact": "Contact",
@@ -486,8 +486,8 @@ const CONTENT = {
       "section.projects": "Ce que j’ai créé",
       "section.contact": "Me contacter",
       "about.p1": "Je suis <strong>Florian Sumi</strong> — Suisse et Américain, basé près de Neuchâtel. Le jour, je prépare un <strong>Master en sciences sociales (Médias &amp; Communication) à l’Université de Lausanne</strong> ; le reste du temps, je développe des logiciels.",
-      "about.p2": "Je suis en grande partie <strong>autodidacte</strong> et je travaille à la manière d’aujourd’hui — je crée des logiciels en <strong>pilotant l’IA</strong> : je conçois, prototype et livre de vraies applications avec l’IA comme partenaire de programmation. Le résultat n’a rien d’une présentation léchée — ce sont des <strong>produits qui fonctionnent, que l’on peut ouvrir et utiliser</strong>, d’une plateforme d’apprentissage du code faisant tourner de vrais moteurs de langage dans le navigateur à un outil qui transforme une simple phrase en un classeur Excel terminé.",
-      "about.p3": "Je viens de la <strong>recherche en médias et communication</strong> — et c’est précisément pour cela que mes logiciels sont pensés pour de vraies personnes, pas seulement pour d’autres ingénieurs. Le même réflexe se retrouve dans des postes de terrain en <strong>vente, gestion de la caisse et service client</strong>, ainsi que dans une qualification d’enseignement TEFL. J’apprends vite, je livre de façon fiable et je transforme des idées floues en outils que les gens peuvent utiliser.",
+      "about.p2": "Je suis en grande partie <strong>autodidacte</strong>, et l’IA fait partie de ma façon de travailler, comme n’importe quel développeur s’appuie sur ses outils. J’ai livré des produits avec WebGL, WebAssembly, des bases de données vectorielles, des pipelines multi-agents et du streaming en temps réel. On peut tous les ouvrir et les utiliser : une plateforme qui fait tourner de vrais moteurs de langage dans le navigateur, une application compagnon avec mémoire pgvector, et d’autres.",
+      "about.p3": "Je viens de la <strong>recherche en médias et communication</strong>, c’est pourquoi je conçois des logiciels pour les gens qui s’en servent, pas seulement pour d’autres développeurs. Le même réflexe vient de postes de terrain en <strong>vente, gestion de caisse et service client</strong>, et d’une qualification d’enseignement TEFL. J’apprends vite et je livre.",
       "about.fact.based.label": "Basé à",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "Langues",
@@ -637,12 +637,12 @@ const CONTENT = {
       {
         "tag": "Compagnon IA · Next.js + pgvector",
         "desc": "Un compagnon IA full-stack (Next.js, Postgres + pgvector) qui se forge de vrais souvenirs de vous, durables et consultables, et poursuit des tâches en arrière-plan — consignant des réflexions intimes et faisant évoluer son humeur même après la fermeture de l’onglet. De vrais comptes, une vraie persistance : une expérience pour donner une vie intérieure à une IA.",
-        "caseStudy": {"stats": ["Next.js + Postgres/pgvector", "Mémoire sémantique à long terme", "Tâches autonomes en arrière-plan"], "body": "La plupart des « compagnons IA » vous oublient au rechargement. Guillermo stocke des embeddings dans pgvector et les retrouve par le sens : il se souvient des échanges passés — et un planificateur le fait écrire et changer d'humeur même après la fermeture de l'onglet."}
+        "caseStudy": {"stats": ["Next.js + pgvector", "Mémoire à long terme", "Tâches en arrière-plan"], "body": "Les souvenirs sont stockés comme embeddings dans pgvector et retrouvés par similarité, donc les conversations passées pertinentes reviennent au lieu d'être perdues au rechargement. Des tâches planifiées le font écrire son journal et changer d'humeur pendant que l'onglet est fermé."}
       },
       {
         "tag": "Plateforme d’apprentissage du code · WASM/Pyodide",
         "desc": "Une école à l’esthétique terminal de hacker qui enseigne six langages — Python, JavaScript, TypeScript, SQL, Lua et Ruby — chacun exécutant un vrai moteur dans le navigateur via WebAssembly. D’abord la théorie, puis des exercices corrigés en direct. Inspirée du CS50 de Harvard et de Dataquest.",
-        "caseStudy": {"stats": ["6 vrais moteurs de langage", "96 exercices vérifiés", "100 % dans le navigateur · 0 installation"], "body": "Le plus dur : faire tourner six runtimes vraiment différents côté client — Python et Ruby via WebAssembly, plus JS, TypeScript, SQL et Lua — et corriger du vrai code, pas des QCM. Chaque solution de référence est vérifiée, donc un exercice ne peut jamais être livré cassé."}
+        "caseStudy": {"stats": ["6 langages, vrais moteurs", "96 exercices", "Tourne dans le navigateur"], "body": "Chaque langage tourne avec un vrai moteur compilé en WebAssembly : Pyodide pour Python, ruby.wasm, sql.js, ainsi que JS, TypeScript et Lua. Les exercices corrigent le code que vous écrivez en l'exécutant sur des tests, pas des QCM. Les solutions de référence sont vérifiées en CI avant publication."}
       },
       {
         "tag": "Apprendre à créer avec l’IA · PWA",
@@ -651,7 +651,7 @@ const CONTENT = {
       {
         "tag": "Générateur Excel par IA · JS + Python serverless",
         "desc": "Dictez ou tapez ce dont vous avez besoin et obtenez un vrai classeur Excel téléchargeable — formules en direct, totaux, mise en forme conditionnelle, listes déroulantes et graphiques. Il lit les données depuis des photos et des PDF, et s’installe comme une application sur n’importe quel appareil.",
-        "caseStudy": {"stats": ["Voix/texte → vrai .xlsx", "Formules, graphiques, mise en forme", "Lit photos et PDF"], "body": "Pas d'export CSV : une fonction serverless en Python construit un vrai classeur avec formules vivantes, mise en forme conditionnelle et graphiques, puis renvoie le .xlsx. Des modèles de vision transforment la photo d'un reçu ou un tableau PDF en lignes structurées."}
+        "caseStudy": {"stats": ["Voix ou texte en entrée", "Vrai .xlsx en sortie", "Lit photos et PDF"], "body": "Une fonction Python côté serveur écrit un vrai classeur avec formules, mise en forme conditionnelle et graphiques, puis renvoie le .xlsx. Les photos et PDF sont lus en lignes par un modèle de vision."}
       },
       {
         "tag": "Triage des e-mails par IA · Agent Gmail",
@@ -660,7 +660,7 @@ const CONTENT = {
       {
         "tag": "Générateur de publicités par IA · Multi-agents",
         "desc": "Un pipeline multi-agents qui transforme un brief produit en créations publicitaires prêtes à l’emploi — des agents spécialisés rédigent les textes, conçoivent les scènes et génèrent les visuels, chaque scène restant modifiable avant l’export.",
-        "caseStudy": {"stats": ["5 agents IA spécialisés", "Brief → texte, scènes, vidéo", "Chaque scène éditable"], "body": "Au lieu d'un méga-prompt, AdForge est un vrai pipeline : des agents distincts pour la stratégie, le texte, la direction artistique et les visuels se passent le relais via une boucle d'affinage, et toute la campagne — jusqu'à une vidéo animée avec voix off IA — est générée dans le navigateur."}
+        "caseStudy": {"stats": ["5 agents", "Brief en entrée, campagne en sortie", "Scènes éditables"], "body": "Cinq agents gèrent la stratégie, le texte, la direction artistique, les visuels et une relecture, chacun passant au suivant. Le résultat est une campagne complète, avec une vidéo animée et voix off, générée dans le navigateur."}
       },
       {
         "tag": "Marketplace de seconde main · Full-stack Node/Express",
@@ -669,7 +669,7 @@ const CONTENT = {
       {
         "tag": "Visuels audio-réactifs & projection · WebGL",
         "desc": "Un outil VJ temps réel en WebGL / Web Audio pour les concerts : dix visuels — cinq fractales « liquides » à zoom infini et cinq visualiseurs audio — qui réagissent à n'importe quel son. Avec un générateur de psytrance évolutif intégré et un mapping de projection multi-formes libre, le tout en application web de bureau.",
-        "caseStudy": {"stats": ["Un seul fichier · 0 dépendance", "10 visuels audio-réactifs", "Mapping vidéo en direct"], "body": "Dix fractales à zoom infini et visualiseurs audio tournent en shaders GLSL pilotés par les fréquences en direct de la Web Audio API — le tout dans un seul fichier HTML autonome, sans build ni bibliothèque, avec en plus du mapping de projection libre pour la scène."}
+        "caseStudy": {"stats": ["Un fichier HTML", "Aucune dépendance", "10 visuels en direct"], "body": "Dix fractales et visualiseurs audio écrits en shaders GLSL qui réagissent aux fréquences en direct de la Web Audio API. C'est un seul fichier HTML, sans build et sans bibliothèque. Le mapping de projection est intégré pour la scène."}
       },
       {
         "tag": "Coach chant IA · Web Audio + PWA",
@@ -695,7 +695,7 @@ const CONTENT = {
       "nav.contact": "Kontakt",
       "hero.eyebrow": "Full-Stack-Entwickler & UNIL-Sozialwissenschaften — offen für Junior-Stellen",
       "hero.role": "Ich liefere Full-Stack-Web-Apps und KI-gestützte Tools – 8 davon sind live",
-      "hero.pitch": "Ich verwandle Ideen in Software, die Menschen wirklich nutzen – und 8 davon sind genau jetzt live: eine Schule im Browser, die sechs Programmiersprachen vermittelt, ein Generator, der aus einem einzigen Satz eine Excel-Datei erstellt, eine Begleit-App mit einem echten Gedächtnis und mehr. Ich komme aus der Medienforschung und entwickle für echte Menschen – nicht nur für andere Entwickler. Französisch und Englisch als Muttersprachen; Schweizer und US-Amerikaner.",
+      "hero.pitch": "Ich verwandle Ideen in Software, die Menschen nutzen, und 8 davon sind gerade live: eine Schule im Browser, die sechs Sprach-Engines über WebAssembly ausführt, ein Excel-Generator per Sprache, eine Begleit-App mit pgvector-Gedächtnis, eine Multi-Agent-Werbepipeline und mehr. Mehrere nutzen KI als echte Funktion, nicht nur, um sie zu bauen. Französisch und Englisch als Muttersprachen; Schweizer und US-Amerikaner.",
       "hero.cta.work": "Meine Arbeiten ansehen",
       "hero.cta.cv": "Lebenslauf herunterladen",
       "hero.cta.contact": "Kontakt",
@@ -708,8 +708,8 @@ const CONTENT = {
       "section.projects": "Was ich gebaut habe",
       "section.contact": "Kontakt aufnehmen",
       "about.p1": "Ich bin <strong>Florian Sumi</strong> — Schweizer und Amerikaner, wohnhaft in der Nähe von Neuenburg. Tagsüber mache ich einen <strong>Master in Sozialwissenschaften (Medien &amp; Kommunikation) an der Universität Lausanne</strong>; in der übrigen Zeit entwickle ich Software.",
-      "about.p2": "Ich bin grösstenteils <strong>Autodidakt</strong> und arbeite auf moderne Weise — ich entwickle Software, indem ich <strong>KI steuere</strong>: Ich entwerfe, prototypisiere und liefere echte Anwendungen aus, mit KI als Pair-Programmer. Das Ergebnis sind keine Präsentationsfolien, sondern <strong>fertige Produkte, die man öffnen und nutzen kann</strong> — von einer Plattform zum Programmierenlernen, die echte Sprach-Engines im Browser ausführt, bis zu einem Tool, das aus einem einzigen Satz eine fertige Excel-Arbeitsmappe macht.",
-      "about.p3": "Ich komme aus der <strong>Medien- und Kommunikationsforschung</strong> — genau deshalb entsteht meine Software für echte Menschen und nicht nur für andere Entwickler. Dasselbe Gespür zeigt sich in praktischen Rollen in <strong>Einzelhandel, Kassenführung und Kundenservice</strong> sowie in einer Lehrqualifikation (TEFL). Ich lerne schnell, liefere zuverlässig und mache aus vagen Ideen etwas, das Menschen nutzen können.",
+      "about.p2": "Ich bin grösstenteils <strong>Autodidakt</strong>, und KI gehört zu meiner Arbeitsweise, so wie jeder Entwickler seine Werkzeuge nutzt. Ich habe Produkte mit WebGL, WebAssembly, Vektordatenbanken, Multi-Agent-Pipelines und Echtzeit-Streaming ausgeliefert. Man kann sie alle öffnen und nutzen: eine Plattform, die echte Sprach-Engines im Browser ausführt, eine Begleit-App mit pgvector-Gedächtnis und weitere.",
+      "about.p3": "Ich komme aus der <strong>Medien- und Kommunikationsforschung</strong>, deshalb baue ich Software für die Menschen, die sie verwenden, nicht nur für andere Entwickler. Dasselbe Gespür kommt aus praktischer Arbeit in <strong>Einzelhandel, Kassenführung und Kundenservice</strong> und einer TEFL-Lehrqualifikation. Ich lerne schnell und ich liefere.",
       "about.fact.based.label": "Wohnort",
       "about.fact.based.value": "Marin-Epagnier, Neuenburg",
       "about.fact.langs.label": "Sprachen",
@@ -859,12 +859,12 @@ const CONTENT = {
       {
         "tag": "KI-Begleiter · Next.js + pgvector",
         "desc": "Ein Full-Stack-KI-Begleiter (Next.js, Postgres + pgvector), der dauerhafte, durchsuchbare Erinnerungen an Sie aufbaut und im Hintergrund weiterläuft — er hält private Reflexionen in einem Tagebuch fest und verändert seine Stimmung, selbst wenn Sie den Tab längst geschlossen haben. Echte Konten, echte Persistenz: ein Experiment, einer KI ein Innenleben zu geben.",
-        "caseStudy": {"stats": ["Next.js + Postgres/pgvector", "Semantisches Langzeitgedächtnis", "Autonome Hintergrund-Jobs"], "body": "Die meisten „KI-Begleiter\"-Demos vergessen dich beim Neuladen. Guillermo speichert Embeddings in pgvector und ruft sie nach Bedeutung ab, erinnert sich also an frühere Gespräche — und ein Scheduler lässt ihn weiter Tagebuch führen und die Stimmung ändern, auch nach dem Schließen des Tabs."}
+        "caseStudy": {"stats": ["Next.js + pgvector", "Langzeitgedächtnis", "Hintergrund-Jobs"], "body": "Erinnerungen werden als Embeddings in pgvector gespeichert und per Ähnlichkeit abgerufen, sodass relevante frühere Gespräche zurückkommen, statt beim Neuladen verloren zu gehen. Geplante Jobs lassen ihn Tagebuch schreiben und die Stimmung ändern, während der Tab geschlossen ist."}
       },
       {
         "tag": "Plattform zum Programmierenlernen · WASM/Pyodide",
         "desc": "Eine Schule im Hacker-Terminal-Look, die sechs Sprachen unterrichtet — Python, JavaScript, TypeScript, SQL, Lua und Ruby — jede mit einer echten Engine direkt im Browser, ausgeführt über WebAssembly. Erst Theorie, dann live bewertete Übungen. Nach dem Vorbild von Harvards CS50 und Dataquest.",
-        "caseStudy": {"stats": ["6 echte Sprach-Engines", "96 geprüfte Übungen", "100 % im Browser · 0 Installation"], "body": "Das Schwierigste: sechs wirklich unterschiedliche Runtimes clientseitig auszuführen — Python und Ruby via WebAssembly, dazu JS, TypeScript, SQL und Lua — und echten Code zu bewerten statt Multiple-Choice. Jede Musterlösung wird geprüft, sodass eine Übung nie fehlerhaft ausgeliefert wird."}
+        "caseStudy": {"stats": ["6 Sprachen, echte Engines", "96 Übungen", "Läuft im Browser"], "body": "Jede Sprache läuft mit einer echten Engine, kompiliert zu WebAssembly: Pyodide für Python, ruby.wasm, sql.js, dazu JS, TypeScript und Lua. Übungen bewerten deinen Code, indem sie ihn gegen Tests ausführen, kein Multiple-Choice. Musterlösungen werden vor der Veröffentlichung in CI geprüft."}
       },
       {
         "tag": "Mit KI bauen lernen · PWA",
@@ -873,7 +873,7 @@ const CONTENT = {
       {
         "tag": "KI-Excel-Generator · JS + Python serverless",
         "desc": "Sagen oder tippen Sie, was Sie brauchen, und erhalten Sie eine echte, herunterladbare Excel-Arbeitsmappe — mit aktiven Formeln, Summen, bedingter Formatierung, Dropdowns und Diagrammen. Liest Daten aus Fotos und PDFs und lässt sich als App auf jedem Gerät installieren.",
-        "caseStudy": {"stats": ["Sprache/Text → echtes .xlsx", "Live-Formeln, Diagramme, Formatierung", "Liest Fotos & PDFs"], "body": "Kein CSV-Dump: Eine Python-Serverless-Funktion baut eine echte Arbeitsmappe mit Live-Formeln, bedingter Formatierung und Diagrammen und streamt das .xlsx zurück. Vision-Modelle verwandeln das Foto einer Quittung oder eine PDF-Tabelle in strukturierte Zeilen."}
+        "caseStudy": {"stats": ["Sprache oder Text rein", "Echtes .xlsx raus", "Liest Fotos und PDFs"], "body": "Eine Python-Funktion im Backend schreibt eine echte Arbeitsmappe mit Formeln, bedingter Formatierung und Diagrammen und gibt das .xlsx zurück. Fotos und PDFs werden von einem Vision-Modell in Zeilen umgewandelt."}
       },
       {
         "tag": "KI-E-Mail-Triage · Gmail-Agent",
@@ -882,7 +882,7 @@ const CONTENT = {
       {
         "tag": "KI-Werbegenerator · Multi-Agent",
         "desc": "Eine Multi-Agent-Pipeline, die aus einem Produkt-Briefing einsatzbereite Werbe-Creatives macht — spezialisierte Agenten schreiben die Texte, gestalten die Szenen und generieren die Bilder, wobei sich jede Szene vor dem Export bearbeiten lässt.",
-        "caseStudy": {"stats": ["5 spezialisierte KI-Agenten", "Brief → Text, Szenen, Video", "Jede Szene editierbar"], "body": "Statt eines Mega-Prompts ist AdForge eine echte Pipeline: separate Agenten für Strategie, Text, Art-Direction und Bilder übergeben über eine Verfeinerungsschleife, und die ganze Kampagne — bis zum animierten Video mit KI-Voiceover — entsteht im Browser."}
+        "caseStudy": {"stats": ["5 Agenten", "Brief rein, Kampagne raus", "Editierbare Szenen"], "body": "Fünf Agenten übernehmen Strategie, Text, Art-Direction, Bilder und eine Prüfung, jeder gibt an den nächsten weiter. Das Ergebnis ist eine komplette Kampagne mit animiertem Video und Voiceover, erzeugt im Browser."}
       },
       {
         "tag": "Second-Hand-Marktplatz · Node/Express Full-Stack",
@@ -891,7 +891,7 @@ const CONTENT = {
       {
         "tag": "Audioreaktive Visuals & Projektion · WebGL",
         "desc": "Ein Echtzeit-VJ-Tool (WebGL / Web Audio) für Live-Shows: zehn Visuals — fünf 'flüssige' Fraktale mit unendlichem Zoom und fünf Audio-Visualizer — die auf jeden Sound reagieren. Mit eingebautem, sich entwickelndem Psytrance-Generator und freiem Multi-Form-Projection-Mapping, als Desktop-Webanwendung.",
-        "caseStudy": {"stats": ["Eine Datei · 0 Abhängigkeiten", "10 audioreaktive Visuals", "Live-Projektion-Mapping"], "body": "Zehn Endloszoom-Fraktale und Audio-Visualizer laufen als GLSL-Shader, angetrieben von den Live-Frequenzdaten der Web Audio API — alles in einer eigenständigen HTML-Datei ohne Build und ohne Bibliotheken, dazu freies Projektion-Mapping für echte Shows."}
+        "caseStudy": {"stats": ["Eine HTML-Datei", "Keine Abhängigkeiten", "10 Live-Visuals"], "body": "Zehn Fraktale und Audio-Visualizer als GLSL-Shader, die auf Live-Frequenzdaten der Web Audio API reagieren. Es ist eine einzige HTML-Datei, ohne Build und ohne Bibliotheken. Projektion-Mapping ist für Live-Shows eingebaut."}
       },
       {
         "tag": "KI-Gesangscoach · Web Audio + PWA",
@@ -917,7 +917,7 @@ const CONTENT = {
       "nav.contact": "联系",
       "hero.eyebrow": "瑞士纳沙泰尔 · 正在寻找机会",
       "hero.role": "我开发真实可用的 Web 应用——已有 8 款上线运行",
-      "hero.pitch": "我把想法变成人们真正在用的软件，其中 8 款此刻正在线上运行：一所在浏览器里教你六种编程语言的学校、一个只凭一句话就生成 Excel 文件的工具、一款拥有真实记忆的陪伴应用，还有更多。我出身于媒体研究，所以我为真实的普通人而做——而不只是为其他工程师。法语和英语母语者；瑞士与美国双重身份。",
+      "hero.pitch": "我把想法变成人们在用的软件，其中 8 款此刻在线：一所通过 WebAssembly 运行六种语言引擎的浏览器学校、一个用语音生成 Excel 的工具、一款带 pgvector 记忆的陪伴应用、一条多智能体广告流水线，等等。其中几款把 AI 用作真正的功能，而不只是用来开发它们。法语和英语母语者；瑞士与美国双重身份。",
       "hero.cta.work": "查看我的作品",
       "hero.cta.cv": "下载简历",
       "hero.cta.contact": "联系我",
@@ -930,8 +930,8 @@ const CONTENT = {
       "section.projects": "我做过的东西",
       "section.contact": "取得联系",
       "about.p1": "我是<strong>Florian Sumi</strong>，拥有瑞士与美国双重国籍，定居在纳沙泰尔附近。白天我在<strong>洛桑大学攻读社会科学硕士（媒体与传播方向）</strong>；其余时间，我都在做软件。",
-      "about.p2": "我基本上是<strong>自学成才</strong>，并以现代的方式工作——我通过<strong>驾驭 AI</strong> 来开发软件：以 AI 作为结对编程搭档，亲手设计、做原型并交付真实的应用。成果不是徒有其表的演示稿，而是<strong>人们打开即用的可用产品</strong>，从一个在浏览器里运行真实语言引擎的编程学习平台，到一个把一句话变成完整 Excel 工作簿的工具。",
-      "about.p3": "我的背景是<strong>媒体与传播研究</strong>——这恰恰解释了为什么我的软件是为真实用户而造，而不只是写给其他工程师看。同样的本能也体现在<strong>零售、现金管理与客户服务</strong>等一线岗位的实战经验，以及一份对外英语教学资格（TEFL）上。我学得快、交付稳，能把模糊的想法变成人们真正用得上的东西。",
+      "about.p2": "我基本上是<strong>自学</strong>的，AI 是我工作方式的一部分，就像任何开发者都会用自己的工具一样。我用 WebGL、WebAssembly、向量数据库、多智能体流水线和实时流交付过产品。它们都能打开即用：一个在浏览器里运行真实语言引擎的平台、一款带 pgvector 记忆的陪伴应用，还有更多。",
+      "about.p3": "我的背景是<strong>媒体与传播研究</strong>，所以我为使用软件的人而做，而不只是为其他开发者。同样的习惯来自<strong>零售、收银和客户服务</strong>的一线工作，以及一份 TEFL 教学资格。我学得快，也能交付。",
       "about.fact.based.label": "所在地",
       "about.fact.based.value": "Marin-Epagnier，纳沙泰尔",
       "about.fact.langs.label": "语言",
@@ -1081,12 +1081,12 @@ const CONTENT = {
       {
         "tag": "AI 伙伴 · Next.js + pgvector",
         "desc": "一个全栈 AI 伙伴（Next.js、Postgres + pgvector），会形成关于你的持久、可检索的记忆，并在后台持续运转——记录私密的日记、转换心情，哪怕你已经关掉了页面。真实账户、真实持久化：一次为 AI 赋予内在世界的实验。",
-        "caseStudy": {"stats": ["Next.js + Postgres/pgvector", "语义化长期记忆", "自主后台任务"], "body": "大多数「AI 伴侣」演示在刷新后就把你忘了。Guillermo 将向量嵌入存入 pgvector 并按语义检索，因此能记起过往对话——调度器还让它在你关闭标签页后继续写日记、转变心情。"}
+        "caseStudy": {"stats": ["Next.js + pgvector", "长期记忆", "后台任务"], "body": "记忆以向量嵌入的形式存入 pgvector，并按相似度检索，因此相关的过往对话会重新出现，而不是刷新后丢失。计划任务让它在标签页关闭时继续写日记、改变心情。"}
       },
       {
         "tag": "编程学习平台 · WASM/Pyodide",
         "desc": "一所黑客终端风格的学校，教你六种语言——Python、JavaScript、TypeScript、SQL、Lua 和 Ruby——每一种都通过 WebAssembly 在浏览器里运行真实的引擎。先讲理论，再做实时评分的练习。借鉴哈佛 CS50 与 Dataquest。",
-        "caseStudy": {"stats": ["6 个真实语言引擎", "96 道已验证练习", "100% 浏览器内 · 0 安装"], "body": "最难的部分是在客户端运行六种截然不同的运行时——Python 和 Ruby 通过 WebAssembly，外加 JS、TypeScript、SQL 和 Lua——并且批改真实代码，而非选择题。每个参考答案都经过验证，练习永远不会带着错误上线。"}
+        "caseStudy": {"stats": ["6 种语言，真实引擎", "96 道练习", "在浏览器中运行"], "body": "每种语言都用编译成 WebAssembly 的真实引擎运行：Python 用 Pyodide，还有 ruby.wasm、sql.js，以及 JS、TypeScript 和 Lua。练习通过运行你写的代码并跑测试来评分，而不是选择题。参考答案在发布前都会经过 CI 验证。"}
       },
       {
         "tag": "用 AI 学开发 · PWA",
@@ -1095,7 +1095,7 @@ const CONTENT = {
       {
         "tag": "AI Excel 生成器 · JS + Python 无服务器",
         "desc": "说出或输入你的需求，即可得到一份真实、可下载的 Excel 工作簿——含实时公式、汇总、条件格式、下拉菜单和图表。能从照片和 PDF 中读取数据，并可作为应用安装到任意设备上。",
-        "caseStudy": {"stats": ["语音/文字 → 真实 .xlsx", "实时公式、图表、格式", "识别照片与 PDF"], "body": "它不是导出 CSV——一个 Python 无服务器函数会构建真正的工作簿，带有实时公式、条件格式和图表，再把 .xlsx 流式传回。视觉模型能把收据照片或 PDF 表格转成结构化的行。"}
+        "caseStudy": {"stats": ["语音或文字输入", "输出真实 .xlsx", "识别照片和 PDF"], "body": "后端的一个 Python 函数会写出真正的工作簿，带公式、条件格式和图表，然后返回 .xlsx。照片和 PDF 由视觉模型读取为表格行。"}
       },
       {
         "tag": "AI 邮件分拣 · Gmail 智能体",
@@ -1104,7 +1104,7 @@ const CONTENT = {
       {
         "tag": "AI 广告生成器 · 多智能体",
         "desc": "一条多智能体流水线，把产品简报变成可直接使用的广告素材——各司其职的智能体分别撰写文案、设计场景、生成图像，每个场景在导出前都可编辑。",
-        "caseStudy": {"stats": ["5 个专职 AI 智能体", "简报 → 文案、场景、视频", "每个场景可编辑"], "body": "AdForge 不是一个超级提示词，而是真正的流水线：负责策略、文案、艺术指导和图像的独立智能体通过精修循环相互交接，整支广告——直到带 AI 配音的动画视频——全部在浏览器中生成。"}
+        "caseStudy": {"stats": ["5 个智能体", "输入简报，输出广告", "场景可编辑"], "body": "五个智能体分别负责策略、文案、艺术指导、图像和一次审校，一个接一个传递。结果是一支完整的广告，包含带配音的动画视频，全部在浏览器中生成。"}
       },
       {
         "tag": "二手交易市场 · Node/Express 全栈",
@@ -1113,7 +1113,7 @@ const CONTENT = {
       {
         "tag": "音频响应视觉与投影 · WebGL",
         "desc": "一款基于 WebGL / Web Audio 的实时 VJ 工具，面向现场演出：十种视觉效果——五种无限缩放的“液态”分形，外加五种音频可视化——都会随任意声音律动。内置不断演变的 psytrance 生成器与自由的多形状投影映射，以桌面 Web 应用运行。",
-        "caseStudy": {"stats": ["单文件 · 0 依赖", "10 种音频响应视觉", "实时投影映射"], "body": "十种无限缩放分形与音频可视化以 GLSL 着色器运行，由 Web Audio API 的实时频率数据驱动——全部装在一个自包含的 HTML 文件里，无需构建、无需库，外加可自由摆放的投影映射，适合真实演出。"}
+        "caseStudy": {"stats": ["一个 HTML 文件", "零依赖", "10 个实时视觉"], "body": "十个分形和音频可视化用 GLSL 着色器编写，根据 Web Audio API 的实时频率数据做出反应。它是单个 HTML 文件，无需构建，也没有任何库。投影映射已内置，可用于现场演出。"}
       },
       {
         "tag": "AI声乐教练 · Web Audio + PWA",
@@ -1139,7 +1139,7 @@ const CONTENT = {
       "nav.contact": "お問い合わせ",
       "hero.eyebrow": "Neuchâtel · スイス — 新たな機会を歓迎",
       "hero.role": "実際に動く Web アプリを作っています — 8本を公開中",
-      "hero.pitch": "アイデアを、人が実際に使えるソフトウェアへと形にします。現在その8本を公開中です。たとえば、6つのプログラミング言語をブラウザ上で学べるスクール、たった一文から Excel ファイルを生成するツール、本物の記憶を持つコンパニオンアプリなど。メディア研究の出身だからこそ、エンジニアだけでなく、実際に使う人のために作ります。フランス語と英語のネイティブ、スイスとアメリカの国籍を持っています。",
+      "hero.pitch": "アイデアを人が使うソフトウェアに変えています。現在 8 本が公開中です。WebAssembly で 6 つの言語エンジンを動かすブラウザ内スクール、音声から Excel を作るツール、pgvector 記憶を持つコンパニオンアプリ、マルチエージェントの広告パイプラインなどです。いくつかは AI を、作るためだけでなく機能として使っています。フランス語と英語のネイティブ、スイスとアメリカの国籍です。",
       "hero.cta.work": "実績を見る",
       "hero.cta.cv": "CV をダウンロード",
       "hero.cta.contact": "お問い合わせ",
@@ -1152,8 +1152,8 @@ const CONTENT = {
       "section.projects": "これまでの制作物",
       "section.contact": "ご連絡はこちら",
       "about.p1": "<strong>Florian Sumi</strong> と申します — スイスとアメリカの国籍を持ち、Neuchâtel 近郊を拠点にしています。日中は<strong>ローザンヌ大学で社会科学（メディア &amp; コミュニケーション）の修士課程</strong>に取り組み、それ以外の時間はソフトウェアを開発しています。",
-      "about.p2": "ほぼ<strong>独学</strong>で、現代的なやり方で開発しています — つまり<strong>AI を指揮して</strong>ソフトウェアを作るということです。AI をペアプログラマーに、本物のアプリケーションを設計・プロトタイピングし、リリースまで届けます。出来上がるのはスライド資料ではなく、<strong>人が実際に開いて使える動く製品</strong>です — ブラウザ内で本物の言語エンジンを動かすコード学習プラットフォームから、一文を完成した Excel ブックに変えるツールまで。",
-      "about.p3": "私のバックグラウンドは<strong>メディア・コミュニケーション研究</strong>です — だからこそ、私のソフトウェアはエンジニアだけでなく実際のユーザーのために作られています。その同じ感覚は、現場で培った<strong>小売販売・現金管理・カスタマーサービス</strong>の経験や、英語教授資格 (TEFL) にも表れています。習得が早く、確実にリリースし、漠然としたアイデアを人が使える形に変えます。",
+      "about.p2": "ほぼ<strong>独学</strong>で、どの開発者も自分のツールを使うのと同じように、AI を作業の一部にしています。WebGL、WebAssembly、ベクトルデータベース、マルチエージェントのパイプライン、リアルタイム配信を使って製品をリリースしてきました。どれも開いてすぐ使えます。ブラウザで本物の言語エンジンを動かすプラットフォーム、pgvector 記憶を持つコンパニオンアプリ、ほかにもあります。",
+      "about.p3": "私のバックグラウンドは<strong>メディア・コミュニケーション研究</strong>なので、他の開発者だけでなく、実際に使う人のためにソフトウェアを作ります。同じ姿勢は、<strong>小売・レジ・接客</strong>の現場経験や TEFL 教授資格にも表れています。覚えるのが速く、きちんとリリースします。",
       "about.fact.based.label": "拠点",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "言語",
@@ -1303,12 +1303,12 @@ const CONTENT = {
       {
         "tag": "AI コンパニオン · Next.js + pgvector",
         "desc": "あなたについての確かで検索可能な記憶を築き、バックグラウンドのジョブを動かし続けるフルスタックの AI コンパニオン（Next.js、Postgres + pgvector）。タブを閉じた後も、内省を日記に綴り、気分を移ろわせます。実際のアカウントと本物の永続性を備えた、AI に内面を与える実験です。",
-        "caseStudy": {"stats": ["Next.js + Postgres/pgvector", "意味的な長期記憶", "自律的なバックグラウンド処理"], "body": "多くの「AI コンパニオン」のデモは再読み込みで利用者を忘れます。Guillermo は埋め込みを pgvector に保存し意味で検索するため過去の会話を思い出し、スケジューラがタブを閉じた後も日記を書き気分を変化させ続けます。"}
+        "caseStudy": {"stats": ["Next.js + pgvector", "長期記憶", "バックグラウンド処理"], "body": "記憶は埋め込みとして pgvector に保存し類似度で検索するため、関連する過去の会話が再読み込みで消えずに戻ってきます。スケジュールされた処理が、タブを閉じている間も日記を書き気分を変え続けます。"}
       },
       {
         "tag": "コード学習プラットフォーム · WASM/Pyodide",
         "desc": "ハッカー端末風のデザインで、6つの言語 — Python、JavaScript、TypeScript、SQL、Lua、Ruby — を教えるスクール。各言語が WebAssembly でブラウザ内に本物のエンジンを動かします。まず理論、続いてライブ採点される演習へ。ハーバードの CS50 と Dataquest をモデルにしています。",
-        "caseStudy": {"stats": ["6 つの実言語エンジン", "96 の検証済み演習", "100% ブラウザ内 · インストール 0"], "body": "最も難しかったのは、6 つの本当に異なるランタイムをクライアント側で動かすこと——Python と Ruby は WebAssembly、さらに JS・TypeScript・SQL・Lua——そして選択式ではなく実際のコードを採点することです。すべての模範解答は合格が検証済みで、演習が壊れたまま公開されることはありません。"}
+        "caseStudy": {"stats": ["6 言語、実エンジン", "96 の演習", "ブラウザで動作"], "body": "各言語は WebAssembly にコンパイルした実エンジンで動きます。Python は Pyodide、ほかに ruby.wasm、sql.js、JS、TypeScript、Lua。演習は書いたコードをテストで実行して採点し、選択式ではありません。模範解答は公開前に CI で検証されます。"}
       },
       {
         "tag": "AI で開発を学ぶ · PWA",
@@ -1317,7 +1317,7 @@ const CONTENT = {
       {
         "tag": "AI Excel ジェネレーター · JS + Python サーバーレス",
         "desc": "必要な内容を話すか入力するだけで、ダウンロード可能な本物の Excel ブックが手に入ります — 動く数式、合計、条件付き書式、ドロップダウン、グラフ付き。写真や PDF からデータを読み取り、どんなデバイスにもアプリとしてインストールできます。",
-        "caseStudy": {"stats": ["音声/テキスト → 本物の .xlsx", "数式・グラフ・書式", "写真と PDF を読み取り"], "body": "CSV を吐くのではなく、Python のサーバーレス関数が数式・条件付き書式・グラフ付きの本物のワークブックを生成し、.xlsx を返します。ビジョンモデルがレシートの写真や PDF の表を構造化された行に変換します。"}
+        "caseStudy": {"stats": ["音声かテキストで入力", "本物の .xlsx を出力", "写真と PDF を読む"], "body": "バックエンドの Python 関数が数式・条件付き書式・グラフ付きの本物のワークブックを書き出し、.xlsx を返します。写真や PDF はビジョンモデルが行として読み取ります。"}
       },
       {
         "tag": "AI メールトリアージ · Gmail エージェント",
@@ -1326,7 +1326,7 @@ const CONTENT = {
       {
         "tag": "AI 広告ジェネレーター · マルチエージェント",
         "desc": "製品ブリーフを、すぐ使える広告クリエイティブに変えるマルチエージェントのパイプライン — 専門のエージェントがコピーを書き、シーンをデザインし、画像を生成します。各シーンは書き出し前に編集できます。",
-        "caseStudy": {"stats": ["5 つの専門 AI エージェント", "ブリーフ → コピー・シーン・動画", "各シーンを編集可能"], "body": "AdForge は一つの巨大プロンプトではなく本物のパイプラインです。戦略・コピー・アートディレクション・画像を担う個別エージェントが改良ループで受け渡し、AI ナレーション付きアニメ動画まで含むキャンペーン全体をブラウザ内で生成します。"}
+        "caseStudy": {"stats": ["5 つのエージェント", "ブリーフを入れて広告を出力", "シーンを編集可能"], "body": "5 つのエージェントが戦略・コピー・アートディレクション・画像・レビューを担当し、順に受け渡します。出力はナレーション付きアニメ動画を含む完成版キャンペーンで、ブラウザ内で生成されます。"}
       },
       {
         "tag": "リセールマーケットプレイス · Node/Express フルスタック",
@@ -1335,7 +1335,7 @@ const CONTENT = {
       {
         "tag": "オーディオ反応ビジュアル＆プロジェクション · WebGL",
         "desc": "WebGL／Web Audio によるライブ向けリアルタイム VJ ツール。10種類のビジュアル——無限ズームする5つの『液体』フラクタルと5つのオーディオビジュアライザー——があらゆる音に反応します。進化する内蔵サイケトランスジェネレーターと自由な複数シェイプのプロジェクションマッピングを備え、デスクトップのウェブアプリとして動作します。",
-        "caseStudy": {"stats": ["単一ファイル · 依存 0", "10 種の音反応ビジュアル", "リアルタイム投影マッピング"], "body": "10 種類の無限ズーム・フラクタルと音声ビジュアライザーが、Web Audio API のリアルタイム周波数データで駆動される GLSL シェーダーとして動作します。すべてビルド不要・ライブラリ不要の自己完結型 HTML ファイル 1 つに収まり、実際のショー向けの自由な投影マッピングも備えます。"}
+        "caseStudy": {"stats": ["HTML 1 ファイル", "依存なし", "10 個のライブビジュアル"], "body": "10 個のフラクタルと音声ビジュアライザーを GLSL シェーダーで書き、Web Audio API のリアルタイム周波数データに反応します。ビルド不要・ライブラリ不要の HTML 1 ファイルです。投影マッピングをライブ用に内蔵しています。"}
       },
       {
         "tag": "AI歌声コーチ · Web Audio + PWA",
