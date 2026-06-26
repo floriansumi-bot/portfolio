@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://floriansumi-bot.github.io/portfolio/sitemap.xml

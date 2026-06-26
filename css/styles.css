@@ -480,3 +480,47 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
   .reveal { opacity: 1; transform: none; }
   #constellation { display: none; }
 }
+
+/* ---------- Project year badge ---------- */
+.project-top { align-items: flex-start; }
+.project-top-right { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
+.project-year {
+  font-size: .72rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--text-faint); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: .18rem .48rem; line-height: 1.4;
+}
+
+/* ---------- After-projects CTA ---------- */
+.projects-cta {
+  text-align: center; margin-top: 3rem; padding: 1.5rem;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface);
+}
+.projects-cta p { color: var(--text-dim); font-size: 1rem; }
+.projects-cta a {
+  color: var(--cyan); font-weight: 600;
+  border-bottom: 1px solid rgba(34,211,238,.35);
+  transition: color .2s, border-color .2s;
+}
+.projects-cta a:hover { color: var(--violet); border-color: rgba(139,92,246,.5); }
+
+/* ---------- Light mode (prefers-color-scheme) ---------- */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f4ff;
+    --bg-soft: #ffffff;
+    --surface: rgba(0,0,0,.04);
+    --surface-2: rgba(0,0,0,.07);
+    --border: rgba(0,0,0,.12);
+    --text: #0a0a12;
+    --text-dim: #3d3b5c;
+    --text-faint: #6b6988;
+  }
+  body::before { background: radial-gradient(120% 80% at 50% -10%, transparent 40%, rgba(245,244,255,.7) 100%); }
+  .blob-1 { opacity: .18; }
+  .blob-2 { opacity: .15; }
+  .blob-3 { opacity: .12; }
+  #constellation { opacity: .35; }
+  .skill-card, .project-card, .music-card, .contact-card, .tl-item { box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Florian Sumi — Builder &amp; Social-Sciences Student</title>
-  <meta name="description" content="Florian Sumi — Swiss/American self-taught builder and UNIL social-sciences student. I turn ideas into working software: an in-browser code school, a prompt-to-Excel app, a resale marketplace and more. Native French & English, based in Neuchâtel." />
+  <title>Florian Sumi — Full-Stack Developer &amp; AI Builder</title>
+  <meta name="description" content="Florian Sumi — Swiss/American full-stack developer and UNIL Social Sciences student. 8 live projects: WebAssembly code school, pgvector AI companion, multi-agent pipelines, WebGL tools and more. Open to junior dev roles in Switzerland or remote." />
   <meta name="author" content="Florian Sumi" />
   <meta name="theme-color" content="#0a0a12" />
   <link rel="canonical" href="https://floriansumi-bot.github.io/portfolio/" />
@@ -15,6 +15,7 @@
   <meta property="og:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
   <meta property="og:image" content="https://floriansumi-bot.github.io/portfolio/assets/og-image.png" />
   <meta property="og:url" content="https://floriansumi-bot.github.io/portfolio/" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Florian Sumi — Builder & Social-Sciences Student" />
   <meta name="twitter:description" content="A humanities student who ships real apps. Portfolio + interactive CV." />
@@ -23,8 +24,31 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Florian Sumi",
+    "jobTitle": "Full-stack developer",
+    "url": "https://floriansumi-bot.github.io/portfolio/",
+    "email": "Florian.Sumi@gmail.com",
+    "telephone": "+41786452178",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marin-Epagnier",
+      "addressRegion": "Neuchâtel",
+      "addressCountry": "CH"
+    },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "University of Lausanne" },
+      { "@type": "EducationalOrganization", "name": "Harvard University" }
+    ],
+    "knowsLanguage": ["French", "English", "German"],
+    "sameAs": ["https://github.com/floriansumi-bot"]
+  }
+  </script>
 </head>
 <body id="top">
   <!-- Animated background -->
@@ -124,7 +148,7 @@
         </div>
         <ul class="hero-stats reveal" aria-label="At a glance">
           <li data-stat="apps" aria-label="13 projects"><strong data-count="13" aria-hidden="true">13</strong><span data-i18n="hero.stat.apps">projects</span></li>
-          <li data-stat="live" aria-label="9 live online"><strong data-count="9" aria-hidden="true">9</strong><span data-i18n="hero.stat.live">live online</span></li>
+          <li data-stat="live" aria-label="8 live online"><strong data-count="8" aria-hidden="true">8</strong><span data-i18n="hero.stat.live">live online</span></li>
           <li data-stat="langs" aria-label="2 native languages"><strong data-count="2" aria-hidden="true">2</strong><span data-i18n="hero.stat.langs">native languages</span></li>
         </ul>
       </div>
@@ -142,7 +166,7 @@
       <div class="about-grid">
         <div class="about-portrait reveal">
           <div class="portrait-frame">
-            <img src="assets/profile.jpg" alt="Portrait of Florian Sumi" id="portrait"
+            <img src="assets/profile.jpg" alt="Portrait of Florian Sumi" id="portrait" width="280" height="280"
                  onerror="this.style.display='none';this.parentElement.classList.add('monogram')" />
             <span class="portrait-monogram" aria-hidden="true">FS</span>
           </div>
@@ -184,11 +208,11 @@
       </div>
       <div class="skills-grid">
         <article class="skill-card reveal">
-          <h3 data-i18n="skills.people.heading">🤝 People &amp; professional</h3>
+          <h3><span aria-hidden="true">🤝</span> <span data-i18n="skills.people.heading">People &amp; professional</span></h3>
           <ul class="chips" id="softSkills"></ul>
         </article>
         <article class="skill-card reveal">
-          <h3 data-i18n="skills.tech.heading">🛠️ Building &amp; AI</h3>
+          <h3><span aria-hidden="true">🛠️</span> <span data-i18n="skills.tech.heading">Building &amp; AI</span></h3>
           <ul class="chips" id="techSkills"></ul>
         </article>
       </div>
@@ -227,6 +251,9 @@
         tools people normally have to pay for and making them free.
       </p>
       <div class="projects-grid" id="projectsGrid"></div>
+      <div class="projects-cta reveal">
+        <p>If something here looks useful for your team — <a href="mailto:Florian.Sumi@gmail.com">email me</a> or <a href="assets/Florian-Sumi-CV.pdf" download>download my CV</a>.</p>
+      </div>
     </section>
 
     <!-- Music -->
@@ -301,6 +328,11 @@
           <span class="contact-icon">💻</span>
           <span class="contact-label" data-i18n="contact.github">GitHub</span>
           <span class="contact-value">@floriansumi-bot</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/florian-sumi/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">🔗</span>
+          <span class="contact-label" data-i18n="contact.linkedin">LinkedIn</span>
+          <span class="contact-value">florian-sumi</span>
         </a>
         <div class="contact-card contact-card--static">
           <span class="contact-icon">📍</span>

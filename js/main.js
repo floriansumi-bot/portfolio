@@ -73,7 +73,10 @@ function renderProjects(el, base, loc) {
         <div class="project-body">
           <div class="project-top">
             <h3 class="project-name">${p.name}</h3>
-            ${badgeFor(p.status)}
+            <div class="project-top-right">
+              ${p.year ? `<span class="project-year">${p.year}</span>` : ""}
+              ${badgeFor(p.status)}
+            </div>
           </div>
           <div class="project-tag">${p.tag || ""}</div>
           <p class="project-desc">${p.desc || ""}</p>
@@ -169,10 +172,26 @@ function detectInitialLang() {
   return LANGS.includes(nav) ? nav : "en";
 }
 
+const _cjkLoaded = new Set();
+function loadCJKFont(lang) {
+  if (_cjkLoaded.has(lang)) return;
+  const url = lang === "zh"
+    ? "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap"
+    : "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap";
+  const link = document.createElement("link");
+  link.rel = "stylesheet"; link.href = url;
+  document.head.appendChild(link);
+  _cjkLoaded.add(lang);
+}
+
 function setupLangSwitch() {
   const sel = document.getElementById("langSwitch");
   if (!sel) return;
-  sel.addEventListener("change", () => applyLanguage(sel.value, { reveal: true }));
+  sel.addEventListener("change", () => {
+    const lang = sel.value;
+    if (lang === "zh" || lang === "ja") loadCJKFont(lang);
+    applyLanguage(lang, { reveal: true });
+  });
 }
 
 /* ---------- INTERACTIONS ---------- */
