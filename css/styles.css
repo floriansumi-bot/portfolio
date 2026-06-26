@@ -504,23 +504,3 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--violet);
   transition: color .2s, border-color .2s;
 }
 .projects-cta a:hover { color: var(--violet); border-color: rgba(139,92,246,.5); }
-
-/* ---------- Light mode (prefers-color-scheme) ---------- */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f5f4ff;
-    --bg-soft: #ffffff;
-    --surface: rgba(0,0,0,.04);
-    --surface-2: rgba(0,0,0,.07);
-    --border: rgba(0,0,0,.12);
-    --text: #0a0a12;
-    --text-dim: #3d3b5c;
-    --text-faint: #6b6988;
-  }
-  body::before { background: radial-gradient(120% 80% at 50% -10%, transparent 40%, rgba(245,244,255,.7) 100%); }
-  .blob-1 { opacity: .18; }
-  .blob-2 { opacity: .15; }
-  .blob-3 { opacity: .12; }
-  #constellation { opacity: .35; }
-  .skill-card, .project-card, .music-card, .contact-card, .tl-item { box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-}
