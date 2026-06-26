@@ -251,7 +251,7 @@ const CONTENT = {
       "nav.contact": "Contact",
       "hero.eyebrow": "Full-stack developer & UNIL Social Sciences student, open to junior dev roles",
       "hero.role": "I ship full-stack web apps and AI-powered tools, 8 live now",
-      "hero.pitch": "I turn ideas into software people use, and 8 are live right now: an in-browser school that runs six programming-language engines via WebAssembly, a voice-to-Excel generator, a companion app with pgvector memory, a multi-agent ad pipeline, and more. Several of them use AI as an actual feature, not only to build them. Native French and English; Swiss and American.",
+      "hero.pitch": "I like turning an idea into something you can actually open and use, and eight of mine are online right now: a browser school that runs six real language engines through WebAssembly, a tool that turns a spoken sentence into a finished Excel file, a companion app that remembers you, an ad studio run by a small team of AI agents. Plenty of them don't just get built with AI, they use it as a feature. French and English are both native to me, and I'm Swiss and American.",
       "hero.cta.work": "View my work",
       "hero.cta.cv": "Download CV",
       "hero.cta.contact": "Contact",
@@ -263,9 +263,9 @@ const CONTENT = {
       "section.experience": "Experience & education",
       "section.projects": "Things I've built",
       "section.contact": "Get in touch",
-      "about.p1": "I'm <strong>Florian Sumi</strong>, Swiss and American, based near Neuchâtel. By day I'm doing a <strong>Master's in Social Sciences (Media &amp; Communication) at the University of Lausanne</strong>; the rest of the time I build software.",
-      "about.p2": "I'm largely <strong>self-taught</strong>, and AI is part of my workflow the way any developer relies on their tools. I've shipped products with WebGL, WebAssembly, vector databases, multi-agent pipelines and real-time streaming. You can open and use all of them: a platform that runs real language engines in the browser, a companion app with a pgvector memory system, and more.",
-      "about.p3": "My background is in <strong>media and communication research</strong>, so I build software for the people using it, not only for other developers. The same habit comes from hands-on <strong>retail, cash-handling and customer-service</strong> work and a TEFL teaching qualification. I pick things up fast and I ship.",
+      "about.p1": "I'm <strong>Florian Sumi</strong>. Swiss and American, living just outside Neuchâtel. Most of my week goes to a <strong>Master's in Social Sciences (Media &amp; Communication) at the University of Lausanne</strong>, and the rest of it goes to building software.",
+      "about.p2": "I'm mostly <strong>self-taught</strong>. These days AI is just part of how I work, the same way any developer leans on their tools, and it lets me ship a lot. I've built things with WebGL, WebAssembly, vector databases, multi-agent pipelines, real-time streaming. None of it is for show: you can open every project and use it. One runs real language engines right in the browser. Another keeps a memory of you in a pgvector store and picks up where you left off.",
+      "about.p3": "My background is in <strong>media and communication research</strong>, which is probably why I build for the person actually using the thing, not just for other developers. The same instinct comes from years of <strong>retail, cash handling and customer service</strong>, plus a TEFL teaching qualification. I learn fast, and I finish what I start.",
       "about.fact.based.label": "Based in",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "Languages",
@@ -278,11 +278,11 @@ const CONTENT = {
       "skills.people.heading": "🤝 People & professional",
       "timeline.experience": "Experience",
       "timeline.education": "Education",
-      "projects.lead": "Working applications, not mockups. Eight are live, all built solo; the badges show what's publicly live versus still in development.",
-      "projects.mission": "One thread ties them together: putting open-source technology into everyday hands, taking tools people normally pay for and making them free.",
+      "projects.lead": "Real apps, not mockups. Eight are live, and I built every one of them myself. The badges tell you what's online versus still in progress.",
+      "projects.mission": "There's one thread through all of it: taking the kind of tools people usually pay for and making them free, built on open source and within everyone's reach.",
       "section.music": "Music & live sets",
       "nav.music": "Music",
-      "music.lead": "Self-taught on Ableton, I produce and DJ. I've grown two projects, Garage Act and Atomatek, from scratch to paid venues and festivals across Switzerland and France, including EPFL's Sysmic festival.",
+      "music.lead": "I taught myself Ableton, and I produce and DJ. Two projects, Garage Act and Atomatek, started from nothing and have made it onto paid stages and festivals around Switzerland and France, including EPFL's Sysmic festival.",
       "music.more": "Full profile ↗",
       "music.play": "Play",
       "music.pause": "Pause",
@@ -415,12 +415,12 @@ const CONTENT = {
       {
         "tag": "AI companion · Next.js + pgvector",
         "desc": "A full-stack AI companion (Next.js, Postgres + pgvector) that forms lasting, searchable memories of you and keeps running background jobs, writing private reflections and shifting mood even after you close the tab. Real accounts and real persistence: an experiment in giving an AI an inner life.",
-        "caseStudy": {"stats": ["Next.js + pgvector", "Long-term memory", "Background jobs"], "body": "Memories are stored as embeddings in pgvector and looked up by similarity, so relevant past conversations come back instead of being lost on reload. Scheduled jobs keep it writing journal entries and changing mood while the tab is closed."}
+        "caseStudy": {"stats": ["Next.js + pgvector", "Long-term memory", "Background jobs"], "body": "It stores memories as embeddings in pgvector and pulls them back by similarity, so the conversations that matter resurface instead of vanishing on a reload. Background jobs keep it going while you're away, writing little journal entries and drifting through moods even with the tab closed."}
       },
       {
         "tag": "Learn-to-code platform · WASM/Pyodide",
         "desc": "A hacker-terminal-themed school that teaches six languages (Python, JavaScript, TypeScript, SQL, Lua and Ruby), each running a real engine inside the browser via WebAssembly. Theory first, then live-graded exercises. Modeled on Harvard's CS50 and Dataquest.",
-        "caseStudy": {"stats": ["6 languages, real engines", "96 exercises", "Runs in the browser"], "body": "Each language runs a real engine compiled to WebAssembly: Pyodide for Python, ruby.wasm, sql.js, plus JS, TypeScript and Lua. Exercises grade the code you write by running it against tests, not multiple choice. Reference solutions are checked in CI before they ship."}
+        "caseStudy": {"stats": ["6 languages, real engines", "96 exercises", "Runs in the browser"], "body": "Every language runs on a real engine compiled to WebAssembly. Python uses Pyodide, and there's ruby.wasm and sql.js alongside JS, TypeScript and Lua. Do an exercise and it grades the actual code you wrote by running it against tests, no multiple choice. Every solution gets checked in CI first, so nothing ships broken."}
       },
       {
         "tag": "Learn to build with AI · PWA",
@@ -429,7 +429,7 @@ const CONTENT = {
       {
         "tag": "AI Excel generator · JS + Python serverless",
         "desc": "Say or type what you need and get a real, downloadable Excel workbook with live formulas, totals, conditional formatting, dropdowns and charts. It reads data from photos and PDFs, and installs as an app on any device.",
-        "caseStudy": {"stats": ["Voice or text in", "Real .xlsx out", "Reads photos and PDFs"], "body": "A Python function on the backend writes a real workbook with formulas, conditional formatting and charts, then returns the .xlsx. Photos and PDFs are read into rows with a vision model."}
+        "caseStudy": {"stats": ["Voice or text in", "Real .xlsx out", "Reads photos and PDFs"], "body": "On the backend a Python function builds an actual workbook, formulas, conditional formatting, charts and all, then hands you back the .xlsx. Snap a photo of a receipt or drop in a PDF and a vision model turns it into rows."}
       },
       {
         "tag": "AI email triage · Gmail agent",
@@ -438,7 +438,7 @@ const CONTENT = {
       {
         "tag": "AI ad generator · Multi-agent",
         "desc": "A multi-agent pipeline that turns a product brief into ready-to-use ad creatives. Specialised agents write the copy, design the scenes and generate the imagery, and every scene stays editable before export.",
-        "caseStudy": {"stats": ["5 agents", "Brief in, campaign out", "Editable scenes"], "body": "Five agents handle strategy, copy, art direction, imagery and a review pass, each feeding the next. The result is a full campaign, including an animated video with voiceover, generated in the browser."}
+        "caseStudy": {"stats": ["5 agents", "Brief in, campaign out", "Editable scenes"], "body": "Five agents split the work: strategy, copy, art direction, imagery, and a final review, each one handing off to the next. What comes out is a whole campaign, down to an animated video with voiceover, and it all happens in the browser."}
       },
       {
         "tag": "Resale marketplace · Node/Express full-stack",
@@ -447,7 +447,7 @@ const CONTENT = {
       {
         "tag": "Audio-reactive visuals & projection · WebGL",
         "desc": "A real-time WebGL / Web Audio VJ tool for live shows: ten visuals (five infinite-zoom 'liquid' fractals plus five audio visualizers) that react to any sound. It includes a built-in evolving psytrance generator and free-form multi-shape projection mapping, and runs as a desktop web app.",
-        "caseStudy": {"stats": ["One HTML file", "No dependencies", "10 live visuals"], "body": "Ten fractals and audio visualisers written as GLSL shaders that react to live frequency data from the Web Audio API. It is one HTML file with no build step and no libraries. Projection mapping is built in for live shows."}
+        "caseStudy": {"stats": ["One HTML file", "No dependencies", "10 live visuals"], "body": "Ten fractals and audio visualisers, all GLSL shaders reacting to live frequency data from the Web Audio API. The whole thing is a single HTML file, no build step, no libraries. Projection mapping is baked in for real shows."}
       },
       {
         "tag": "AI singing coach · Web Audio + PWA",
