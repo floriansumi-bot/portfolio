@@ -406,60 +406,60 @@ const CONTENT = {
     "projects": [
       {
         "tag": "Self-hosted media centre · Electron + Node",
-        "desc": "A self-hosted media centre I built top to bottom. A Node/Express server indexes a library and streams it over HTTP range requests (instant seeking), and three clients share one sync engine: an Electron desktop app, a Capacitor Android app, and a lightweight client for low-power devices. It includes a hand-built virtualised grid that stays smooth with thousands of items (no framework), real-time 'watch-together' rooms that mirror one viewer's play, pause and seek to a friend over Server-Sent Events, token auth with passkey-locked private folders, and remote access over a private mesh VPN."
+        "desc": "A self-hosted media centre I built top to bottom. A Node/Express server indexes the library and streams it with HTTP range requests, so seeking is instant, and three clients run off a single sync engine: Electron on the desktop, a Capacitor app on Android, and a lighter one for low-power devices. The grid is hand-built and virtualised, so thousands of items still scroll smoothly with no framework behind them. It also does watch-together rooms that mirror one person's play, pause and seek to a friend over Server-Sent Events, token auth with passkey-locked private folders, and remote access over a private mesh VPN."
       },
       {
         "tag": "Interactive Pi 5 course · PWA",
-        "desc": "A 447-page Raspberry Pi 5 handbook turned into a friendly course you can actually finish. It has a real hand-written Linux terminal and a wireable GPIO breadboard you can try right in the browser, plus ⌘K search, a glossary, quizzes and badges, and light/dark themes. Installable and fully offline."
+        "desc": "A 447-page Raspberry Pi 5 handbook turned into a course you can actually get through. There's a real hand-written Linux terminal and a wireable GPIO breadboard you can poke at right in the browser, plus ⌘K search, a glossary, quizzes and badges, and light and dark themes. It installs like an app and works fully offline."
       },
       {
         "tag": "AI companion · Next.js + pgvector",
-        "desc": "A full-stack AI companion (Next.js, Postgres + pgvector) that forms lasting, searchable memories of you and keeps running background jobs, writing private reflections and shifting mood even after you close the tab. Real accounts and real persistence: an experiment in giving an AI an inner life.",
+        "desc": "A full-stack AI companion (Next.js, Postgres and pgvector) that builds up lasting, searchable memories of you and keeps working in the background, writing private reflections and shifting its mood even after you've closed the tab. Real accounts, real persistence. Mostly it's an experiment in giving an AI something like an inner life.",
         "caseStudy": {"stats": ["Next.js + pgvector", "Long-term memory", "Background jobs"], "body": "It stores memories as embeddings in pgvector and pulls them back by similarity, so the conversations that matter resurface instead of vanishing on a reload. Background jobs keep it going while you're away, writing little journal entries and drifting through moods even with the tab closed."}
       },
       {
         "tag": "Learn-to-code platform · WASM/Pyodide",
-        "desc": "A hacker-terminal-themed school that teaches six languages (Python, JavaScript, TypeScript, SQL, Lua and Ruby), each running a real engine inside the browser via WebAssembly. Theory first, then live-graded exercises. Modeled on Harvard's CS50 and Dataquest.",
+        "desc": "A hacker-terminal code school that teaches six languages, Python, JavaScript, TypeScript, SQL, Lua and Ruby, each one running a real engine in the browser through WebAssembly. Theory first, then exercises that grade your code as you go. It's modelled on Harvard's CS50 and Dataquest.",
         "caseStudy": {"stats": ["6 languages, real engines", "96 exercises", "Runs in the browser"], "body": "Every language runs on a real engine compiled to WebAssembly. Python uses Pyodide, and there's ruby.wasm and sql.js alongside JS, TypeScript and Lua. Do an exercise and it grades the actual code you wrote by running it against tests, no multiple choice. Every solution gets checked in CI first, so nothing ships broken."}
       },
       {
         "tag": "Learn to build with AI · PWA",
-        "desc": "A course platform built for people who came to coding through AI tools and want to go deeper. Structured tracks take you from prompt to deployed app, with a live AI mentor that answers questions inline, progress tracking, and a curriculum that keeps up as the tooling changes. Built because every existing learn-to-code resource assumes you want to become a traditional engineer."
+        "desc": "A course platform for people who got into coding through AI tools and want to go deeper. The tracks walk you from a prompt all the way to a deployed app, with a live AI mentor answering questions as you go, progress tracking, and a curriculum that keeps up as the tools change. I built it because every other learn-to-code resource assumes you want to be a traditional engineer."
       },
       {
         "tag": "AI Excel generator · JS + Python serverless",
-        "desc": "Say or type what you need and get a real, downloadable Excel workbook with live formulas, totals, conditional formatting, dropdowns and charts. It reads data from photos and PDFs, and installs as an app on any device.",
+        "desc": "Say or type what you need and it hands back a real, downloadable Excel workbook, live formulas, totals, conditional formatting, dropdowns, charts. It'll even read the data straight off a photo or a PDF, and it installs as an app on any device.",
         "caseStudy": {"stats": ["Voice or text in", "Real .xlsx out", "Reads photos and PDFs"], "body": "On the backend a Python function builds an actual workbook, formulas, conditional formatting, charts and all, then hands you back the .xlsx. Snap a photo of a receipt or drop in a PDF and a vision model turns it into rows."}
       },
       {
         "tag": "AI email triage · Gmail agent",
-        "desc": "An AI agent that triages a Gmail inbox twice a day: it stars and labels the mail that matters (invoices, payroll, tax, deadlines, security), drafts replies that need one without ever sending, and blocks noisy senders on request."
+        "desc": "An AI agent that goes through a Gmail inbox twice a day. It stars and labels the mail that actually matters (invoices, payroll, tax, deadlines, security), drafts the replies that need one without ever hitting send, and blocks noisy senders when you ask."
       },
       {
         "tag": "AI ad generator · Multi-agent",
-        "desc": "A multi-agent pipeline that turns a product brief into ready-to-use ad creatives. Specialised agents write the copy, design the scenes and generate the imagery, and every scene stays editable before export.",
+        "desc": "A multi-agent pipeline that turns a product brief into ad creatives you can use. Specialised agents handle the copy, the scenes and the imagery, and every scene stays editable right up to export.",
         "caseStudy": {"stats": ["5 agents", "Brief in, campaign out", "Editable scenes"], "body": "Five agents split the work: strategy, copy, art direction, imagery, and a final review, each one handing off to the next. What comes out is a whole campaign, down to an animated video with voiceover, and it all happens in the browser."}
       },
       {
         "tag": "Resale marketplace · Node/Express full-stack",
-        "desc": "A peer-to-peer marketplace for buying and selling second-hand fashion in Switzerland, with real user accounts, JWT auth, listings and messaging. Trilingual (FR / DE / IT), built as a Node/Express full-stack app with a PWA front end. In development."
+        "desc": "A peer-to-peer marketplace for buying and selling second-hand fashion in Switzerland, with real accounts, JWT auth, listings and messaging. It's trilingual (FR, DE, IT), built as a Node/Express full-stack app with a PWA front end. Still in development."
       },
       {
         "tag": "Audio-reactive visuals & projection · WebGL",
-        "desc": "A real-time WebGL / Web Audio VJ tool for live shows: ten visuals (five infinite-zoom 'liquid' fractals plus five audio visualizers) that react to any sound. It includes a built-in evolving psytrance generator and free-form multi-shape projection mapping, and runs as a desktop web app.",
+        "desc": "A real-time WebGL and Web Audio VJ tool for live shows. Ten visuals, five infinite-zoom 'liquid' fractals and five audio visualizers, all reacting to whatever's playing. There's a built-in psytrance generator that keeps evolving and free-form projection mapping, and it runs as a desktop web app.",
         "caseStudy": {"stats": ["One HTML file", "No dependencies", "10 live visuals"], "body": "Ten fractals and audio visualisers, all GLSL shaders reacting to live frequency data from the Web Audio API. The whole thing is a single HTML file, no build step, no libraries. Projection mapping is baked in for real shows."}
       },
       {
         "tag": "AI singing coach · Web Audio + PWA",
-        "desc": "A full singing coach in the browser: real-time pitch tuner, scored vocal warm-ups, pitch practice game, 13 theory cards, a 12-week training programme, daily plans, Ableton studio guide, progress radar chart and achievement badges. Runs offline, installs as an app, and ships as an Android APK."
+        "desc": "A full singing coach that lives in the browser: real-time pitch tuner, scored warm-ups, a pitch practice game, 13 theory cards, a 12-week programme, daily plans, an Ableton studio guide, a progress radar and achievement badges. It runs offline, installs as an app, and ships as an Android APK."
       },
       {
         "tag": "Bar-crawl app · React Native / Expo",
-        "desc": "Find bars by canton, browse by commune, filter by type, and mark your crawl progress: a pocket guide to the Swiss bar scene. 3,500+ venues across Switzerland, built with Expo and React Native on a Supabase backend. In development."
+        "desc": "Find bars by canton, browse by commune, filter by type, and tick off your crawl as you go. It's a pocket guide to the Swiss bar scene, 3,500-plus venues, built with Expo and React Native on a Supabase backend. Still in development."
       },
       {
         "tag": "Algo trading research · Python",
-        "desc": "An algorithmic paper-trading bot and back-testing harness in Python. Evaluated honestly as a study in strategy testing and risk, it was kept strictly paper-only after the data showed no reliable live edge."
+        "desc": "An algorithmic paper-trading bot and back-testing harness in Python. I treated it as an honest study in strategy testing and risk, and kept it strictly paper-only once the data showed there was no reliable edge live."
       }
     ]
   },
@@ -473,7 +473,7 @@ const CONTENT = {
       "nav.contact": "Contact",
       "hero.eyebrow": "Développeur full-stack & étudiant UNIL en Sciences sociales, ouvert aux postes junior",
       "hero.role": "Je livre des apps web full-stack et des outils IA, 8 en ligne",
-      "hero.pitch": "Je transforme des idées en logiciels que les gens utilisent, et 8 sont en ligne en ce moment : une école dans le navigateur qui fait tourner six moteurs de langages via WebAssembly, un générateur Excel à la voix, une application compagnon avec mémoire pgvector, un pipeline publicitaire multi-agents, et plus encore. Plusieurs utilisent l’IA comme vraie fonctionnalité, pas seulement pour les construire. Francophone et anglophone de naissance ; Suisse et Américain.",
+      "hero.pitch": "J'aime prendre une idée et en faire quelque chose qu'on peut vraiment ouvrir et utiliser. J'en ai huit en ligne en ce moment : une école dans le navigateur qui fait tourner six vrais moteurs de langages via WebAssembly, un outil qui transforme une phrase dictée en fichier Excel fini, une appli compagnon qui se souvient de vous, un studio de pub géré par une petite équipe d'agents IA. Beaucoup ne sont pas juste construits avec l'IA : ils s'en servent comme d'une fonctionnalité. Le français et l'anglais sont mes deux langues maternelles, et je suis suisse et américain.",
       "hero.cta.work": "Voir mes réalisations",
       "hero.cta.cv": "Télécharger le CV",
       "hero.cta.contact": "Contact",
@@ -485,9 +485,9 @@ const CONTENT = {
       "section.experience": "Parcours & formation",
       "section.projects": "Ce que j’ai créé",
       "section.contact": "Me contacter",
-      "about.p1": "Je suis <strong>Florian Sumi</strong>, Suisse et Américain, basé près de Neuchâtel. Le jour, je prépare un <strong>Master en sciences sociales (Médias &amp; Communication) à l’Université de Lausanne</strong> ; le reste du temps, je développe des logiciels.",
-      "about.p2": "Je suis en grande partie <strong>autodidacte</strong>, et l’IA fait partie de ma façon de travailler, comme n’importe quel développeur s’appuie sur ses outils. J’ai livré des produits avec WebGL, WebAssembly, des bases de données vectorielles, des pipelines multi-agents et du streaming en temps réel. On peut tous les ouvrir et les utiliser : une plateforme qui fait tourner de vrais moteurs de langage dans le navigateur, une application compagnon avec mémoire pgvector, et d’autres.",
-      "about.p3": "Je viens de la <strong>recherche en médias et communication</strong>, c’est pourquoi je conçois des logiciels pour les gens qui s’en servent, pas seulement pour d’autres développeurs. Le même réflexe vient de postes de terrain en <strong>vente, gestion de caisse et service client</strong>, et d’une qualification d’enseignement TEFL. J’apprends vite et je livre.",
+      "about.p1": "Je suis <strong>Florian Sumi</strong>. Suisse et américain, j'habite juste à côté de Neuchâtel. La plus grande partie de ma semaine passe dans un <strong>Master en sciences sociales (Médias &amp; Communication) à l'Université de Lausanne</strong>, et le reste passe à développer.",
+      "about.p2": "Je suis surtout <strong>autodidacte</strong>. Aujourd'hui l'IA fait simplement partie de ma façon de travailler, comme n'importe quel développeur s'appuie sur ses outils, et ça me permet de beaucoup livrer. J'ai construit des choses avec WebGL, WebAssembly, des bases de données vectorielles, des pipelines multi-agents, du streaming en temps réel. Rien de tout ça n'est de la déco : chaque projet s'ouvre et s'utilise. L'un fait tourner de vrais moteurs de langages directement dans le navigateur. Un autre garde une mémoire de vous dans un store pgvector et reprend là où vous en étiez.",
+      "about.p3": "Je viens de la <strong>recherche en médias et communication</strong>, et c'est sans doute pour ça que je construis pour la personne qui va se servir de l'outil, pas juste pour d'autres développeurs. Le même réflexe vient d'années de <strong>vente, gestion de caisse et service client</strong>, plus un diplôme d'enseignement TEFL. J'apprends vite, et je finis ce que je commence.",
       "about.fact.based.label": "Basé à",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "Langues",
@@ -500,11 +500,11 @@ const CONTENT = {
       "skills.people.heading": "🤝 Relationnel & professionnel",
       "timeline.experience": "Expérience",
       "timeline.education": "Formation",
-      "projects.lead": "De vraies applications qui fonctionnent, pas des maquettes. Huit sont en ligne, toutes développées en solo ; les badges distinguent ce qui est publiquement en ligne de ce qui est encore en développement.",
-      "projects.mission": "Un fil rouge les relie : mettre la technologie open source entre les mains de tous, en prenant des outils habituellement payants pour les rendre gratuits.",
+      "projects.lead": "De vraies applis, pas des maquettes. Huit sont en ligne, et je les ai toutes construites moi-même. Les badges vous disent ce qui est en ligne et ce qui est encore en chantier.",
+      "projects.mission": "Il y a un fil rouge dans tout ça : prendre le genre d'outils pour lesquels les gens paient d'habitude et les rendre gratuits, bâtis sur de l'open source et à la portée de tous.",
       "section.music": "Musique & sets live",
       "nav.music": "Musique",
-      "music.lead": "Autodidacte sur Ableton, je produis et je mixe. J’ai porté deux projets, Garage Act et Atomatek, de zéro jusqu’à des salles et festivals rémunérés en Suisse et en France, dont le festival Sysmic de l’EPFL.",
+      "music.lead": "J'ai appris Ableton tout seul, je produis et je mixe. Deux projets, Garage Act et Atomatek, sont partis de rien et ont atteint des scènes et des festivals payants en Suisse et en France, dont le festival Sysmic de l'EPFL.",
       "music.more": "Profil complet ↗",
       "music.play": "Lecture",
       "music.pause": "Pause",
@@ -628,60 +628,60 @@ const CONTENT = {
     "projects": [
       {
         "tag": "Médiacentre auto-hébergé · Electron + Node",
-        "desc": "Un médiacentre auto-hébergé que j'ai construit de A à Z : un serveur Node/Express qui indexe une bibliothèque et la diffuse via des requêtes HTTP par plage (lecture instantanée), avec trois clients partageant un même moteur de synchronisation : une application de bureau Electron, une application Android Capacitor et un client léger pour appareils peu puissants. On y trouve une grille virtualisée faite main qui reste fluide avec des milliers d'éléments (sans framework), des sessions « regarder ensemble » en temps réel qui répliquent la lecture, la pause et l'avance d'un spectateur vers un ami via Server-Sent Events, une authentification par jeton avec dossiers privés verrouillés par clé d'accès, et un accès à distance via un réseau maillé privé (VPN)."
+        "desc": "Un media center auto-hébergé que j'ai construit de A à Z. Un serveur Node/Express indexe la bibliothèque et la diffuse avec des requêtes HTTP par plage, donc le défilement dans la vidéo est instantané, et trois clients tournent sur un seul moteur de synchro : Electron sur le bureau, une appli Capacitor sur Android, et une version plus légère pour les appareils peu puissants. La grille est faite main et virtualisée, donc des milliers d'éléments défilent sans accroc, sans aucun framework derrière. Il fait aussi des salles de visionnage commun qui répliquent la lecture, la pause et le défilement d'une personne vers un ami via Server-Sent Events, de l'authentification par token avec des dossiers privés verrouillés par passkey, et de l'accès à distance via un VPN mesh privé."
       },
       {
         "tag": "Cours interactif Pi 5 · PWA",
-        "desc": "Un manuel de 447 pages sur le Raspberry Pi 5 réinventé en un cours convivial que l'on peut vraiment terminer. Il propose un véritable terminal Linux écrit à la main et une platine GPIO que l'on câble directement dans le navigateur, ainsi qu'une recherche ⌘K, un glossaire, des quiz et des badges, et des thèmes clair et sombre. Installable et entièrement hors ligne."
+        "desc": "Un manuel de 447 pages sur le Raspberry Pi 5 transformé en un cours qu'on peut vraiment finir. Il y a un vrai terminal Linux écrit à la main et une breadboard GPIO câblable qu'on peut bidouiller directement dans le navigateur, plus une recherche ⌘K, un glossaire, des quiz et des badges, et des thèmes clair et sombre. Il s'installe comme une appli et fonctionne entièrement hors ligne."
       },
       {
         "tag": "Compagnon IA · Next.js + pgvector",
-        "desc": "Un compagnon IA full-stack (Next.js, Postgres + pgvector) qui se forge de vrais souvenirs de vous, consultables et persistants, et poursuit des tâches en arrière-plan, consignant des réflexions intimes et faisant évoluer son humeur même après la fermeture de l'onglet. De vrais comptes, une vraie persistance : une expérience pour donner une vie intérieure à une IA.",
-        "caseStudy": {"stats": ["Next.js + pgvector", "Mémoire à long terme", "Tâches en arrière-plan"], "body": "Les souvenirs sont stockés comme embeddings dans pgvector et retrouvés par similarité, donc les conversations passées pertinentes reviennent au lieu d'être perdues au rechargement. Des tâches planifiées le font écrire son journal et changer d'humeur pendant que l'onglet est fermé."}
+        "desc": "Un compagnon IA full-stack (Next.js, Postgres et pgvector) qui se construit des souvenirs durables et consultables sur vous et continue de tourner en arrière-plan, écrivant des réflexions privées et changeant d'humeur même une fois l'onglet fermé. De vrais comptes, une vraie persistance. C'est avant tout une expérience : donner à une IA quelque chose qui ressemble à une vie intérieure.",
+        "caseStudy": {"stats": ["Next.js + pgvector", "Mémoire à long terme", "Tâches en arrière-plan"], "body": "Il stocke les souvenirs sous forme d'embeddings dans pgvector et les rappelle par similarité, donc les conversations qui comptent ressurgissent au lieu de disparaître à chaque rechargement. Des tâches de fond le font vivre pendant votre absence : il écrit de petites pages de journal et traverse des humeurs, même l'onglet fermé."}
       },
       {
         "tag": "Plateforme d’apprentissage du code · WASM/Pyodide",
-        "desc": "Une école à l'esthétique terminal de hacker qui enseigne six langages (Python, JavaScript, TypeScript, SQL, Lua et Ruby), chacun exécutant un vrai moteur dans le navigateur via WebAssembly. D'abord la théorie, puis des exercices corrigés en direct. Inspirée du CS50 de Harvard et de Dataquest.",
-        "caseStudy": {"stats": ["6 langages, vrais moteurs", "96 exercices", "Tourne dans le navigateur"], "body": "Chaque langage tourne avec un vrai moteur compilé en WebAssembly : Pyodide pour Python, ruby.wasm, sql.js, ainsi que JS, TypeScript et Lua. Les exercices corrigent le code que vous écrivez en l'exécutant sur des tests, pas des QCM. Les solutions de référence sont vérifiées en CI avant publication."}
+        "desc": "Une école de code en mode terminal de hacker qui enseigne six langages, Python, JavaScript, TypeScript, SQL, Lua et Ruby, chacun faisant tourner un vrai moteur dans le navigateur via WebAssembly. La théorie d'abord, puis des exercices qui corrigent votre code au fur et à mesure. Il s'inspire du CS50 de Harvard et de Dataquest.",
+        "caseStudy": {"stats": ["6 langages, vrais moteurs", "96 exercices", "Tourne dans le navigateur"], "body": "Chaque langage tourne sur un vrai moteur compilé en WebAssembly. Python utilise Pyodide, et il y a ruby.wasm et sql.js aux côtés de JS, TypeScript et Lua. Faites un exercice et il corrige le vrai code que vous avez écrit en le confrontant à des tests, aucun QCM. Chaque solution est d'abord vérifiée en CI, donc rien ne part cassé."}
       },
       {
         "tag": "Apprendre à créer avec l’IA · PWA",
-        "desc": "Une plateforme de cours pensée pour celles et ceux venus au code par les outils d'IA et qui veulent aller plus loin. Des parcours structurés vous mènent du prompt à l'application déployée, avec un mentor IA en direct qui répond à vos questions au fil de l'eau, un suivi de progression et un programme qui se met à jour à mesure que les outils changent. Né du constat que toutes les ressources existantes supposent que vous voulez devenir un ingénieur classique."
+        "desc": "Une plateforme de cours pour ceux qui sont venus au code par les outils d'IA et veulent aller plus loin. Les parcours vous mènent du prompt jusqu'à une appli déployée, avec un mentor IA en direct qui répond à vos questions au passage, un suivi de progression, et un programme qui évolue à mesure que les outils changent. Je l'ai construit parce que toutes les autres ressources pour apprendre à coder partent du principe que vous voulez devenir un ingénieur classique."
       },
       {
         "tag": "Générateur Excel par IA · JS + Python serverless",
-        "desc": "Dictez ou tapez ce dont vous avez besoin et obtenez un vrai classeur Excel téléchargeable, avec formules en direct, totaux, mise en forme conditionnelle, listes déroulantes et graphiques. Il lit les données depuis des photos et des PDF, et s'installe comme une application sur n'importe quel appareil.",
-        "caseStudy": {"stats": ["Voix ou texte en entrée", "Vrai .xlsx en sortie", "Lit photos et PDF"], "body": "Une fonction Python côté serveur écrit un vrai classeur avec formules, mise en forme conditionnelle et graphiques, puis renvoie le .xlsx. Les photos et PDF sont lus en lignes par un modèle de vision."}
+        "desc": "Dites ou tapez ce dont vous avez besoin et il vous rend un vrai classeur Excel téléchargeable, formules en direct, totaux, mise en forme conditionnelle, listes déroulantes, graphiques. Il lit même les données directement depuis une photo ou un PDF, et il s'installe comme une appli sur n'importe quel appareil.",
+        "caseStudy": {"stats": ["Voix ou texte en entrée", "Vrai .xlsx en sortie", "Lit photos et PDF"], "body": "Côté backend, une fonction Python construit un vrai classeur, formules, mise en forme conditionnelle, graphiques et tout le reste, puis vous rend le fichier .xlsx. Prenez en photo un reçu ou déposez un PDF, et un modèle de vision le transforme en lignes."}
       },
       {
         "tag": "Triage des e-mails par IA · Agent Gmail",
-        "desc": "Un agent IA qui trie une boîte Gmail deux fois par jour : il met en favori et étiquette les messages qui comptent (factures, salaires, impôts, échéances, sécurité), rédige les réponses nécessaires sans jamais les envoyer, et bloque les expéditeurs indésirables à la demande."
+        "desc": "Un agent IA qui parcourt une boîte Gmail deux fois par jour. Il met une étoile et un libellé sur les mails qui comptent vraiment (factures, salaires, impôts, échéances, sécurité), rédige les réponses qui en valent la peine sans jamais cliquer sur envoyer, et bloque les expéditeurs envahissants quand vous le demandez."
       },
       {
         "tag": "Générateur de publicités par IA · Multi-agents",
-        "desc": "Un pipeline multi-agents qui transforme un brief produit en créations publicitaires prêtes à l'emploi. Des agents spécialisés rédigent les textes, conçoivent les scènes et génèrent les visuels, et chaque scène reste modifiable avant l'export.",
-        "caseStudy": {"stats": ["5 agents", "Brief en entrée, campagne en sortie", "Scènes éditables"], "body": "Cinq agents gèrent la stratégie, le texte, la direction artistique, les visuels et une relecture, chacun passant au suivant. Le résultat est une campagne complète, avec une vidéo animée et voix off, générée dans le navigateur."}
+        "desc": "Un pipeline multi-agents qui transforme un brief produit en visuels publicitaires utilisables. Des agents spécialisés gèrent la rédaction, les scènes et les images, et chaque scène reste modifiable jusqu'à l'export.",
+        "caseStudy": {"stats": ["5 agents", "Brief en entrée, campagne en sortie", "Scènes éditables"], "body": "Cinq agents se partagent le travail : stratégie, rédaction, direction artistique, images et une relecture finale, chacun passant la main au suivant. Ce qui en sort, c'est une campagne complète, jusqu'à une vidéo animée avec voix off, et tout se passe dans le navigateur."}
       },
       {
         "tag": "Marketplace de seconde main · Full-stack Node/Express",
-        "desc": "Une marketplace entre particuliers pour acheter et vendre de la mode de seconde main en Suisse, avec de vrais comptes utilisateurs, authentification JWT, annonces et messagerie. Trilingue (FR / DE / IT), conçue comme une application full-stack Node/Express avec un front-end PWA. En développement."
+        "desc": "Une place de marché entre particuliers pour acheter et vendre de la mode d'occasion en Suisse, avec de vrais comptes, de l'authentification JWT, des annonces et de la messagerie. Elle est trilingue (FR, DE, IT), bâtie comme une appli full-stack Node/Express avec un front PWA. Encore en développement."
       },
       {
         "tag": "Visuels audio-réactifs & projection · WebGL",
-        "desc": "Un outil VJ temps réel en WebGL / Web Audio pour les concerts : dix visuels (cinq fractales « liquides » à zoom infini et cinq visualiseurs audio) qui réagissent à n'importe quel son. Avec un générateur de psytrance évolutif intégré et un mapping de projection multi-formes libre, le tout en application web de bureau.",
-        "caseStudy": {"stats": ["Un fichier HTML", "Aucune dépendance", "10 visuels en direct"], "body": "Dix fractales et visualiseurs audio écrits en shaders GLSL qui réagissent aux fréquences en direct de la Web Audio API. C'est un seul fichier HTML, sans build et sans bibliothèque. Le mapping de projection est intégré pour la scène."}
+        "desc": "Un outil VJ WebGL et Web Audio en temps réel pour les shows en live. Dix visuels, cinq fractales « liquides » à zoom infini et cinq visualiseurs audio, tous réagissant à ce qui passe. Il y a un générateur de psytrance intégré qui évolue sans cesse et du mapping vidéo en roue libre, et il tourne comme une appli web de bureau.",
+        "caseStudy": {"stats": ["Un fichier HTML", "Aucune dépendance", "10 visuels en direct"], "body": "Dix fractales et visualiseurs audio, tous des shaders GLSL qui réagissent aux données de fréquence en direct de la Web Audio API. Le tout tient dans un seul fichier HTML, sans étape de build, sans librairies. Le mapping vidéo est intégré pour les vrais shows."}
       },
       {
         "tag": "Coach chant IA · Web Audio + PWA",
-        "desc": "Un coach vocal complet dans le navigateur : accordeur de justesse en temps réel, échauffements notés, jeu de pratique mélodique, 13 fiches théoriques, programme de 12 semaines, plan journalier adaptatif, guide studio Ableton, radar de progression et badges. Fonctionne hors ligne, s'installe comme appli et sort en APK Android."
+        "desc": "Un vrai coach de chant qui vit dans le navigateur : accordeur de hauteur en temps réel, échauffements notés, un jeu d'entraînement à la justesse, 13 fiches de théorie, un programme de 12 semaines, des plans quotidiens, un guide studio Ableton, un radar de progression et des badges de réussite. Il tourne hors ligne, s'installe comme une appli, et se livre en APK Android."
       },
       {
         "tag": "Appli de tournée des bars · React Native / Expo",
-        "desc": "Un compagnon de tournée des bars qui recense tous les bars de Suisse, plus de 3 500, organisés par canton et par commune. Développé avec Expo et React Native, en migration vers un backend Supabase. En développement."
+        "desc": "Trouvez des bars par canton, parcourez par commune, filtrez par type, et cochez votre tournée au fur et à mesure. C'est un guide de poche de la scène des bars suisses, plus de 3 500 adresses, construit avec Expo et React Native sur un backend Supabase. Encore en développement."
       },
       {
         "tag": "Recherche en trading algorithmique · Python",
-        "desc": "Un bot de paper-trading algorithmique et un banc de backtesting en Python. Évalué en toute honnêteté comme une étude du test de stratégies et de la gestion du risque, il est resté strictement en paper-trading après que les données ont révélé l’absence d’avantage fiable en conditions réelles."
+        "desc": "Un bot de paper trading algorithmique et un banc de back-testing en Python. Je l'ai traité comme une étude honnête du test de stratégies et du risque, et je l'ai gardé strictement en paper une fois que les données ont montré qu'il n'y avait pas d'avantage fiable en réel."
       }
     ]
   },
@@ -695,7 +695,7 @@ const CONTENT = {
       "nav.contact": "Kontakt",
       "hero.eyebrow": "Full-Stack-Entwickler & UNIL-Sozialwissenschaften, offen für Junior-Stellen",
       "hero.role": "Ich liefere Full-Stack-Web-Apps und KI-gestützte Tools – 8 davon sind live",
-      "hero.pitch": "Ich verwandle Ideen in Software, die Menschen nutzen, und 8 davon sind gerade live: eine Schule im Browser, die sechs Sprach-Engines über WebAssembly ausführt, ein Excel-Generator per Sprache, eine Begleit-App mit pgvector-Gedächtnis, eine Multi-Agent-Werbepipeline und mehr. Mehrere nutzen KI als echte Funktion, nicht nur, um sie zu bauen. Französisch und Englisch als Muttersprachen; Schweizer und US-Amerikaner.",
+      "hero.pitch": "Ich nehme am liebsten eine Idee und mache etwas daraus, das man wirklich öffnen und benutzen kann. Acht davon sind gerade online: eine Schule im Browser, in der sechs echte Sprach-Engines über WebAssembly laufen, ein Tool, das aus einem gesprochenen Satz eine fertige Excel-Datei macht, eine Begleit-App, die sich an Sie erinnert, ein Werbestudio, das ein kleines Team aus KI-Agenten betreibt. Bei vielen ist KI nicht nur beim Bauen dabei, sondern selbst Teil der Funktion. Französisch und Englisch sind beide meine Muttersprache, und ich bin Schweizer und Amerikaner.",
       "hero.cta.work": "Meine Arbeiten ansehen",
       "hero.cta.cv": "Lebenslauf herunterladen",
       "hero.cta.contact": "Kontakt",
@@ -707,9 +707,9 @@ const CONTENT = {
       "section.experience": "Erfahrung & Ausbildung",
       "section.projects": "Was ich gebaut habe",
       "section.contact": "Kontakt aufnehmen",
-      "about.p1": "Ich bin <strong>Florian Sumi</strong>, Schweizer und Amerikaner, wohnhaft in der Nähe von Neuenburg. Tagsüber mache ich einen <strong>Master in Sozialwissenschaften (Medien &amp; Kommunikation) an der Universität Lausanne</strong>; in der übrigen Zeit entwickle ich Software.",
-      "about.p2": "Ich bin grösstenteils <strong>Autodidakt</strong>, und KI gehört zu meiner Arbeitsweise, so wie jeder Entwickler seine Werkzeuge nutzt. Ich habe Produkte mit WebGL, WebAssembly, Vektordatenbanken, Multi-Agent-Pipelines und Echtzeit-Streaming ausgeliefert. Man kann sie alle öffnen und nutzen: eine Plattform, die echte Sprach-Engines im Browser ausführt, eine Begleit-App mit pgvector-Gedächtnis und weitere.",
-      "about.p3": "Ich komme aus der <strong>Medien- und Kommunikationsforschung</strong>, deshalb baue ich Software für die Menschen, die sie verwenden, nicht nur für andere Entwickler. Dasselbe Gespür kommt aus praktischer Arbeit in <strong>Einzelhandel, Kassenführung und Kundenservice</strong> und einer TEFL-Lehrqualifikation. Ich lerne schnell und ich liefere.",
+      "about.p1": "Ich bin <strong>Florian Sumi</strong>. Schweizer und Amerikaner, wohnhaft gleich ausserhalb von Neuenburg. Der grösste Teil meiner Woche geht für einen <strong>Master in Sozialwissenschaften (Medien &amp; Kommunikation) an der Universität Lausanne</strong> drauf, der Rest fürs Entwickeln von Software.",
+      "about.p2": "Ich bin grösstenteils <strong>Autodidakt</strong>. KI gehört heute einfach zu meiner Arbeitsweise, genauso wie jeder Entwickler sich auf seine Werkzeuge stützt, und damit bringe ich eine Menge auf die Strasse. Ich habe Dinge mit WebGL, WebAssembly, Vektordatenbanken, Multi-Agent-Pipelines und Echtzeit-Streaming gebaut. Nichts davon ist nur Schaufenster: Sie können jedes Projekt öffnen und benutzen. Eines lässt echte Sprach-Engines direkt im Browser laufen. Ein anderes behält Sie in einem pgvector-Speicher im Gedächtnis und macht da weiter, wo Sie aufgehört haben.",
+      "about.p3": "Mein Hintergrund liegt in der <strong>Medien- und Kommunikationsforschung</strong>, und vermutlich baue ich genau deshalb für die Person, die das Ding am Ende wirklich benutzt, und nicht bloss für andere Entwickler. Dasselbe Gespür kommt aus Jahren in <strong>Einzelhandel, Kassenführung und Kundenservice</strong> sowie einer TEFL-Lehrqualifikation. Ich lerne schnell, und was ich anfange, bringe ich auch zu Ende.",
       "about.fact.based.label": "Wohnort",
       "about.fact.based.value": "Marin-Epagnier, Neuenburg",
       "about.fact.langs.label": "Sprachen",
@@ -722,11 +722,11 @@ const CONTENT = {
       "skills.people.heading": "🤝 Menschen & Berufliches",
       "timeline.experience": "Erfahrung",
       "timeline.education": "Ausbildung",
-      "projects.lead": "Echte, funktionierende Anwendungen, keine Mockups. Acht sind live, alle im Alleingang gebaut; die Badges zeigen, was öffentlich live ist und was sich noch in Entwicklung befindet.",
-      "projects.mission": "Ein roter Faden verbindet sie alle: quelloffene Technologie in den Alltag aller bringen, also Werkzeuge, für die man sonst zahlt, kostenlos machen.",
+      "projects.lead": "Echte Apps, keine Mockups. Acht sind live, und jede einzelne habe ich selbst gebaut. Die Badges zeigen Ihnen, was online ist und was noch in Arbeit steckt.",
+      "projects.mission": "Ein Gedanke zieht sich durch alles: die Art von Werkzeugen, für die man normalerweise zahlt, kostenlos zu machen, auf Open Source aufgebaut und für jeden erreichbar.",
       "section.music": "Musik & Live-Sets",
       "nav.music": "Musik",
-      "music.lead": "Autodidakt an Ableton, produziere ich und lege auf. Zwei Projekte, Garage Act und Atomatek, habe ich von Grund auf aufgebaut und auf bezahlte Bühnen und Festivals in der Schweiz und in Frankreich gebracht, darunter das Sysmic-Festival der EPFL.",
+      "music.lead": "Ableton habe ich mir selbst beigebracht, ich produziere und lege auf. Zwei Projekte, Garage Act und Atomatek, sind aus dem Nichts entstanden und haben es auf bezahlte Bühnen und Festivals in der ganzen Schweiz und in Frankreich geschafft, darunter das Sysmic-Festival der EPFL.",
       "music.more": "Vollständiges Profil ↗",
       "music.play": "Abspielen",
       "music.pause": "Pause",
@@ -850,60 +850,60 @@ const CONTENT = {
     "projects": [
       {
         "tag": "Selbst gehostetes Mediacenter · Electron + Node",
-        "desc": "Ein selbst gehostetes Mediacenter, das ich vollständig selbst gebaut habe: ein Node/Express-Server, der eine Bibliothek indexiert und per HTTP-Range-Requests streamt (sofortiges Spulen), mit drei Clients, die eine gemeinsame Sync-Engine teilen: eine Electron-Desktop-App, eine Capacitor-Android-App und ein schlanker Client für leistungsschwache Geräte. Dazu gehören ein handgebautes virtualisiertes Grid, das mit Tausenden Einträgen flüssig bleibt (ohne Framework), Echtzeit-Räume zum gemeinsamen Ansehen, die Wiedergabe, Pause und Spulen eines Zuschauers über Server-Sent Events an einen Freund spiegeln, Token-Authentifizierung mit per Passkey gesperrten privaten Ordnern und Fernzugriff über ein privates Mesh-VPN."
+        "desc": "Ein selbst gehostetes Medienzentrum, das ich von oben bis unten gebaut habe. Ein Node/Express-Server indexiert die Bibliothek und streamt sie über HTTP-Range-Requests, sodass das Spulen sofort sitzt, und drei Clients laufen über eine einzige Sync-Engine: Electron auf dem Desktop, eine Capacitor-App auf Android und eine leichtere Variante für schwächere Geräte. Das Raster ist handgebaut und virtualisiert, sodass Tausende von Einträgen ohne Framework im Hintergrund flüssig scrollen. Dazu kommen Watch-together-Räume, die Play, Pause und Spulen einer Person über Server-Sent Events an einen Freund spiegeln, Token-Auth mit per Passkey gesperrten privaten Ordnern und Fernzugriff über ein privates Mesh-VPN."
       },
       {
         "tag": "Interaktiver Pi-5-Kurs · PWA",
-        "desc": "Ein 447-seitiges Raspberry-Pi-5-Handbuch, neu aufgelegt als freundlicher Kurs, den man wirklich abschliessen kann. Er bietet ein echtes, handgeschriebenes Linux-Terminal und ein verdrahtbares GPIO-Steckbrett, das man direkt im Browser ausprobieren kann, dazu ⌘K-Suche, ein Glossar, Quizze und Abzeichen sowie ein helles und ein dunkles Theme. Installierbar und vollständig offline."
+        "desc": "Ein 447-seitiges Handbuch zum Raspberry Pi 5, verwandelt in einen Kurs, den man tatsächlich durchziehen kann. Es gibt ein echtes, von Hand geschriebenes Linux-Terminal und ein verdrahtbares GPIO-Steckbrett, an dem Sie direkt im Browser herumprobieren können, dazu ⌘K-Suche, ein Glossar, Quizze und Badges sowie helle und dunkle Themes. Es installiert sich wie eine App und funktioniert vollständig offline."
       },
       {
         "tag": "KI-Begleiter · Next.js + pgvector",
-        "desc": "Ein Full-Stack-KI-Begleiter (Next.js, Postgres + pgvector), der bleibende, durchsuchbare Erinnerungen an Sie aufbaut und im Hintergrund weiterläuft, private Reflexionen in einem Tagebuch festhält und seine Stimmung verändert, selbst wenn Sie den Tab längst geschlossen haben. Echte Konten, echte Persistenz: ein Experiment, einer KI ein Innenleben zu geben.",
-        "caseStudy": {"stats": ["Next.js + pgvector", "Langzeitgedächtnis", "Hintergrund-Jobs"], "body": "Erinnerungen werden als Embeddings in pgvector gespeichert und per Ähnlichkeit abgerufen, sodass relevante frühere Gespräche zurückkommen, statt beim Neuladen verloren zu gehen. Geplante Jobs lassen ihn Tagebuch schreiben und die Stimmung ändern, während der Tab geschlossen ist."}
+        "desc": "Eine Full-Stack-KI-Begleitung (Next.js, Postgres und pgvector), die sich bleibende, durchsuchbare Erinnerungen an Sie aufbaut und im Hintergrund weiterarbeitet, private Gedanken notiert und ihre Stimmung verschiebt, auch nachdem Sie den Tab geschlossen haben. Echte Konten, echte Persistenz. In erster Linie ist es ein Experiment, einer KI so etwas wie ein Innenleben zu geben.",
+        "caseStudy": {"stats": ["Next.js + pgvector", "Langzeitgedächtnis", "Hintergrund-Jobs"], "body": "Erinnerungen werden als Embeddings in pgvector abgelegt und über Ähnlichkeit wieder hervorgeholt, sodass die Gespräche, auf die es ankommt, wieder auftauchen, statt beim Neuladen zu verschwinden. Hintergrundjobs halten alles am Laufen, während Sie weg sind, schreiben kleine Tagebucheinträge und lassen die Stimmung wandern, selbst bei geschlossenem Tab."}
       },
       {
         "tag": "Plattform zum Programmierenlernen · WASM/Pyodide",
-        "desc": "Eine Schule im Hacker-Terminal-Look, die sechs Sprachen unterrichtet (Python, JavaScript, TypeScript, SQL, Lua und Ruby), jede mit einer echten Engine direkt im Browser, ausgeführt über WebAssembly. Erst Theorie, dann live bewertete Übungen. Nach dem Vorbild von Harvards CS50 und Dataquest.",
-        "caseStudy": {"stats": ["6 Sprachen, echte Engines", "96 Übungen", "Läuft im Browser"], "body": "Jede Sprache läuft mit einer echten Engine, kompiliert zu WebAssembly: Pyodide für Python, ruby.wasm, sql.js, dazu JS, TypeScript und Lua. Übungen bewerten deinen Code, indem sie ihn gegen Tests ausführen, kein Multiple-Choice. Musterlösungen werden vor der Veröffentlichung in CI geprüft."}
+        "desc": "Eine Code-Schule im Hacker-Terminal-Look, die sechs Sprachen vermittelt, Python, JavaScript, TypeScript, SQL, Lua und Ruby, jede mit einer echten Engine im Browser über WebAssembly. Erst die Theorie, dann Aufgaben, die Ihren Code unterwegs bewerten. Vorbild sind Harvards CS50 und Dataquest.",
+        "caseStudy": {"stats": ["6 Sprachen, echte Engines", "96 Übungen", "Läuft im Browser"], "body": "Jede Sprache läuft auf einer echten Engine, die nach WebAssembly kompiliert ist. Python nutzt Pyodide, dazu kommen ruby.wasm und sql.js neben JS, TypeScript und Lua. Lösen Sie eine Aufgabe, wird der Code, den Sie tatsächlich geschrieben haben, gegen Tests ausgeführt und bewertet, kein Multiple Choice. Jede Lösung wird zuerst in CI geprüft, damit nichts kaputt ausgeliefert wird."}
       },
       {
         "tag": "Mit KI bauen lernen · PWA",
-        "desc": "Eine Kursplattform für alle, die übers KI-Werkzeug zum Programmieren kamen und tiefer einsteigen wollen. Strukturierte Lernpfade führen vom Prompt zur ausgelieferten App, mit einem Live-KI-Mentor, der Fragen direkt beantwortet, Fortschrittsverfolgung und einem Lehrplan, der sich an die ändernden Werkzeuge anpasst. Entstanden, weil alle bestehenden Lernangebote annehmen, man wolle klassischer Entwickler werden."
+        "desc": "Eine Kursplattform für Leute, die über KI-Tools zum Programmieren gekommen sind und tiefer einsteigen wollen. Die Tracks begleiten Sie vom Prompt bis zur fertig deployten App, mit einem KI-Mentor, der unterwegs in Echtzeit Fragen beantwortet, einem Fortschritts-Tracking und einem Lehrplan, der mithält, wenn sich die Tools verändern. Ich habe sie gebaut, weil jede andere Lern-Ressource fürs Programmieren davon ausgeht, dass man klassischer Ingenieur werden möchte."
       },
       {
         "tag": "KI-Excel-Generator · JS + Python serverless",
-        "desc": "Sagen oder tippen Sie, was Sie brauchen, und erhalten Sie eine echte, herunterladbare Excel-Arbeitsmappe mit aktiven Formeln, Summen, bedingter Formatierung, Dropdowns und Diagrammen. Liest Daten aus Fotos und PDFs und lässt sich als App auf jedem Gerät installieren.",
-        "caseStudy": {"stats": ["Sprache oder Text rein", "Echtes .xlsx raus", "Liest Fotos und PDFs"], "body": "Eine Python-Funktion im Backend schreibt eine echte Arbeitsmappe mit Formeln, bedingter Formatierung und Diagrammen und gibt das .xlsx zurück. Fotos und PDFs werden von einem Vision-Modell in Zeilen umgewandelt."}
+        "desc": "Sagen oder tippen Sie, was Sie brauchen, und Sie bekommen eine echte, herunterladbare Excel-Arbeitsmappe zurück, mit lebenden Formeln, Summen, bedingter Formatierung, Dropdowns und Diagrammen. Sie liest die Daten sogar direkt von einem Foto oder einem PDF ab und installiert sich als App auf jedem Gerät.",
+        "caseStudy": {"stats": ["Sprache oder Text rein", "Echtes .xlsx raus", "Liest Fotos und PDFs"], "body": "Im Backend baut eine Python-Funktion eine echte Arbeitsmappe, mit Formeln, bedingter Formatierung, Diagrammen und allem Drum und Dran, und gibt Ihnen die .xlsx zurück. Knipsen Sie einen Beleg ab oder werfen Sie ein PDF hinein, und ein Vision-Modell macht Zeilen daraus."}
       },
       {
         "tag": "KI-E-Mail-Triage · Gmail-Agent",
-        "desc": "Ein KI-Agent, der ein Gmail-Postfach zweimal täglich sortiert: Er markiert und beschriftet die Post, die zählt (Rechnungen, Lohnabrechnungen, Steuern, Fristen, Sicherheit), entwirft die nötigen Antworten, ohne sie je zu senden, und blockiert auf Wunsch lästige Absender."
+        "desc": "Ein KI-Agent, der zweimal am Tag einen Gmail-Posteingang durchgeht. Er markiert und beschriftet die Mails, auf die es wirklich ankommt (Rechnungen, Lohn, Steuern, Fristen, Sicherheit), entwirft die Antworten, die eine brauchen, ohne je auf Senden zu drücken, und blockiert nervige Absender, wenn Sie es möchten."
       },
       {
         "tag": "KI-Werbegenerator · Multi-Agent",
-        "desc": "Eine Multi-Agent-Pipeline, die aus einem Produkt-Briefing einsatzbereite Werbe-Creatives macht. Spezialisierte Agenten schreiben die Texte, gestalten die Szenen und generieren die Bilder, und jede Szene bleibt vor dem Export bearbeitbar.",
-        "caseStudy": {"stats": ["5 Agenten", "Brief rein, Kampagne raus", "Editierbare Szenen"], "body": "Fünf Agenten übernehmen Strategie, Text, Art-Direction, Bilder und eine Prüfung, jeder gibt an den nächsten weiter. Das Ergebnis ist eine komplette Kampagne mit animiertem Video und Voiceover, erzeugt im Browser."}
+        "desc": "Eine Multi-Agent-Pipeline, die aus einem Produkt-Briefing brauchbare Werbe-Creatives macht. Spezialisierte Agenten kümmern sich um Text, Szenen und Bildwelt, und jede Szene bleibt bis zum Export bearbeitbar.",
+        "caseStudy": {"stats": ["5 Agenten", "Brief rein, Kampagne raus", "Editierbare Szenen"], "body": "Fünf Agenten teilen sich die Arbeit: Strategie, Text, Art Direction, Bildwelt und zum Schluss eine Abnahme, jeder übergibt an den nächsten. Heraus kommt eine ganze Kampagne, bis hin zu einem animierten Video mit Voiceover, und das alles passiert im Browser."}
       },
       {
         "tag": "Second-Hand-Marktplatz · Node/Express Full-Stack",
-        "desc": "Ein Peer-to-Peer-Marktplatz zum Kaufen und Verkaufen von Second-Hand-Mode in der Schweiz, mit echten Benutzerkonten, JWT-Authentifizierung, Inseraten und Nachrichten. Dreisprachig (FR / DE / IT), gebaut als Full-Stack-App mit Node/Express und PWA-Frontend. In Entwicklung."
+        "desc": "Ein Peer-to-Peer-Marktplatz zum Kaufen und Verkaufen von Secondhand-Mode in der Schweiz, mit echten Konten, JWT-Auth, Inseraten und Nachrichten. Er ist dreisprachig (FR, DE, IT) und als Node/Express-Full-Stack-App mit einem PWA-Frontend gebaut. Noch in Entwicklung."
       },
       {
         "tag": "Audioreaktive Visuals & Projektion · WebGL",
-        "desc": "Ein Echtzeit-VJ-Tool (WebGL / Web Audio) für Live-Shows: zehn Visuals (fünf 'flüssige' Fraktale mit unendlichem Zoom und fünf Audio-Visualizer), die auf jeden Sound reagieren. Mit eingebautem, sich entwickelndem Psytrance-Generator und freiem Multi-Form-Projection-Mapping, als Desktop-Webanwendung.",
-        "caseStudy": {"stats": ["Eine HTML-Datei", "Keine Abhängigkeiten", "10 Live-Visuals"], "body": "Zehn Fraktale und Audio-Visualizer als GLSL-Shader, die auf Live-Frequenzdaten der Web Audio API reagieren. Es ist eine einzige HTML-Datei, ohne Build und ohne Bibliotheken. Projektion-Mapping ist für Live-Shows eingebaut."}
+        "desc": "Ein Echtzeit-VJ-Tool mit WebGL und Web Audio für Live-Shows. Zehn Visuals, fünf unendlich zoomende «flüssige» Fraktale und fünf Audiovisualizer, die alle auf das reagieren, was gerade läuft. Eingebaut sind ein Psytrance-Generator, der sich ständig weiterentwickelt, und freies Projection Mapping, und es läuft als Desktop-Web-App.",
+        "caseStudy": {"stats": ["Eine HTML-Datei", "Keine Abhängigkeiten", "10 Live-Visuals"], "body": "Zehn Fraktale und Audiovisualizer, allesamt GLSL-Shader, die auf Live-Frequenzdaten aus der Web Audio API reagieren. Das Ganze ist eine einzige HTML-Datei, kein Build-Schritt, keine Bibliotheken. Projection Mapping ist für echte Shows gleich mit eingebaut."}
       },
       {
         "tag": "KI-Gesangscoach · Web Audio + PWA",
-        "desc": "Ein vollständiger Gesangscoach im Browser: Echtzeit-Stimmungs-Tuner, bewertete Stimmübungen, Melodie-Übungsspiel, 13 Theorie-Karten, ein 12-Wochen-Trainingsprogramm, adaptiver Tagesplan, Ableton-Studio-Guide, Fortschrittsradar und Achievements. Offline nutzbar, als App installierbar und als Android-APK verfügbar."
+        "desc": "Ein vollwertiger Gesangscoach, der im Browser lebt: Echtzeit-Stimmgerät, bewertete Warm-ups, ein Spiel zum Treffen der Töne, 13 Theoriekarten, ein 12-Wochen-Programm, Tagespläne, ein Ableton-Studioleitfaden, ein Fortschritts-Radar und Achievement-Badges. Er läuft offline, installiert sich als App und kommt als Android-APK."
       },
       {
         "tag": "Bar-Crawl-App · React Native / Expo",
-        "desc": "Eine Begleit-App für Bar-Crawls, die jede Bar der Schweiz abdeckt, über 3'500, geordnet nach Kanton und Gemeinde. Gebaut mit Expo und React Native, in Umstellung auf ein Supabase-Backend. In Entwicklung."
+        "desc": "Finden Sie Bars nach Kanton, stöbern Sie nach Gemeinde, filtern Sie nach Typ und haken Sie Ihre Tour unterwegs ab. Es ist ein Taschenführer durch die Schweizer Barszene, über 3500 Lokale, gebaut mit Expo und React Native auf einem Supabase-Backend. Noch in Entwicklung."
       },
       {
         "tag": "Algo-Trading-Forschung · Python",
-        "desc": "Ein algorithmischer Paper-Trading-Bot mit Backtesting-Gerüst in Python. Ehrlich evaluiert als Studie zu Strategietests und Risiko, strikt auf Paper-Trading beschränkt, nachdem die Daten keinen verlässlichen Vorteil im Echtbetrieb zeigten."
+        "desc": "Ein algorithmischer Paper-Trading-Bot samt Backtesting-Gerüst in Python. Ich habe es als ehrliche Studie zu Strategietests und Risiko angelegt und strikt beim Papierhandel belassen, sobald die Daten zeigten, dass es live keinen verlässlichen Vorteil gab."
       }
     ]
   },
@@ -917,7 +917,7 @@ const CONTENT = {
       "nav.contact": "联系",
       "hero.eyebrow": "瑞士纳沙泰尔 · 正在寻找机会",
       "hero.role": "我开发真实可用的 Web 应用，已有 8 款上线运行",
-      "hero.pitch": "我把想法变成人们在用的软件，其中 8 款此刻在线：一所通过 WebAssembly 运行六种语言引擎的浏览器学校、一个用语音生成 Excel 的工具、一款带 pgvector 记忆的陪伴应用、一条多智能体广告流水线，等等。其中几款把 AI 用作真正的功能，而不只是用来开发它们。法语和英语母语者；瑞士与美国双重身份。",
+      "hero.pitch": "我喜欢把一个想法变成你真的能打开、能用起来的东西，目前我做的有八个已经上线了：一所跑在浏览器里的学校，通过 WebAssembly 跑着六个真实的语言引擎；一个把你说的一句话变成成品 Excel 文件的工具；一个会记住你的陪伴应用；还有一间由一小队 AI agent 撑起来的广告工作室。它们里面有不少不只是靠 AI 做出来，而是把 AI 直接当成功能在用。法语和英语都是我的母语，我有瑞士和美国双重身份。",
       "hero.cta.work": "查看我的作品",
       "hero.cta.cv": "下载简历",
       "hero.cta.contact": "联系我",
@@ -929,9 +929,9 @@ const CONTENT = {
       "section.experience": "经历与教育",
       "section.projects": "我做过的东西",
       "section.contact": "取得联系",
-      "about.p1": "我是<strong>Florian Sumi</strong>，拥有瑞士与美国双重国籍，定居在纳沙泰尔附近。白天我在<strong>洛桑大学攻读社会科学硕士（媒体与传播方向）</strong>；其余时间，我都在做软件。",
-      "about.p2": "我基本上是<strong>自学</strong>的，AI 是我工作方式的一部分，就像任何开发者都会用自己的工具一样。我用 WebGL、WebAssembly、向量数据库、多智能体流水线和实时流交付过产品。它们都能打开即用：一个在浏览器里运行真实语言引擎的平台、一款带 pgvector 记忆的陪伴应用，还有更多。",
-      "about.p3": "我的背景是<strong>媒体与传播研究</strong>，所以我为使用软件的人而做，而不只是为其他开发者。同样的习惯来自<strong>零售、收银和客户服务</strong>的一线工作，以及一份 TEFL 教学资格。我学得快，也能交付。",
+      "about.p1": "我是 <strong>Florian Sumi</strong>。瑞士和美国双重身份，住在纳沙泰尔郊外。我一周大半时间花在<strong>在洛桑大学攻读社会科学（媒体与传播）硕士</strong>上，剩下的时间都拿来写软件了。",
+      "about.p2": "我基本是<strong>自学</strong>出来的。如今 AI 就是我工作方式里的一部分，就跟任何开发者依赖自己的工具一样，它让我能做出很多东西。我做过用 WebGL、WebAssembly、向量数据库、多 agent 流水线、实时流的项目。这些都不是摆样子的：每一个项目你都能打开、能用。其中一个直接在浏览器里跑真实的语言引擎；另一个把关于你的记忆存进 pgvector，下次接着上回的地方继续聊。",
+      "about.p3": "我的背景是<strong>媒体与传播研究</strong>，大概正因如此，我做东西是为了那个真正在用它的人，而不是只为了别的开发者。这股劲儿也来自我多年的<strong>零售、收银和客户服务</strong>经历，再加上一张 TEFL 教学资格证。我学东西快，而且开了头就会做完。",
       "about.fact.based.label": "所在地",
       "about.fact.based.value": "Marin-Epagnier，纳沙泰尔",
       "about.fact.langs.label": "语言",
@@ -944,11 +944,11 @@ const CONTENT = {
       "skills.people.heading": "🤝 人际与职业",
       "timeline.experience": "工作经历",
       "timeline.education": "教育背景",
-      "projects.lead": "真实可用的应用，而非设计稿。8 款已上线，全部由我独立完成；徽章标明哪些已公开上线、哪些仍在开发中。",
-      "projects.mission": "它们有一条共同的主线：把开源技术带到日常人手中，把人们通常要付费的工具变成免费的。",
+      "projects.lead": "都是能真用的应用，不是样板演示。八个已经上线，每一个都是我自己亲手做的。徽章会告诉你哪些已经在线、哪些还在做。",
+      "projects.mission": "这些项目里有一条共同的线：把那些大家通常得花钱买的工具，做成免费的，基于开源，让每个人都用得上。",
       "section.music": "音乐与现场",
       "nav.music": "音乐",
-      "music.lead": "我自学 Ableton，做音乐制作与 DJ。我从零起步打造了两个项目（Garage Act 和 Atomatek），一路带上瑞士和法国的付费场馆与音乐节，包括 EPFL 的 Sysmic 音乐节。",
+      "music.lead": "我自学了 Ableton，自己做音乐也打碟。有两个项目，Garage Act 和 Atomatek，都是从零起步，后来登上了瑞士和法国各地的付费舞台和音乐节，包括 EPFL 的 Sysmic 音乐节。",
       "music.more": "完整主页 ↗",
       "music.play": "播放",
       "music.pause": "暂停",
@@ -1072,60 +1072,60 @@ const CONTENT = {
     "projects": [
       {
         "tag": "自托管媒体中心 · Electron + Node",
-        "desc": "一个我从零亲手搭建的自托管媒体中心：Node/Express 服务器索引媒体库并通过 HTTP 范围请求流式传输（即时跳转），三个客户端共用同一套同步引擎：Electron 桌面应用、Capacitor 安卓应用，以及面向低功耗设备的轻量客户端。它包含手写的虚拟化网格，在上千条目下依然流畅（无框架）；通过 Server-Sent Events 将一位观众的播放、暂停、跳转实时镜像给好友的「一起看」房间；基于令牌的鉴权与通行密钥锁定的私密文件夹；以及通过私有网状 VPN 的远程访问。"
+        "desc": "一个我从头到尾自己搭的自托管媒体中心。一个 Node/Express 服务器为媒体库建立索引，用 HTTP range 请求来推流，所以拖动进度条是瞬间响应的；三个客户端跑在同一个同步引擎上：桌面端是 Electron，安卓上是一个 Capacitor 应用，还有一个给低功耗设备的轻量版。网格是手写的，还做了虚拟化，所以背后没有任何框架，几千个条目照样滑得很顺。它还能做一起看的房间，通过 Server-Sent Events 把一个人的播放、暂停、拖动同步给朋友，有 token 鉴权和用 passkey 锁住的私密文件夹，还能通过一个私有 mesh VPN 远程访问。"
       },
       {
         "tag": "树莓派 5 互动课程 · PWA",
-        "desc": "一本 447 页的树莓派 5 手册，重做成友好、可真正学完的课程。它内置可直接在浏览器里上手的真实手写 Linux 终端，以及可接线的 GPIO 面包板，还配有 ⌘K 搜索、词汇表、测验与徽章，以及明暗双主题。可安装、完全离线。"
+        "desc": "一本 447 页的 Raspberry Pi 5 手册，被我做成了一门你真能上完的课程。里面有一个真正的手写 Linux 终端，还有一块能接线的 GPIO 面包板，都能直接在浏览器里上手摆弄，另外还有 ⌘K 搜索、术语表、测验和徽章，以及明暗两套主题。它能像应用一样安装，还能完全离线使用。"
       },
       {
         "tag": "AI 伙伴 · Next.js + pgvector",
-        "desc": "一个全栈 AI 伙伴（Next.js、Postgres + pgvector），会形成关于你的持久、可检索的记忆，并在后台持续运转，记录私密的日记、转换心情，哪怕你已经关掉了页面。真实账户、真实持久化：一次为 AI 赋予内在世界的实验。",
-        "caseStudy": {"stats": ["Next.js + pgvector", "长期记忆", "后台任务"], "body": "记忆以向量嵌入的形式存入 pgvector，并按相似度检索，因此相关的过往对话会重新出现，而不是刷新后丢失。计划任务让它在标签页关闭时继续写日记、改变心情。"}
+        "desc": "一个全栈的 AI 陪伴应用（Next.js、Postgres 和 pgvector），它会慢慢攒下关于你的、持久且可检索的记忆，并在后台一直运转，写一些私密的随想，就算你已经关了标签页，它的情绪也还在变。真实的账号，真实的持久化。说到底，它更像是一场实验：试着给 AI 一点类似内心世界的东西。",
+        "caseStudy": {"stats": ["Next.js + pgvector", "长期记忆", "后台任务"], "body": "它把记忆作为 embedding 存进 pgvector，再按相似度把它们调出来，所以那些重要的对话会重新浮现，而不是一刷新就没了。后台任务在你离开的时候也一直运转，就算标签页关着，它也会写一些小日记，情绪也会慢慢起伏变化。"}
       },
       {
         "tag": "编程学习平台 · WASM/Pyodide",
-        "desc": "一所黑客终端风格的学校，教你六种语言（Python、JavaScript、TypeScript、SQL、Lua 和 Ruby），每一种都通过 WebAssembly 在浏览器里运行真实的引擎。先讲理论，再做实时评分的练习。借鉴哈佛 CS50 与 Dataquest。",
-        "caseStudy": {"stats": ["6 种语言，真实引擎", "96 道练习", "在浏览器中运行"], "body": "每种语言都用编译成 WebAssembly 的真实引擎运行：Python 用 Pyodide，还有 ruby.wasm、sql.js，以及 JS、TypeScript 和 Lua。练习通过运行你写的代码并跑测试来评分，而不是选择题。参考答案在发布前都会经过 CI 验证。"}
+        "desc": "一所黑客终端风格的代码学校，教六门语言，Python、JavaScript、TypeScript、SQL、Lua 和 Ruby，每一门都通过 WebAssembly 在浏览器里跑一个真实的引擎。先讲理论，再做练习，练习会在你写的过程中给代码判分。它的设计参考了哈佛的 CS50 和 Dataquest。",
+        "caseStudy": {"stats": ["6 种语言，真实引擎", "96 道练习", "在浏览器中运行"], "body": "每种语言都跑在一个编译成 WebAssembly 的真实引擎上。Python 用 Pyodide，旁边还有 ruby.wasm 和 sql.js，再加上 JS、TypeScript 和 Lua。做一道练习，它会真的把你写的代码跑一遍、用测试来判分，没有选择题这回事。每个解答都先在 CI 里过一遍，所以不会有坏掉的东西上线。"}
       },
       {
         "tag": "用 AI 学开发 · PWA",
-        "desc": "一个面向「通过 AI 工具入门、想更深入」人群的课程平台。结构化的学习路线带你从提示词走到部署上线的应用，配有可实时答疑的 AI 导师、进度追踪，以及一套会随工具变化而更新的课程。做它，是因为现有的学编程资源都默认你想成为一名传统工程师。"
+        "desc": "一个面向那些从 AI 工具入门写代码、又想往深里钻的人的课程平台。课程会带你从一句 prompt 一路走到一个部署好的应用，途中有一位实时的 AI 导师随时答疑，还有进度追踪，以及一套会跟着工具一起更新的课程内容。我做它，是因为别的所有学编程的资料都默认你想当一名传统工程师。"
       },
       {
         "tag": "AI Excel 生成器 · JS + Python 无服务器",
-        "desc": "说出或输入你的需求，即可得到一份真实、可下载的 Excel 工作簿，含实时公式、汇总、条件格式、下拉菜单和图表。它能从照片和 PDF 中读取数据，并可作为应用安装到任意设备上。",
-        "caseStudy": {"stats": ["语音或文字输入", "输出真实 .xlsx", "识别照片和 PDF"], "body": "后端的一个 Python 函数会写出真正的工作簿，带公式、条件格式和图表，然后返回 .xlsx。照片和 PDF 由视觉模型读取为表格行。"}
+        "desc": "把你想要的说出来或打出来，它就会还给你一个真正能下载的 Excel 工作簿，带实时公式、合计、条件格式、下拉菜单、图表。它甚至能直接从一张照片或一个 PDF 里读出数据，而且能作为应用装在任何设备上。",
+        "caseStudy": {"stats": ["语音或文字输入", "输出真实 .xlsx", "识别照片和 PDF"], "body": "后端有个 Python 函数会构建一个真正的工作簿，公式、条件格式、图表全都有，然后把 .xlsx 文件交还给你。拍一张收据照片，或者丢进一个 PDF，一个视觉模型就会把它变成一行行数据。"}
       },
       {
         "tag": "AI 邮件分拣 · Gmail 智能体",
-        "desc": "一个 AI 智能体，每天两次为 Gmail 收件箱分拣邮件：给真正重要的邮件加星标和标签（发票、工资、税务、截止日期、安全），为需要回复的邮件起草回信但绝不发送，并能按需屏蔽吵闹的发件人。"
+        "desc": "一个 AI agent，每天两次帮你过一遍 Gmail 收件箱。它会给那些真正重要的邮件加星标和标签（发票、工资、税务、截止日期、安全），给需要回复的邮件起草回信、但从不替你按下发送，还能在你需要时拦掉那些吵闹的发件人。"
       },
       {
         "tag": "AI 广告生成器 · 多智能体",
-        "desc": "一条多智能体流水线，把产品简报变成可直接使用的广告素材。各司其职的智能体分别撰写文案、设计场景、生成图像，每个场景在导出前都可编辑。",
-        "caseStudy": {"stats": ["5 个智能体", "输入简报，输出广告", "场景可编辑"], "body": "五个智能体分别负责策略、文案、艺术指导、图像和一次审校，一个接一个传递。结果是一支完整的广告，包含带配音的动画视频，全部在浏览器中生成。"}
+        "desc": "一条多 agent 流水线，把一份产品简介变成你能直接用的广告创意。专门的 agent 各自负责文案、场景和图像，每个场景一直到导出之前都还能编辑。",
+        "caseStudy": {"stats": ["5 个智能体", "输入简报，输出广告", "场景可编辑"], "body": "五个 agent 分工合作：策略、文案、艺术指导、图像，还有最后的审核，一个接一个往下传。出来的是一整套完整的广告战役，细到一段配了画外音的动画视频，而且这一切都在浏览器里完成。"}
       },
       {
         "tag": "二手交易市场 · Node/Express 全栈",
-        "desc": "一个面向瑞士的二手时尚个人交易市场（C2C），带有真实用户账户、JWT 鉴权、商品发布与消息功能。三语界面（法/德/意），以 Node/Express 全栈应用构建，前端为 PWA。开发中。"
+        "desc": "一个点对点的二手时尚买卖市场，面向瑞士，有真实账号、JWT 鉴权、商品列表和私信。它支持三种语言（法语、德语、意大利语），用 Node/Express 搭成全栈应用，前端是 PWA。还在开发中。"
       },
       {
         "tag": "音频响应视觉与投影 · WebGL",
-        "desc": "一款基于 WebGL / Web Audio 的实时 VJ 工具，面向现场演出：十种视觉效果（五种无限缩放的“液态”分形，外加五种音频可视化）都会随任意声音律动。内置不断演变的 psytrance 生成器与自由的多形状投影映射，以桌面 Web 应用运行。",
-        "caseStudy": {"stats": ["一个 HTML 文件", "零依赖", "10 个实时视觉"], "body": "十个分形和音频可视化用 GLSL 着色器编写，根据 Web Audio API 的实时频率数据做出反应。它是单个 HTML 文件，无需构建，也没有任何库。投影映射已内置，可用于现场演出。"}
+        "desc": "一个面向现场演出的实时 WebGL 加 Web Audio 的 VJ 工具。十种视觉效果，五个无限放大的「液态」分形，五个音频可视化器，全都跟着当下放的音乐一起动。它内置了一个会不断演变的 psytrance 生成器，还有自由的投影映射，并且作为桌面网页应用运行。",
+        "caseStudy": {"stats": ["一个 HTML 文件", "零依赖", "10 个实时视觉"], "body": "十个分形和音频可视化效果，全是 GLSL 着色器，对来自 Web Audio API 的实时频率数据做出反应。整个东西就是一个 HTML 文件，没有构建步骤，也没有任何库。投影映射也内置好了，能直接用在现场演出上。"}
       },
       {
         "tag": "AI声乐教练 · Web Audio + PWA",
-        "desc": "浏览器内完整的声乐教练：实时音准调音器、评分发声练习、音高练习游戏、13张理论卡片、12周训练计划、自适应每日计划、Ableton录音棚指南、进度雷达图与成就徽章。支持离线使用，可安装为应用，并提供Android APK。"
+        "desc": "一位完整的、住在浏览器里的歌唱教练：实时音准校准、带评分的开嗓练习、一个音准练习小游戏、13 张乐理卡片、一套 12 周的训练计划、每日方案、一份 Ableton 录音棚指南、一张进度雷达图，还有成就徽章。它能离线运行，能像应用一样安装，还做成了安卓 APK。"
       },
       {
         "tag": "酒吧巡游应用 · React Native / Expo",
-        "desc": "一款酒吧巡游伴侣应用，覆盖瑞士的每一家酒吧，3500 多家，按州与市镇组织。用 Expo 与 React Native 构建，正迁移至 Supabase 后端。开发中。"
+        "desc": "按州查酒吧，按市镇浏览，按类型筛选，边逛边把你的酒吧路线一个个打勾。它是一本随身的瑞士酒吧指南，收录了 3500 多家场所，用 Expo 和 React Native 搭成，后端是 Supabase。还在开发中。"
       },
       {
         "tag": "算法交易研究 · Python",
-        "desc": "一个用 Python 写的算法纸面交易机器人与回测框架。经过诚实评估，它是一项关于策略测试与风险的研究：在数据表明没有可靠的实盘优势后，严格保持仅纸面交易。"
+        "desc": "一个用 Python 写的算法模拟交易机器人加回测框架。我把它当成一次老老实实的研究，去琢磨策略测试和风险，等数据表明实盘上并没有稳定的优势，我就把它严格限定在只做模拟、不碰真钱。"
       }
     ]
   },
@@ -1139,7 +1139,7 @@ const CONTENT = {
       "nav.contact": "お問い合わせ",
       "hero.eyebrow": "フルスタック開発者・UNIL 社会科学専攻、ジュニア開発職を希望（スイスまたはリモート）",
       "hero.role": "実際に動く Web アプリを作っています。8本を公開中",
-      "hero.pitch": "アイデアを人が使うソフトウェアに変えています。現在 8 本が公開中です。WebAssembly で 6 つの言語エンジンを動かすブラウザ内スクール、音声から Excel を作るツール、pgvector 記憶を持つコンパニオンアプリ、マルチエージェントの広告パイプラインなどです。いくつかは AI を、作るためだけでなく機能として使っています。フランス語と英語のネイティブ、スイスとアメリカの国籍です。",
+      "hero.pitch": "アイデアを、実際に開いて使える形にするのが好きです。いまそうやって作ったものが8つオンラインで動いています。WebAssembly で6つの本物の言語エンジンを走らせるブラウザ上の学校、話した一文をそのまま完成した Excel ファイルにするツール、あなたのことを覚えてくれるコンパニオンアプリ、小さな AI エージェントのチームが回す広告スタジオ。どれも AI でただ作ったというだけでなく、AI そのものを機能として使っています。フランス語と英語はどちらもネイティブで、スイスとアメリカの二重国籍です。",
       "hero.cta.work": "実績を見る",
       "hero.cta.cv": "CV をダウンロード",
       "hero.cta.contact": "お問い合わせ",
@@ -1151,9 +1151,9 @@ const CONTENT = {
       "section.experience": "経歴・学歴",
       "section.projects": "これまでの制作物",
       "section.contact": "ご連絡はこちら",
-      "about.p1": "<strong>Florian Sumi</strong> と申します。スイスとアメリカの国籍を持ち、Neuchâtel 近郊を拠点にしています。日中は<strong>ローザンヌ大学で社会科学（メディア &amp; コミュニケーション）の修士課程</strong>に取り組み、それ以外の時間はソフトウェアを開発しています。",
-      "about.p2": "ほぼ<strong>独学</strong>で、どの開発者も自分のツールを使うのと同じように、AI を作業の一部にしています。WebGL、WebAssembly、ベクトルデータベース、マルチエージェントのパイプライン、リアルタイム配信を使って製品をリリースしてきました。どれも開いてすぐ使えます。ブラウザで本物の言語エンジンを動かすプラットフォーム、pgvector 記憶を持つコンパニオンアプリ、ほかにもあります。",
-      "about.p3": "私のバックグラウンドは<strong>メディア・コミュニケーション研究</strong>なので、他の開発者だけでなく、実際に使う人のためにソフトウェアを作ります。同じ姿勢は、<strong>小売・レジ・接客</strong>の現場経験や TEFL 教授資格にも表れています。覚えるのが速く、きちんとリリースします。",
+      "about.p1": "<strong>Florian Sumi</strong>と申します。スイスとアメリカの二重国籍で、Neuchâtel のすぐ近くに住んでいます。平日のほとんどは<strong>ローザンヌ大学で社会科学（メディア＆コミュニケーション）の修士課程</strong>に通っていて、残りの時間でソフトウェアを作っています。",
+      "about.p2": "基本的には<strong>独学</strong>です。いまの自分にとって AI は仕事の一部になっていて、どんな開発者も自分の道具に頼るのと同じ感覚で使っています。おかげでたくさんのものを世に出せています。これまでに WebGL、WebAssembly、ベクトルデータベース、マルチエージェントのパイプライン、リアルタイム配信などを使って作ってきました。見せかけのものは一つもありません。どのプロジェクトも実際に開いて使えます。あるものはブラウザの中で本物の言語エンジンをそのまま動かしますし、別のものは pgvector のストアにあなたの記憶を保ち、前回の続きから話を始めます。",
+      "about.p3": "もともとの専門は<strong>メディア・コミュニケーション研究</strong>で、たぶんそのせいで、ほかの開発者向けではなく、実際にそれを使う人のために作るようになりました。同じ感覚は、長年の<strong>小売・レジ・接客</strong>の経験や、TEFL の英語教授資格からも来ているのだと思います。覚えるのは早いほうですし、始めたことは最後までやり切ります。",
       "about.fact.based.label": "拠点",
       "about.fact.based.value": "Marin-Epagnier, Neuchâtel",
       "about.fact.langs.label": "言語",
@@ -1166,11 +1166,11 @@ const CONTENT = {
       "skills.people.heading": "🤝 対人 & プロフェッショナル",
       "timeline.experience": "経歴",
       "timeline.education": "学歴",
-      "projects.lead": "モックアップではなく、実際に動くアプリケーション。8本が公開中で、すべて単独で開発しました。バッジは一般公開中か開発中かを示しています。",
-      "projects.mission": "すべてに共通する一本の軸があります。オープンソース技術を誰もの手に届けること。本来は有料のツールを、無料で使えるようにすることです。",
+      "projects.lead": "モックアップではなく、本物のアプリです。8つが公開中で、どれも自分一人で作りました。バッジを見れば、どれが公開済みで、どれがまだ制作中かが分かります。",
+      "projects.mission": "全部に共通している軸が一つあります。普段ならお金を払って使うような道具を、オープンソースの上に作って無料にし、誰の手にも届くようにすることです。",
       "section.music": "音楽 & ライブ",
       "nav.music": "音楽",
-      "music.lead": "Ableton は独学で、音楽制作と DJ をしています。Garage Act と Atomatek という2つのプロジェクトをゼロから育て、EPFL の Sysmic フェスティバルをはじめ、スイスとフランスの有料公演やフェスに出演してきました。",
+      "music.lead": "Ableton は独学で身につけ、制作と DJ をやっています。Garage Act と Atomatek という2つのプロジェクトはゼロから始めて、スイスやフランス各地の有料のステージやフェスに出るところまで来ました。EPFL の Sysmic フェスティバルもそのひとつです。",
       "music.more": "プロフィールを見る ↗",
       "music.play": "再生",
       "music.pause": "一時停止",
@@ -1294,60 +1294,60 @@ const CONTENT = {
     "projects": [
       {
         "tag": "セルフホスト型メディアセンター · Electron + Node",
-        "desc": "ゼロから構築したセルフホスト型のメディアセンター：ライブラリを索引化し HTTP レンジリクエストでストリーミング（瞬時のシーク）する Node/Express サーバーと、同一の同期エンジンを共有する 3 つのクライアント（Electron デスクトップ、Capacitor の Android アプリ、低スペック機器向けの軽量クライアント）で構成。見どころ：数千件でも滑らかに動く自作の仮想化グリッド（フレームワーク不使用）、Server-Sent Events で視聴者の再生／一時停止／シークを友人にリアルタイムで反映する「一緒に観る」ルーム、トークン認証とパスキーで施錠した非公開フォルダ、プライベートなメッシュ VPN による遠隔アクセス。"
+        "desc": "自分でゼロから作った、自前ホスティングのメディアセンターです。Node/Express のサーバーがライブラリをインデックス化し、HTTP の range リクエストで配信するので、シークが一瞬で決まります。3つのクライアントが一つの同期エンジンで動いていて、デスクトップは Electron、Android は Capacitor アプリ、低スペック機向けには軽量版があります。グリッドは手作りで仮想化してあるので、フレームワークなしでも数千件がなめらかにスクロールします。さらに、誰か一人の再生・一時停止・シークを Server-Sent Events で友達の画面にそのまま映す一緒に見る部屋、パスキーでロックした非公開フォルダ付きのトークン認証、プライベートなメッシュ VPN 越しのリモートアクセスにも対応しています。"
       },
       {
         "tag": "インタラクティブ Pi 5 講座 · PWA",
-        "desc": "447 ページの Raspberry Pi 5 ハンドブックを、最後までやり切れる親しみやすい講座に再構築。ブラウザ内で実際に動く手作りの Linux ターミナルと、配線できる GPIO ブレッドボードをその場で試せます。⌘K 検索、生きた用語集、クイズとバッジ、ライト／ダークの2テーマを搭載。インストール可能で完全オフライン対応。"
+        "desc": "447ページある Raspberry Pi 5 のハンドブックを、最後までちゃんとやり通せるコースに作り変えました。手書き入力に対応した本物の Linux ターミナルと、ブラウザの中でいじれる配線可能な GPIO ブレッドボードがあり、ほかにも ⌘K 検索、用語集、クイズとバッジ、ライトとダークのテーマがそろっています。アプリのようにインストールでき、完全にオフラインで動きます。"
       },
       {
         "tag": "AI コンパニオン · Next.js + pgvector",
-        "desc": "あなたについての確かで検索可能な記憶を築き、バックグラウンドのジョブを動かし続けるフルスタックの AI コンパニオン（Next.js、Postgres + pgvector）。タブを閉じた後も、内省を日記に綴り、気分を移ろわせます。実際のアカウントと本物の永続性を備えた、AI に内面を与える実験です。",
-        "caseStudy": {"stats": ["Next.js + pgvector", "長期記憶", "バックグラウンド処理"], "body": "記憶は埋め込みとして pgvector に保存し類似度で検索するため、関連する過去の会話が再読み込みで消えずに戻ってきます。スケジュールされた処理が、タブを閉じている間も日記を書き気分を変え続けます。"}
+        "desc": "フルスタックの AI コンパニオンです（Next.js、Postgres、pgvector）。あなたについての、消えずに検索できる記憶を少しずつ積み上げ、バックグラウンドでも動き続けて、タブを閉じたあとも内緒の振り返りを書いたり気分を変えたりします。本物のアカウント、本物の永続化です。これは何より、AI に内面のようなものを持たせてみる実験です。",
+        "caseStudy": {"stats": ["Next.js + pgvector", "長期記憶", "バックグラウンド処理"], "body": "記憶を pgvector の中に埋め込みとして保存し、似ているものをたどって引き出します。だから大事な会話は、リロードで消えてしまうのではなく、また自然と浮かび上がってきます。あなたが離れている間もバックグラウンドのジョブが動き続けていて、タブを閉じていても、小さな日記を書いたり気分が移り変わったりしています。"}
       },
       {
         "tag": "コード学習プラットフォーム · WASM/Pyodide",
-        "desc": "ハッカー端末風のデザインで、6つの言語（Python、JavaScript、TypeScript、SQL、Lua、Ruby）を教えるスクール。各言語が WebAssembly でブラウザ内に本物のエンジンを動かします。まず理論、続いてライブ採点される演習へ。ハーバードの CS50 と Dataquest をモデルにしています。",
-        "caseStudy": {"stats": ["6 言語、実エンジン", "96 の演習", "ブラウザで動作"], "body": "各言語は WebAssembly にコンパイルした実エンジンで動きます。Python は Pyodide、ほかに ruby.wasm、sql.js、JS、TypeScript、Lua。演習は書いたコードをテストで実行して採点し、選択式ではありません。模範解答は公開前に CI で検証されます。"}
+        "desc": "ハッカー風ターミナルのコードスクールで、Python、JavaScript、TypeScript、SQL、Lua、Ruby の6言語を教えます。どれも WebAssembly を通してブラウザの中で本物のエンジンを動かしています。まず理論、それから書いたコードをその場で採点してくれる演習へと進みます。Harvard の CS50 と Dataquest を手本にしています。",
+        "caseStudy": {"stats": ["6 言語、実エンジン", "96 の演習", "ブラウザで動作"], "body": "どの言語も、WebAssembly にコンパイルされた本物のエンジンの上で動いています。Python は Pyodide を使い、JS、TypeScript、Lua に加えて ruby.wasm や sql.js もそろっています。演習をやると、選択式ではなく、あなたが実際に書いたコードをテストにかけて採点します。どの解答も先に CI でチェックしているので、壊れたまま世に出ることはありません。"}
       },
       {
         "tag": "AI で開発を学ぶ · PWA",
-        "desc": "AI ツールでコーディングに入り、さらに深く学びたい人のための講座プラットフォーム。体系化されたトラックがプロンプトからデプロイ済みアプリまで導き、その場で質問に答えるライブ AI メンター、進捗トラッキング、そして変化するツールに合わせて更新され続けるカリキュラムを備えています。既存の学習教材がどれも「従来型のエンジニアになりたい」前提なので作りました。"
+        "desc": "AI ツールをきっかけにコーディングを始めて、もっと深く知りたいという人向けのコースプラットフォームです。プロンプトから、デプロイ済みのアプリにたどり着くところまでトラックが連れていってくれます。進めながら質問に答えてくれるライブの AI メンター、進捗トラッキング、そしてツールの変化に合わせて更新され続けるカリキュラム付きです。これを作ったのは、ほかのどの学習用教材も、あなたが従来型のエンジニアになりたいと決めてかかっていたからです。"
       },
       {
         "tag": "AI Excel ジェネレーター · JS + Python サーバーレス",
-        "desc": "必要な内容を話すか入力するだけで、ダウンロード可能な本物の Excel ブックが手に入ります。動く数式、合計、条件付き書式、ドロップダウン、グラフ付き。写真や PDF からデータを読み取り、どんなデバイスにもアプリとしてインストールできます。",
-        "caseStudy": {"stats": ["音声かテキストで入力", "本物の .xlsx を出力", "写真と PDF を読む"], "body": "バックエンドの Python 関数が数式・条件付き書式・グラフ付きの本物のワークブックを書き出し、.xlsx を返します。写真や PDF はビジョンモデルが行として読み取ります。"}
+        "desc": "必要なものを話すか打ち込むだけで、本物の、そのままダウンロードできる Excel ワークブックを返してくれます。動く数式、合計、条件付き書式、ドロップダウン、グラフ付きです。写真や PDF からデータをそのまま読み取ることもできますし、どんなデバイスにもアプリとしてインストールできます。",
+        "caseStudy": {"stats": ["音声かテキストで入力", "本物の .xlsx を出力", "写真と PDF を読む"], "body": "バックエンドでは Python の関数が本物のワークブックを組み立てます。数式も、条件付き書式も、グラフも全部入りで、それを .xlsx として返してくれます。レシートの写真を撮るか PDF を放り込めば、ビジョンモデルがそれを行データに変えてくれます。"}
       },
       {
         "tag": "AI メールトリアージ · Gmail エージェント",
-        "desc": "Gmail の受信トレイを1日2回トリアージする AI エージェント。重要なメール（請求書、給与、税金、締め切り、セキュリティ）にスターとラベルを付け、返信が必要なものは下書きを作成し（送信は一切しません）、要望に応じて迷惑な送信者をブロックします。"
+        "desc": "Gmail の受信トレイを1日2回さらってくれる AI エージェントです。本当に大事なメール（請求書、給与、税金、締め切り、セキュリティ）にはスターとラベルを付け、返信が要るものは下書きまで作って（送信は絶対しません）、頼めばうるさい送信者をブロックします。"
       },
       {
         "tag": "AI 広告ジェネレーター · マルチエージェント",
-        "desc": "製品ブリーフを、すぐ使える広告クリエイティブに変えるマルチエージェントのパイプライン。専門のエージェントがコピーを書き、シーンをデザインし、画像を生成します。各シーンは書き出し前に編集できます。",
-        "caseStudy": {"stats": ["5 つのエージェント", "ブリーフを入れて広告を出力", "シーンを編集可能"], "body": "5 つのエージェントが戦略・コピー・アートディレクション・画像・レビューを担当し、順に受け渡します。出力はナレーション付きアニメ動画を含む完成版キャンペーンで、ブラウザ内で生成されます。"}
+        "desc": "製品ブリーフを、そのまま使える広告クリエイティブに変えるマルチエージェントのパイプラインです。専門のエージェントがコピー、シーン、ビジュアルをそれぞれ担当し、どのシーンも書き出しの直前まで編集できます。",
+        "caseStudy": {"stats": ["5 つのエージェント", "ブリーフを入れて広告を出力", "シーンを編集可能"], "body": "5つのエージェントが分担します。戦略、コピー、アートディレクション、ビジュアル、そして最後のレビュー。それぞれが次へとバトンを渡していきます。出てくるのはキャンペーン一式で、ナレーション付きのアニメーション動画まで含まれます。しかもそれが全部ブラウザの中で起きます。"}
       },
       {
         "tag": "リセールマーケットプレイス · Node/Express フルスタック",
-        "desc": "スイス向けの個人間（C2C）中古ファッション・マーケットプレイス。実際のユーザーアカウント、JWT 認証、出品、メッセージング機能を備えています。3か国語対応 (FR / DE / IT) で、PWA フロントエンドを持つ Node/Express のフルスタックアプリとして構築。現在開発中。"
+        "desc": "スイスで中古ファッションを売り買いするための、個人どうしのマーケットプレイスです。本物のアカウント、JWT 認証、出品、メッセージ機能付き。3言語対応（FR、DE、IT）で、Node/Express のフルスタックアプリに PWA のフロントエンドという構成です。まだ開発中です。"
       },
       {
         "tag": "オーディオ反応ビジュアル＆プロジェクション · WebGL",
-        "desc": "WebGL／Web Audio によるライブ向けリアルタイム VJ ツール。10種類のビジュアル（無限ズームする5つの『液体』フラクタルと5つのオーディオビジュアライザー）があらゆる音に反応します。進化する内蔵サイケトランスジェネレーターと自由な複数シェイプのプロジェクションマッピングを備え、デスクトップのウェブアプリとして動作します。",
-        "caseStudy": {"stats": ["HTML 1 ファイル", "依存なし", "10 個のライブビジュアル"], "body": "10 個のフラクタルと音声ビジュアライザーを GLSL シェーダーで書き、Web Audio API のリアルタイム周波数データに反応します。ビルド不要・ライブラリ不要の HTML 1 ファイルです。投影マッピングをライブ用に内蔵しています。"}
+        "desc": "ライブのショー向けの、リアルタイムな WebGL ＆ Web Audio の VJ ツールです。10種類のビジュアルがあり、無限ズームの液体のようなフラクタルが5つ、オーディオビジュアライザーが5つ、どれも流れている音に反応します。進化し続ける psytrance ジェネレーターと自由なプロジェクションマッピングが組み込まれていて、デスクトップ向けのウェブアプリとして動きます。",
+        "caseStudy": {"stats": ["HTML 1 ファイル", "依存なし", "10 個のライブビジュアル"], "body": "10種類のフラクタルとオーディオビジュアライザーがあり、すべて GLSL シェーダーで、Web Audio API から来るリアルタイムの周波数データに反応します。全体がたった一つの HTML ファイルで、ビルド手順もライブラリもありません。実際のショー向けに、プロジェクションマッピングも最初から組み込んであります。"}
       },
       {
         "tag": "AI歌声コーチ · Web Audio + PWA",
-        "desc": "ブラウザ完結の歌声コーチ：リアルタイムピッチチューナー、採点付き発声練習、音程練習ゲーム、13枚の理論カード、12週間トレーニングプログラム、アダプティブ日次プラン、Abletonスタジオガイド、進捗レーダーチャート、アチーブメントバッジ。オフライン対応、アプリとしてインストール可能、Android APKも提供。"
+        "desc": "ブラウザの中で完結する本格的なボイスコーチです。リアルタイムのピッチチューナー、採点付きのウォームアップ、ピッチ練習ゲーム、13枚の理論カード、12週間のプログラム、毎日のプラン、Ableton のスタジオガイド、進捗のレーダー、達成バッジまでそろっています。オフラインで動き、アプリとしてインストールでき、Android の APK としても配布できます。"
       },
       {
         "tag": "バー巡りアプリ · React Native / Expo",
-        "desc": "スイス全土のすべてのバー、3,500軒以上を州とコミューン別に整理して網羅したバー巡りのお供アプリ。Expo と React Native で構築し、現在 Supabase バックエンドへ移行中。開発中です。"
+        "desc": "州ごとにバーを探し、コミューン単位で見て回り、種類で絞り込み、はしご酒をしながらチェックを付けていけます。スイスのバー事情を手のひらに収めたガイドで、3,500軒を超える店を収録しています。Expo と React Native で作り、バックエンドは Supabase です。まだ開発中です。"
       },
       {
         "tag": "アルゴリズム取引リサーチ · Python",
-        "desc": "Python によるアルゴリズム・ペーパートレーディングのボットとバックテスト基盤。戦略検証とリスクの研究として誠実に評価し、データが確かなライブでの優位性を示さなかったため、厳密にペーパー取引のみに留めています。"
+        "desc": "Python で書いた、アルゴリズム的なペーパートレードのボットとバックテストの仕組みです。戦略の検証とリスクをまじめに見つめる研究として取り組み、データを見て実際には信頼できる優位性がないと分かってからは、あくまでペーパー専用に徹しました。"
       }
     ]
   }
